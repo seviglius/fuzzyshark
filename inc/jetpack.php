@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package portshowlio-theme
+ * @package fuzzyshark
  */
 
 /**
@@ -13,23 +13,23 @@
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
  */
-function portshowlio_theme_jetpack_setup() {
+function fuzzyshark_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'portshowlio_theme_infinite_scroll_render',
+		'render'    => 'fuzzyshark_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'portshowlio_theme_jetpack_setup' );
+add_action( 'after_setup_theme', 'fuzzyshark_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function portshowlio_theme_infinite_scroll_render() {
+function fuzzyshark_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

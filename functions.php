@@ -1,13 +1,13 @@
 <?php
 /**
- * portshowlio-theme functions and definitions.
+ * fuzzyshark functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package portshowlio-theme
+ * @package fuzzyshark
  */
 
-if ( ! function_exists( 'portshowlio_theme_setup' ) ) :
+if ( ! function_exists( 'fuzzyshark_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'portshowlio_theme_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function portshowlio_theme_setup() {
+function fuzzyshark_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on portshowlio-theme, use a find and replace
-	 * to change 'portshowlio-theme' to the name of your theme in all the template files.
+	 * If you're building a theme based on fuzzyshark, use a find and replace
+	 * to change 'fuzzyshark' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'portshowlio-theme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'fuzzyshark', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function portshowlio_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'portshowlio-theme' ),
+		'primary' => esc_html__( 'Primary', 'fuzzyshark' ),
 	) );
 
 	/*
@@ -72,13 +72,13 @@ function portshowlio_theme_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'portshowlio_theme_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'fuzzyshark_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'portshowlio_theme_setup' );
+add_action( 'after_setup_theme', 'fuzzyshark_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -87,39 +87,39 @@ add_action( 'after_setup_theme', 'portshowlio_theme_setup' );
  *
  * @global int $content_width
  */
-function portshowlio_theme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'portshowlio_theme_content_width', 640 );
+function fuzzyshark_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'fuzzyshark_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'portshowlio_theme_content_width', 0 );
+add_action( 'after_setup_theme', 'fuzzyshark_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function portshowlio_theme_widgets_init() {
+function fuzzyshark_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'portshowlio-theme' ),
+		'name'          => esc_html__( 'Sidebar', 'fuzzyshark' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'portshowlio-theme' ),
+		'description'   => esc_html__( 'Add widgets here.', 'fuzzyshark' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'portshowlio_theme_widgets_init' );
+add_action( 'widgets_init', 'fuzzyshark_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function portshowlio_theme_scripts() {
+function fuzzyshark_scripts() {
 
-	wp_enqueue_style( 'portshowlio-theme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'fuzzyshark-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'portshowlio-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'fuzzyshark-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'portshowlio-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'fuzzyshark-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 
@@ -127,7 +127,7 @@ function portshowlio_theme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'portshowlio_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'fuzzyshark_scripts' );
 
 /**
  * Implement the Custom Header feature.

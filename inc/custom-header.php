@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package portshowlio-theme
+ * @package fuzzyshark
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses portshowlio_theme_header_style()
+ * @uses fuzzyshark_header_style()
  */
-function portshowlio_theme_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'portshowlio_theme_custom_header_args', array(
+function fuzzyshark_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'fuzzyshark_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'portshowlio_theme_header_style',
+		'wp-head-callback'       => 'fuzzyshark_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'portshowlio_theme_custom_header_setup' );
+add_action( 'after_setup_theme', 'fuzzyshark_custom_header_setup' );
 
-if ( ! function_exists( 'portshowlio_theme_header_style' ) ) :
+if ( ! function_exists( 'fuzzyshark_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see portshowlio_theme_custom_header_setup().
+ * @see fuzzyshark_custom_header_setup().
  */
-function portshowlio_theme_header_style() {
+function fuzzyshark_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

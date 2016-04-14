@@ -1,8 +1,8 @@
 <?php
 /**
- * portshowlio-theme Theme Customizer.
+ * fuzzyshark Theme Customizer.
  *
- * @package portshowlio-theme
+ * @package fuzzyshark
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function portshowlio_theme_customize_register( $wp_customize ) {
+function fuzzyshark_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'portshowlio_theme_customize_register' );
+add_action( 'customize_register', 'fuzzyshark_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function portshowlio_theme_customize_preview_js() {
-	wp_enqueue_script( 'portshowlio_theme_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function fuzzyshark_customize_preview_js() {
+	wp_enqueue_script( 'fuzzyshark_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'portshowlio_theme_customize_preview_js' );
+add_action( 'customize_preview_init', 'fuzzyshark_customize_preview_js' );
