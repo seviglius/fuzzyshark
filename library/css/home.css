@@ -1,3 +1,94 @@
 body {
-  background-color: ;
+  background-color: #f63619;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#logo {
+  position: fixed;
+  width: 368px;
+  height: 443px;
+  top: 125px;
+  right: 100px;
+  z-index: -9999;
+}
+
+a:link, a:hover, a:active, a:visited {
+  color: #fff;
+}
+
+.intro {
+  margin-top: 200px;
+}
+.intro h1 {
+  display: none;
+}
+.intro h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.intro p {
+  line-height: 2;
+  font-size: 3rem;
+}
+
+.scca-student-name {
+  font-size: 10rem;
+  line-height: 1;
+  margin-top: 10rem;
+}
+
+.scca-student-photo img {
+  position: fixed;
+  top: 10%;
+  right: 100px;
+  bottom: 10%;
+  z-index: -999;
+  height: 80%;
+  display: none;
+}
+
+.student-list {
+  margin-top: 300px;
+}
+
+.sticky {
+  top: 0;
+  position: fixed;
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    position: relative;
+    z-index: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: auto;
+    right: auto;
+  }
+
+  .intro {
+    margin-top: 50px;
+  }
+  .intro h1 {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+  }
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .intro p {
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+
+  .scca-student-name {
+    margin-top: 200px;
+    font-size: 5rem;
+  }
 }
