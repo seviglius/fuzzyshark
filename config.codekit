@@ -272,6 +272,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/library\/scss\/bootstrap.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/library\/scss\/bootstrap.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/library\/scss\/bootstrap.min.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -558,7 +567,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Brenton",
+"lastSavedByUser": "Nicholas Cavagnaro",
 "manualImportLinks": {
 	},
 "projectAttributes": {
