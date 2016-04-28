@@ -7,9 +7,8 @@
 <div class="container">
 	<div class="row">
 
-		<div class="col-md-8 col-sm-6 intro">
-			<img src="/img/logo-placeholder.png" alt="Portshowlio 2016 Logo" id="logo"><!-- logo -->
-			<h1>Portshowlio 2016</h2>
+		<div class="col-md-8 intro">
+			<h1>Portshowlio 2016</h1>
 			<h2>Seattle Central Creative Academy</h2>
 			<?php 
 			if (have_posts()) {
@@ -26,6 +25,7 @@
 
 		<?php
     remove_all_filters('posts_orderby');
+    global $post; $cntr = 1;
 
     $args = array(
         'post_type' => array('design', 'photography'),
@@ -37,18 +37,18 @@
     $featuredimage = get_field_objects();
 ?>
 
+
 <div class="col-sm-12 student-list">
 <?php while ($query->have_posts()) : $query->the_post(); ?> 
-       <div class="scca-student-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-       <div class="scca-student-photo"><img src="<?php 
-											       	if( get_field('designer_headshot') ): 
-											       	the_field('designer_headshot'); 
+       <div class="scca-student-name"><a href="<?php the_permalink(); ?>" class="name" id="<?php echo "name-" . $cntr; ?>"><?php the_title(); ?></a></div>
+       <div class="scca-student-photo"><a href="<?php the_permalink(); ?>"><img src="<?php 
+											       	if( get_field('featured_project_image') ): 
+											       	the_field('featured_project_image'); 
 											       	endif; 
-											       	if( get_field('photographer_headshot') ): 
-											       	the_field('photographer_headshot'); 
-											       	endif;
-       	?>" alt="<?php the_title(); ?>" class="headshot"></div>
+       	?>" alt="<?php the_title(); ?>" class="featured-project-image" id="<?php echo "featured-project-image-" . $cntr; ?>"></a></div>
   
+<?php $cntr++; ?>
+
 <?php wp_reset_query(); ?>
 
 <?php endwhile; ?>
@@ -60,3 +60,11 @@
 
 
 <?php get_footer(); ?>
+
+
+
+<script>
+
+
+
+</script>

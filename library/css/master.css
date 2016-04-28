@@ -7147,26 +7147,32 @@ body {
   background-color: #f63619;
   color: #fff;
   overflow-x: hidden;
+  font-family: "azo-sans-web", sans-serif;
 }
 
-#logo {
+h1 {
   position: fixed;
-  width: 368px;
-  height: 443px;
-  top: 125px;
-  right: 100px;
+  width: 305px;
+  height: 437px;
+  top: 130px;
+  right: 132px;
   z-index: -9999;
+  background-image: url("/img/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
 }
 
 a:link, a:hover, a:active, a:visited {
   color: #fff;
+  text-decoration: none;
+}
+a.underlined {
+  text-decoration: underline;
 }
 
 .intro {
   margin-top: 200px;
-}
-.intro h1 {
-  display: none;
 }
 .intro h2 {
   font-weight: bold;
@@ -7181,12 +7187,16 @@ a:link, a:hover, a:active, a:visited {
   font-size: 10rem;
   line-height: 1;
   margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.scca-student-name:last-of-type {
+  margin-bottom: 0;
 }
 
 .scca-student-photo img {
   position: fixed;
   top: 10%;
-  right: 100px;
+  right: 0;
   bottom: 10%;
   z-index: -999;
   height: 80%;
@@ -7195,6 +7205,7 @@ a:link, a:hover, a:active, a:visited {
 
 .student-list {
   margin-top: 300px;
+  margin-bottom: 50vh;
 }
 
 .sticky {
@@ -7202,8 +7213,8 @@ a:link, a:hover, a:active, a:visited {
   position: fixed;
 }
 
-@media screen and (max-width: 768px) {
-  #logo {
+@media screen and (max-width: 992px) {
+  h1 {
     position: relative;
     z-index: auto;
     display: block;
@@ -7216,7 +7227,9 @@ a:link, a:hover, a:active, a:visited {
   .intro {
     margin-top: 50px;
   }
-  .intro h1 {
+}
+@media screen and (max-width: 768px) {
+  .intro h2.sticky {
     display: block;
     text-align: center;
     font-size: 2rem;
@@ -7235,5 +7248,14 @@ a:link, a:hover, a:active, a:visited {
   .scca-student-name {
     margin-top: 200px;
     font-size: 5rem;
+  }
+
+  .scca-student-photo img {
+    right: 15px;
+    left: 15px;
+    margin: auto;
+    width: calc(100% - 30px);
+    height: auto;
+    display: none;
   }
 }
