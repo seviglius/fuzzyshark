@@ -129,8 +129,6 @@ function fuzzyshark_scripts() {
 
 	wp_enqueue_script( 'fuzzyshark-js', get_template_directory_uri() . '/js/fuzzyshark.js', array('fuzzyshark-jquery'), '1', true );
 
-	wp_enqueue_script( 'typekit', 'https://use.typekit.net/cyu0jvu.js', array(), '1', false );
-
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -163,3 +161,17 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/*** TypeKit Fonts ***/
+
+function theme_typekit() {
+    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/cyu0jvu.js');
+}
+add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+
+function theme_typekit_inline() {
+  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php } }
+add_action( 'wp_head', 'theme_typekit_inline' );
