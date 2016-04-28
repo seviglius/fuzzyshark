@@ -7144,10 +7144,10 @@ button.close {
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
 body {
-  background-color: #f63619;
+  background-color: #ee2624;
   color: #fff;
   overflow-x: hidden;
-  font-family: "azo-sans-web", sans-serif;
+  font-family: "tk-azo-sans-web", sans-serif;
 }
 
 h1 {
@@ -7251,10 +7251,8 @@ a.underlined {
   }
 
   .scca-student-photo img {
-    right: 15px;
-    left: 15px;
-    margin: auto;
-    width: calc(100% - 30px);
+    margin: auto 0;
+    width: 100%;
     height: auto;
     display: none;
   }

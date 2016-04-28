@@ -1,11 +1,9 @@
-$background: #f63619;
-$text: #fff;
 
 body {
 	background-color: $background;	
 	color: $text;
 	overflow-x: hidden;
-	font-family: "azo-sans-web", sans-serif;
+	font-family: "tk-azo-sans-web", sans-serif;
 }
 
 h1 {
@@ -120,10 +118,8 @@ h1 {
 		}  
 
 	.scca-student-photo img {
-		right: 15px;
-		left: 15px;
-		margin: auto;
-		width: calc(100% - 30px);
+		margin: auto 0;
+		width: 100%;
 		height: auto;
 		display: none;
 	}
