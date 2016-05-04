@@ -65,6 +65,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/Logo_Play.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33012,
+		"inputAbbreviatedPath": "\/img\/Logo_Play.png",
+		"outputAbbreviatedPath": "\/img\/Logo_Play.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/Logo_Play_2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2526,
+		"inputAbbreviatedPath": "\/img\/Logo_Play_2.png",
+		"outputAbbreviatedPath": "\/img\/Logo_Play_2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/inc\/custom-header.php": {
 		"fileType": 8192,
 		"ignore": 0,

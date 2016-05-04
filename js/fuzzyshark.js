@@ -17,3 +17,13 @@ new Waypoint({
   offset: '55%'
 });
 });
+
+var target = $('#video-container');
+var targetHeight = target.outerHeight();
+
+$(document).scroll(function(e){
+    var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
+    if(scrollPercent >= 50){
+        target.css('opacity', scrollPercent);
+    }
+});
