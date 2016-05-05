@@ -33,7 +33,7 @@ get_header(); ?>
 
 
 
-<?php if (get_row_layout() == 'module_2' ): ?>
+<?php if ( get_row_layout() == 'module_2' ): ?>
 	<!--module 2 6column text centered-->
 	<div class="container">
 <div class="row">
