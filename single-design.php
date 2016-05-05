@@ -52,11 +52,11 @@ get_header(); ?>
 <div class="col-md-5">
 	<img src="<?php the_sub_field('image'); ?>" alt="project image 3">
 	</div>
-	<?php if(get_sub_field('caption')): ?>
+	<?php if(get_sub_field('caption') ) : ?>
 	<div class="col-md-5 col-md-offset-1">
 		<?php the_sub_field('caption'); ?>
-</div>
-<?php endif; ?>
+	</div>
+	<?php endif; ?>
 </div>
 </div>
 <?php endif; ?>
