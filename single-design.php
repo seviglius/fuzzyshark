@@ -54,7 +54,7 @@ get_header(); ?>
 	</div>
 	<?php if(get_sub_field('caption')): ?>
 	<div class="col-md-5 col-md-offset-1">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 </div>
 <?php endif; ?>
 </div>
@@ -71,7 +71,7 @@ get_header(); ?>
 			<img src="<?php the_sub_field('image'); ?>" alt="project image 4">
 			</div>
 	<div class="col-md-5 col-md-offset-1 col-md-pull-6">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 	</div>
 		<?php else : ?>
 			<div class="col-md-5 col-md-offset-7">
@@ -92,7 +92,7 @@ get_header(); ?>
 					</div>
 					<?php if(get_sub_field('caption')): ?>
 					<div class="col-md-3">
-						<?php the sub_field('caption'); ?>
+						<?php the_sub_field('caption'); ?>
 				</div>
 				<?php endif; ?>
 				</div>
@@ -109,7 +109,7 @@ get_header(); ?>
 			<img src="<?php the_sub_field('image'); ?>" alt="project image 6">
 			</div>
 	<div class="col-md-3 col-md-offset-1 col-md-pull-8">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 	</div>
 		<?php else : ?>
 			<div class="col-md-8 col-md-offset-4">
@@ -129,7 +129,7 @@ get_header(); ?>
 	</div>
 	<?php if(get_sub_field('caption')): ?>
 	<div class="col-md-5">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 </div>
 <?php endif; ?>
 </div>
@@ -145,7 +145,7 @@ get_header(); ?>
 			<img src="<?php the_sub_field('image'); ?>" alt="project image 8">
 			</div>
 	<div class="col-md-5 col-md-offset-1 col-md-pull-6">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 	</div>
 		<?php else : ?>
 			<div class="col-md-5 col-md-offset-7">
@@ -204,7 +204,7 @@ endif;
 	</div>
 	<?php if(get_sub_field('caption')): ?>
 	<div class="col-md-6 col-md-offset-1">
-		<?php the sub_field('caption'); ?>
+		<?php the_sub_field('caption'); ?>
 </div>
 <?php endif; ?>
 </div>
