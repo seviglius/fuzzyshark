@@ -156,7 +156,7 @@ get_header(); ?>
 </div>
 <?php endif; ?>
 
-
+<?php /*
 <?php if(get_row_layout() == 'module_9' ): ?>
 <!--module 9 4column image 2 column margin + gutter on left 1 column padding text 5 column text-->
 <?php if(have_rows('repeater')): while(have_rows('repeater')): the_row(); ?>
@@ -168,7 +168,7 @@ get_header(); ?>
 		<img src="<?php the_sub_field('image'); ?>" alt="project image 9">
 	</div>
 <?php endif; ?>
-<?php if(get_row_layout() == 'caption' ); ?>
+<?php if(get_row_layout() == 'caption' ): ?>
 	<div class="col-md-4">
 		<?php the_sub_field('caption'); ?>
 	</div>
@@ -181,7 +181,7 @@ endwhile;
 endif;
 endif;
 ?>
-
+*/ ?>
 
 
 <?php if (get_row_layout() == 'module_10' ): ?>
