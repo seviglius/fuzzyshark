@@ -45,24 +45,24 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php if (get_row_layout() == 'module_3' ); ?>
+<?php if (get_row_layout() == 'module_3' ): ?>
 <!--module 3 leftalignmarginzeroimagecolumn5 offset1 text6column-->
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-5">
-	<img src="<?php the_sub_field('image'); ?>" alt="project image 3">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="<?php the_sub_field('image'); ?>" alt="project image 3">
+			</div>
+			<?php if(get_sub_field('caption') ) : ?>
+				<div class="col-md-5 col-md-offset-1">
+					<?php the_sub_field('caption'); ?>
+				</div>
+			<?php endif; ?>
+		</div>
 	</div>
-	<?php if(get_sub_field('caption') ) : ?>
-	<div class="col-md-5 col-md-offset-1">
-		<?php the_sub_field('caption'); ?>
-	</div>
-	<?php endif; ?>
-</div>
-</div>
 <?php endif; ?>
 
 
-<?php if(get_row_layout() == 'module_4' ); ?>
+<?php if(get_row_layout() == 'module_4' ): ?>
 <!--module 4 5columntextoffsetone 5columnimagenomarginright-->
 <div class="container-fluid">
 <div class="row">
@@ -83,7 +83,7 @@ get_header(); ?>
 <?php endif; ?>
 
 
-				<?php if (get_row_layout() == 'module_5' ); ?>
+				<?php if (get_row_layout() == 'module_5' ): ?>
 				<!--module 5 8columnimage nomarginleftalign 4columtext*subjecttochange-->
 				<div class="container-fluid">
 				<div class="row">
@@ -100,7 +100,7 @@ get_header(); ?>
 				<?php endif; ?>
 
 
-<?php if (get_row_layout() == 'module_6' ); ?>
+<?php if (get_row_layout() == 'module_6' ): ?>
 <!--module 6 8 column image no margin 4column text image right align-->
 <div class="container-fluid">
 <div class="row">
@@ -120,7 +120,7 @@ get_header(); ?>
 </div>
 <?php endif; ?>
 
-<?php if (get_row_layout() == 'module_7' ); ?>
+<?php if (get_row_layout() == 'module_7' ): ?>
 <!--module 7 12column image centered-->
 <div class="container-fluid">
 <div class="row">
@@ -136,7 +136,7 @@ get_header(); ?>
 </div>
 <?php endif; ?>
 
-<?php if (get_row_layout() == 'module_6' ); ?>
+<?php if (get_row_layout() == 'module_6' ): ?>
 <!--module 8 4column image 2 column margin + gutter on right 1 column padding right 5column-->
 <div class="container-fluid">
 <div class="row">
@@ -157,7 +157,7 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php if(get_row_layout() == 'module_9' ); ?>
+<?php if(get_row_layout() == 'module_9' ): ?>
 <!--module 9 4column image 2 column margin + gutter on left 1 column padding text 5 column text-->
 <?php if(have_rows('repeater')): while(have_rows('repeater')): the_row(); ?>
 	<?php if(have_rows('row')): while(have_rows('row')): the_row(); ?>
@@ -184,7 +184,7 @@ endif;
 
 
 
-<?php if (get_row_layout() == 'module_10' ); ?>
+<?php if (get_row_layout() == 'module_10' ): ?>
 <!--module 10 6 column image large no gutter image 6 column text-->
 <div class="container">
 <div class="row">
@@ -195,7 +195,7 @@ endif;
 </div>
 <?php endif; ?>
 
-<?php if (get_row_layout() == 'module_11' ); ?>
+<?php if (get_row_layout() == 'module_11' ): ?>
 <!--module 11 6 column image no gutter image 6 column column text-->
 <div class="container">
 <div class="row">
