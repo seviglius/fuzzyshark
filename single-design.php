@@ -163,7 +163,7 @@ get_header(); ?>
 	<?php if(have_rows('row')): while(have_rows('row')): the_row(); ?>
 		<div class="container">
 			<div class="row">
-	<?php if(get_row_layout() == 'image' ); ?>
+	<?php if(get_row_layout() == 'image' ): ?>
 	<div class="col-md-4">
 		<img src="<?php the_sub_field('image'); ?>" alt="project image 9">
 	</div>
