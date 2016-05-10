@@ -7150,11 +7150,18 @@ body {
   font-family: "azo-sans-web",sans-serif;
 }
 
-h1 {
+img {
+  width: 100%;
+}
+
+#logo {
   position: fixed;
   width: 305px;
   height: 437px;
-  top: 130px;
+  top: 44%;
+  bottom: 56%;
+  margin: auto;
+  padding-bottom: 25px;
   right: 132px;
   z-index: -9999;
   background-image: url("/img/logo.png");
@@ -7200,6 +7207,7 @@ a.underlined {
   bottom: 10%;
   z-index: -999;
   height: 80%;
+  width: auto;
   display: none;
 }
 
@@ -7239,8 +7247,18 @@ a.underlined {
   background: linear-gradient(#b1246e, transparent);
 }
 
+.collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
+  content: ",";
+}
+.collaborators:last-of-type:not(:first-of-type)::before {
+  content: "and ";
+}
+.collaborators:not(:last-of-type):not(:first-of-type)::after {
+  content: ",";
+}
+
 @media screen and (max-width: 992px) {
-  h1 {
+  #logo {
     position: relative;
     z-index: auto;
     display: block;
@@ -7282,4 +7300,66 @@ a.underlined {
     height: auto;
     display: none;
   }
+
+  .mobile-add-margin {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .mobile-no-margin {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+.single {
+  background: #fff;
+  color: #b1246e;
+  padding-top: 25px;
+}
+.single a:hover, .single a:link, .single a:active, .single a:visited {
+  color: #b1246e;
+}
+.single p {
+  font-size: 16px;
+}
+.single .profile-header {
+  text-align: center;
+  margin-bottom: 200px;
+}
+.single .profile-header h1 {
+  margin-bottom: 36px;
+}
+.single .profile-header p {
+  font-size: 20px;
+  margin-bottom: 36px;
+}
+.single .project-header {
+  text-align: center;
+  color: #000;
+  margin-bottom: 75px;
+}
+.single .project-header a:hover, .single .project-header a:active, .single .project-header a:link, .single .project-header avisited {
+  color: #000;
+}
+.single .project-featured-image {
+  margin-bottom: 100px;
+}
+.single .project-introduction {
+  margin-bottom: 300px;
+}
+.single .profile-footer {
+  text-align: center;
+}
+.single .profile-footer p {
+  margin-bottom: 25px;
+  font-size: 50px;
+}
+.single .profile-footer .social-icons {
+  margin-bottom: 100px;
+}
+.single .module {
+  margin-bottom: 400px;
+}
+.single .module img {
+  margin-bottom: 15px;
 }

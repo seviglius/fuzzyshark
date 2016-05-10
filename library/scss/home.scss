@@ -1,16 +1,25 @@
 
 body {
-	background-color: $background;	
-	color: $text;
+	background-color: $red;	
+	color: $white;
 	overflow-x: hidden;
 	font-family: "azo-sans-web",sans-serif;
 }
 
-h1 {
+
+
+img {
+	width: 100%;
+}
+
+#logo {
 	position: fixed;
 	width: 305px;
 	height: 437px;
-	top: 130px;
+	top: 44%;
+	bottom: 56%;
+	margin: auto;
+	padding-bottom: 25px;
 	right: 132px;
 	z-index: -9999;
 	background-image: url('/img/logo.png');
@@ -24,7 +33,7 @@ a {
 	&:hover,
 	&:active,
 	&:visited {
-	color: $text;
+	color: $white;
 	text-decoration: none;
 	}
 	&.underlined {
@@ -62,6 +71,7 @@ a {
 	bottom: 10%;
 	z-index: -999;
 	height: 80%;
+	width: auto;
 	display: none;
 }
 
@@ -101,9 +111,35 @@ a {
     background: linear-gradient($purple, transparent);
 }
 
+.collaborators {
+	&:first-of-type{
+		&:not(:nth-last-of-type(2)){
+			&:not(:last-of-type){
+				&::after {
+					content: ",";
+				}
+			}
+		}
+	}
+	&:last-of-type{
+		&:not(:first-of-type){
+			&::before {
+				content: "and ";
+			}
+		}
+	}
+	&:not(:last-of-type){
+		&:not(:first-of-type){
+			&::after {
+				content: ",";
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 992px) {
 
-h1 {
+#logo {
 		position: relative;
 		z-index: auto;
 		display: block;
@@ -148,6 +184,16 @@ h1 {
 		width: 100%;
 		height: auto;
 		display: none;
+	}
+
+	.mobile-add-margin {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.mobile-no-margin {
+		margin-right: -15px;
+		margin-left: -15px;
 	}
 	
 }
