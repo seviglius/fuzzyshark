@@ -1,8 +1,4 @@
-<?php
-/**
- * Template Name: Single Design
- */
-get_header(); ?>
+<?php get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -17,23 +13,32 @@ get_header(); ?>
 		</div>
 		<div class="project-header col-sm-12">
 			<h2><?php the_field('project_title'); ?></h2>
-			<?php if(have_rows('collaborators')): ?>
-			<p>In collaboration with
-			<?php while(have_rows('collaborators')): the_row(); ?>
-				<span class="collaborators"><a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('name'); ?></a></span>
-			<?php endwhile; endif; ?>
-			</p>
+			<?php
+
+				$post_objects = get_field('collaborators');
+
+				if( $post_objects ): ?>
+					<p>In collaboration with
+				    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <a class="collaborators" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				    <?php endforeach; ?>
+				    </p>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
 		</div>
 	</div>
 </div>
 
+
+<div class="container">
 <div class="row">
 	<div class="col-md-12 project-featured-image">
 		<img src="<?php the_field('project_featured_image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 	</div>
 </div>
 
-<div class="container">
+
 	<div class="row project-introduction">
 		<div class="col-md-8 col-md-offset-2">
 			<p><?php the_field('project_introduction'); ?></p>

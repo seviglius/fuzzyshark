@@ -1,255 +1,295 @@
-
 <?php get_header(); ?>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/styles/css/single_page.css" ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/styles/css/royal_orig.css" />
+<?php while ( have_posts() ) : the_post(); ?>
+
+<div class="container">
+	<div class="row">
+		<div class="profile-header col-sm-12">
+			<h1><?php the_title(); ?></h1>
+			<p><a href="http://<?php the_field('portfolio_site'); ?>"><?php the_field('portfolio_site'); ?></a></p>
+			<div class="col-sm-4 col-sm-offset-4">
+				<img src="<?php the_field('headshot'); ?>" alt="<?php the_title(); ?>">
+			</div>
+		</div>
+		<div class="project-header col-sm-12">
+			<h2><?php the_field('project_title'); ?></h2>
+			<?php
+
+				$post_objects = get_field('collaborators');
+
+				if( $post_objects ): ?>
+					<p>In collaboration with
+				    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+				        <?php setup_postdata($post); ?>
+				        <a class="collaborators" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				    <?php endforeach; ?>
+				    </p>
+				    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				<?php endif; ?>
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+<div class="row">
+	<div class="col-md-12 project-featured-image">
+		<img src="<?php the_field('project_featured_image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+	</div>
+</div>
+
+
+	<div class="row project-introduction">
+		<div class="col-md-8 col-md-offset-2">
+			<p><?php the_field('project_introduction'); ?></p>
+		</div>
+	</div>
+</div>
 
 
 
 
 
-	<section id="">
-        <div class="container-fluid" id="">
+<?php if (have_rows('project') ):
+	while ( have_rows('project') ): the_row(); ?>
 
 
-            <div class="row">
-            	<div class="col-sm-3">
-            		<img class="responsive-image photo-student-image single-student-portrait" src="<?php the_field('photographer_headshot'); ?>" alt="Photographer Headshot" /> 
+	<?php //module 3 leftalignmarginzeroimagecolumn5 offset1 text6column
+	if (get_row_layout() == 'module_3' ): ?>
+			<div class="row module">
+				<div class="col-sm-5">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
+				<?php if(get_sub_field('caption') ) : ?>
+					<div class="col-sm-5 col-sm-offset-1 mobile-add-margin">
+						<p><?php the_sub_field('caption'); ?></p>
+					</div>
+				<?php endif; ?>
+			</div>
+	<?php endif; ?>
 
 
-				<div class="col-md-6 about-student pad-sidebar"> 
-					<h3 class="student-name text-uppercase"><?php the_field('photograper_name');?></h3>
-
-					<!--skills-->
-					<div class="photographer_skills">
-					<?php if( have_rows('photo_skills_web') ): ?>
-					<?php while( have_rows('photo_skills_web') ): the_row(); ?>
-						<p class="inline-text text-uppercase photo-category"> <?php the_sub_field('photo_primary_skill_web'); ?></p>
-						<p class="inline-text pipe">|</p>
-						<p class="inline-text text-uppercase photo-category"><?php the_sub_field('photo_secondary_skill_web'); ?></p>
-						<p class="inline-text pipe">|</p>
-						<p class="inline-text text-uppercase photo-category"><?php the_sub_field('photo_tertiary_skill_web'); ?></p>
-					<?php endwhile; ?>
-					<?php endif; ?>
-					</div><!--designer_skills closes-->
-
-
-					<a href="<?php the_field('photographer_website_url'); ?>" class="student-url" target="blank"><?php the_field('photographer_website');?></a>
-
-
-					<!--social media-->
-						<?php if( have_rows('social_media') ): ?>
-							<?php while( have_rows('social_media') ): the_row(); ?>
+	<?php //module 4 5columntextoffsetone 5columnimagenomarginright
+	if(get_row_layout() == 'module_4' ): ?>
+	<div class="row module">
+		<?php if(get_sub_field('caption')): ?>
+			<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
+				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+		<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin">
+			<p><?php the_sub_field('caption'); ?></p>
+		</div>
+			<?php else : ?>
+				<div class="col-sm-5 col-sm-offset-7">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					</div>
+				<?php endif; ?>
+	</div>
+	<?php endif; ?>
 
 
-								<?php if(get_sub_field('linkedin_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('linkedin_page'); ?>" target="_blank">
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-linkedin "></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
-
-								<?php if(get_sub_field('facebook_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('facebook_page'); ?>" target="_blank">
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-facebook"></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
-
-								<?php if(get_sub_field('twitter_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('twitter_page'); ?>" target="_blank">
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-twitter"></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
-
-								<?php if(get_sub_field('instagram_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('instagram_page'); ?>"target="_blank" >
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-instagram "></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
-
-								<?php if(get_sub_field('tumblr_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('tumblr_page'); ?>" target="_blank">
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-tumblr"></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
-
-								<?php if(get_sub_field('pinterest_page') ): ?>
-									<a class="social-icon" href="<?php the_sub_field('pinterest_page'); ?>" target="_blank">
-										<span class="fa-stack fa-lg scca-social-button">
-		                    				<i class="fa fa-stack-1x fa-pinterest"></i>
-		                				</span>
-									</a>
-								<?php endif; ?>
+	<?php //module 5 8columnimage nomarginleftalign 4columtext subjecttochange
+	if (get_row_layout() == 'module_5' ): ?>
+	<div class="row module">
+	<div class="col-sm-8">
+		<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+		</div>
+		<?php if(get_sub_field('caption')): ?>
+		<div class="col-sm-3 mobile-add-margin">
+			<p><?php the_sub_field('caption'); ?></p>
+	</div>
+	<?php endif; ?>
+	</div>
+	<?php endif; ?>
 
 
-						    <?php endwhile; ?>
+	<?php //module 6 8 column image no margin 4column text image right align
+	if (get_row_layout() == 'module_6' ): ?>
+	<div class="row module">
+		<?php if(get_sub_field('caption')): ?>
+			<div class="col-sm-8 col-sm-push-4">
+				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin">
+			<p><?php the_sub_field('caption'); ?></p>
+		</div>
+			<?php else : ?>
+				<div class="col-sm-8 col-sm-offset-4">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					</div>
+				<?php endif; ?>
+	</div>
+	<?php endif; ?>
+
+	<?php //module 7 12column image centered
+	if (get_row_layout() == 'module_7' ): ?>
+		<div class="row module">
+			<div class="col-sm-6">
+				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+			</div>
+			<?php if(get_sub_field('caption')): ?>
+				<div class="col-sm-5 mobile-add-margin">
+					<p><?php the_sub_field('caption'); ?></p>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+
+	<?php //module 8 4column image 2 column margin + gutter on right 1 column padding right 5column
+	if (get_row_layout() == 'module_8' ): ?>
+		<div class="row module">
+			<?php if(get_sub_field('caption')): ?>
+				<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin">
+					<p><?php the_sub_field('caption'); ?></p>
+				</div>
+			<?php else : ?>
+				<div class="col-sm-5 col-sm-offset-7">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
+
+
+	<?php //module 9 4column image 2 column margin + gutter on left 1 column padding text 5 column text
+	if(get_row_layout() == 'module_9' ): ?>
+		
+	<div class="container">
+					<div class="row module">
+		<?php if(have_rows('repeater')): while(have_rows('repeater')): the_row(); ?>
+			<?php if(have_rows('row')): while(have_rows('row')): the_row(); ?>
+						<?php if(get_row_layout() == 'image' ): ?>
+							<div class="col-sm-4 mobile-no-margin">
+								<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+							</div>
+						<?php endif; 
+						if(get_row_layout() == 'caption' ): ?>
+							<div class="col-sm-4">
+								<p><?php the_sub_field('caption'); ?></p>
+							</div>
 						<?php endif; ?>
-				
-
-
-
-					<p class="student-description"><?php the_field('personal_description');?></p> 
-
-
-				</div><!--col 6 closes--> 
-
-				<div class="col-sm-5"></div>
-        	</div> <!--row-->
-
-	
-
-
-
-	    	<div class="row">
-	        	<div class="col-sm-12">
-					<div class="royalSlider rsDefault">
-						<!-- lazy loaded image with thumbnail -->
-
-						<?php while(the_flexible_field("gallery_photos")): ?>" 
-							<?php if(get_row_layout() == "gallery_photos"): // layout: Content ?>
-								<a class="rsImg" 
-									data-rsBigImg="<?php the_sub_field('fullsize_photo'); ?>" 
-									href="<?php the_sub_field('fullsize_photo'); ?>" 
-									data-rsVideo="<?php the_sub_field('video_url'); ?>">
-									<p class="photo-text"><?php the_sub_field('photo_description');?> </p>
-
-									<div class="col-sm-4"></div>
-
-									<div class="col-sm-4">
-										<img src="<?php the_sub_field("gallery_thumbnail"); ?>" class="rsTmb" />
-									</div>
-
-									<div class="col-sm-4"></div>
-
-								</a>
-							<?php endif; ?>
-						<?php endwhile; ?>
-
-					</div><!--slider-->
-
-
-				</div><!--col-->	
-	    	</div> <!--row-->
-
-
-
-
-
-
-            <div class="row">
-            	<div class="col-sm-2"></div>
-            	<div class="col-sm-8">
-            		<p class="process-statement"><?php the_field('photo_process');?></p> 
-				</div> 
-				<div class="col-sm-2"></div>				
-        	</div> <!--row-->
- 
-
-	  
-
-		<!--previous/next nav -->
-
-	    	<!-- <div class="row pad_nav_photo">
-				<div class="col-xs-12  col-sm-6">
-
-					<div class="ppara-photo2 navigation">
-					<p class="ppad_nav_photo">
-					<?php c2c_previous_or_loop_post_link('%link') ?></p>
-					</div>
 					
+			<?php endwhile; endif; endwhile; endif;
+			?>
+			</div>
 				</div>
-					
-	   
-	        	<div class="col-xs-12 col-sm-6">	
+		<?php
+	endif; ?>
 
-					<div class="ppara-photo navigation">
-						<p class="ppad_nav_photo">
-						<?php c2c_next_or_loop_post_link('%link')?></p>
+
+
+	<?php //module 10 6 column image large no gutter image 6 column text
+	if (get_row_layout() == 'module_10' ): ?>
+		<div class="container">
+			<div class="row module">
+				<div class="col-sm-10 col-sm-offset-1 mobile-no-margin">
+					<?php if (have_rows('image_video') ): while ( have_rows('image_video') ): the_row(); ?>
+					<?php if (get_row_layout() == 'image' ): ?>
+						<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php endif; ?>
+					<?php if (get_row_layout() == 'video' ): ?>
+						<?php the_sub_field('video'); ?>
+					<?php endif; ?>
+				<?php endwhile; endif; ?>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<?php //module 11 6 column image no gutter image 6 column column text
+	if (get_row_layout() == 'module_11' ): ?>
+		<div class="container">
+			<div class="row module">
+				<div class="col-sm-5 mobile-no-margin">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<?php if(get_sub_field('caption')): ?>
+					<div class="col-sm-6 col-sm-offset-1">
+						<p><?php the_sub_field('caption'); ?></p>
 					</div>
-				
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<?php //module 12 6 column image no gutter image 6 column column text
+	if (get_row_layout() == 'module_12' ): ?>
+		<div class="container">
+			<div class="row module">
+				<div class="col-sm-6 mobile-no-margin">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
+				<?php if(get_sub_field('caption')): ?>
+					<div class="col-sm-6">
+						<p><?php the_sub_field('caption'); ?></p>
+					</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 
-	    	</div> --> <!--row-->
+<?php endwhile; endif; ?>
 
+<div class="container">
+	<div class="row profile-footer">
+		<div class="col-sm-12">
+			<p><a href="http://<?php the_field('portfolio_site'); ?>"><?php the_field('portfolio_site'); ?></a></p>
+			<div class="social-icons">
+				<?php if(get_field('linkedin_page') ): ?>
+					<a class="social-icon" href="<?php the_field('linkedin_page'); ?>" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-linkedin "></i>
+        				</span>
+					</a>
+				<?php endif; ?>
 
-		</div> <!--container-->
-	</section> <!--section -->
+				<?php if(get_field('facebook_page') ): ?>
+					<a class="social-icon" href="<?php the_field('facebook_page'); ?>" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-facebook"></i>
+        				</span>
+					</a>
+				<?php endif; ?>
 
+				<?php if(get_field('twitter_page') ): ?>
+					<a class="social-icon" href="<?php the_field('twitter_page'); ?>" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-twitter"></i>
+        				</span>
+					</a>
+				<?php endif; ?>
 
-	    
-    
-	  
+				<?php if(get_field('instagram_page') ): ?>
+					<a class="social-icon" href="<?php the_field('instagram_page'); ?>"target="_blank" >
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-instagram "></i>
+        				</span>
+					</a>
+				<?php endif; ?>
 
+				<?php if(get_field('tumblr_page') ): ?>
+					<a class="social-icon" href="<?php the_field('tumblr_page'); ?>" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-tumblr"></i>
+        				</span>
+					</a>
+				<?php endif; ?>
 
-	<!-- jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+				<?php if(get_field('pinterest_page') ): ?>
+					<a class="social-icon" href="<?php the_field('pinterest_page'); ?>" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-pinterest"></i>
+        				</span>
+					</a>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+</div>
 
-
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/royalslider.js"></script>
-
-
-
-	<!--royal slider script-->
-	        <script>
-	            jQuery(document).ready(function($) {
-	                $(".royalSlider").royalSlider({
-	                    keyboardNavEnabled: true,
-	                    loop: true,
-	                    autoScaleSlider: true,
-	                    usePreloader: true,
-	                    arrows: true,
-	                    controlsInside: true,
-	                    controlNavigation: 'tabs',
-	                    thumbs: {
-	                            // thumbnails options go gere
-	                            spacing: 10,
-	                            arrowsAutoHide: false,
-	                            },
-
-	                    fullscreen: {
-	                        // fullscreen options go gere
-	                        enabled: true,
-	                        nativeFS: false,
-	                    },
-
-	                    globalCaption: true,
-	                    fitInViewport: true,
-
-	                    arrowsNavAutoHide: true,
-
-	                    autoScaleSlider:true,
-	                    autoScaleSliderHeight: 400,
-	                    autoScaleSliderWidth: 800,
-                    
-	                    autoPlay: {
-	                    	// autoplay options go gere
-	                    	enabled: true,
-	                    	pauseOnHover: true,
-	                    },
-
-	                    imageScaleMode:'fit',
-	                    imageAlignCenter: true,
-
-	                });  
-	            });
-	        </script>
-
-
-
-
-
-
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
-	                
