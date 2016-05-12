@@ -1,0 +1,36 @@
+/*////////////////////////////////////////////////////
+SITEMAP-NAVBAR
+////////////////////////////////////////////////////*/
+
+div.sitemap-navbar{
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	padding: 0;
+	ul#menu-sitemap{
+		padding:1% 0;
+		margin:0;
+		position: relative;
+		text-align: center;
+		li{
+			position: relative;
+			list-style: none;
+			display: inline-block;
+			&:nth-of-type(1){
+				position: absolute;
+				left:1%;
+			}
+			&:nth-of-type(3){
+				position: absolute;
+				right:1%;
+			}
+			a{
+				padding:.5rem 1rem;
+				height:inherit;
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
