@@ -127,6 +127,8 @@ function fuzzyshark_scripts() {
 
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/min/jquery.waypoints.min.js' );
 
+	wp_enqueue_script( 'stickykit', get_template_directory_uri() . '/js/jquery.sticky-kit.min.js' );
+
 	wp_enqueue_script( 'fuzzyshark-js', get_template_directory_uri() . '/js/fuzzyshark.js', array('fuzzyshark-jquery'), '1', true );
 
 	wp_enqueue_script( 'font-awesome',  '//use.fontawesome.com/ca6014a4d4.js', true );
@@ -177,3 +179,10 @@ function theme_typekit_inline() {
   	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php } }
 add_action( 'wp_head', 'theme_typekit_inline' );
+
+
+function my_myme_types($mime_types){
+    $mime_types['psd'] = 'image/vnd.adobe.photoshop'; //Adding psd extension
+    return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
