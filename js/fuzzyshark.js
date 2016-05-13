@@ -27,3 +27,19 @@ $(document).scroll(function(e){
         target.css('opacity', scrollPercent);
     }
 });
+
+$( document ).ready(function() {
+
+$(".stick-in-parent").stick_in_parent({offset_top: 200});
+
+$('.stick-in-parent')
+
+.on('sticky_kit:bottom', function(e) {
+    $(this).parent().css('position', 'static');
+})
+.on('sticky_kit:unbottom', function(e) {
+    $(this).parent().css('position', 'relative');
+})
+
+
+});

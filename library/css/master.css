@@ -7327,7 +7327,7 @@ a.underlined {
   margin-bottom: 200px;
 }
 .single .profile-header h1 {
-  margin-bottom: 36px;
+  margin-bottom: 15px;
 }
 .single .profile-header p {
   font-size: 20px;
@@ -7362,4 +7362,48 @@ a.underlined {
 }
 .single .module img {
   margin-bottom: 15px;
+}
+
+/*////////////////////////////////////////////////////
+SITEMAP
+////////////////////////////////////////////////////*/
+div.sitemap-grid {
+  text-align: center;
+  background-color: blue !important;
+}
+
+/*////////////////////////////////////////////////////
+SITEMAP-NAVBAR
+////////////////////////////////////////////////////*/
+div.sitemap-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+div.sitemap-navbar ul#menu-sitemap {
+  padding: 1% 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+div.sitemap-navbar ul#menu-sitemap li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+div.sitemap-navbar ul#menu-sitemap li:nth-of-type(1) {
+  position: absolute;
+  left: 1%;
+}
+div.sitemap-navbar ul#menu-sitemap li:nth-of-type(3) {
+  position: absolute;
+  right: 1%;
+}
+div.sitemap-navbar ul#menu-sitemap li a {
+  padding: .5rem 1rem;
+  height: inherit;
+  display: block;
+  text-transform: uppercase;
 }
