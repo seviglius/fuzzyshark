@@ -237,8 +237,30 @@
 		</div>
 	<?php endif; ?>
 
-	<?php //module 12 6 column image no gutter image 6 column column text
+	<?php //module 12
 	if (get_row_layout() == 'module_12' ): ?>
+		<div class="container">
+			<div class="row module">
+				<?php if(get_sub_field('caption')): ?>
+				<div class="col-sm-5 col-sm-offset-1 mobile-no-margin col-sm-push-6 stick-in-parent">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
+					<p><?php the_sub_field('caption'); ?></p>
+				</div>
+				<?php else : ?>
+				<div class="col-sm-5 col-sm-offset-7 mobile-no-margin stick-in-parent">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	
+
+	<?php //module 13 6 column image no gutter image 6 column column text
+	if (get_row_layout() == 'module_13' ): ?>
 		<div class="container">
 			<div class="row module">
 				<div class="col-sm-6 mobile-no-margin stick-in-parent">
@@ -253,8 +275,28 @@
 		</div>
 	<?php endif; ?>
 
-	<?php //module 13 no margin hero image because the photographers are such whiners
-	if (get_row_layout() == 'module_13' ): ?>
+	<?php //module 14 6 column image no gutter image 6 column column text
+	if (get_row_layout() == 'module_14' ): ?>
+		<div class="container">
+			<div class="row module">
+				<?php if(get_sub_field('caption')): ?>
+				<div class="col-sm-6 mobile-no-margin col-sm-push-6 stick-in-parent">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
+					<p><?php the_sub_field('caption'); ?></p>
+				</div>
+				<?php else : ?>
+				<div class="col-sm-6 col-sm-offset-6 mobile-no-margin stick-in-parent">
+					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<?php //module 15 no margin hero image because the photographers are such whiners
+	if (get_row_layout() == 'module_15' ): ?>
 			<div class="row module">
 				<div class="col-sm-12">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
