@@ -1,81 +1,65 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-( function() {
-	var container, button, menu, links, subMenus, i, len;
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
+
+
+jQuery(document).ready(function($){
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var Query = 0;
+
+	
+	if($(window).width() > Query ) {
+		var headerHeight = $('.header').height();
+		$(window).on('scroll',
+		{
+	        previousTop: 0
+	    }, 
+	    function () {
+		    var currentTop = $(window).scrollTop();
+		    //check if user is scrolling up
+		    if (currentTop < this.previousTop ) {
+		    	//if scrolling up...
+		    	if (currentTop > 0 && $('.header').hasClass('is-fixed')) {
+		    		$('.header').addClass('visible');
+		    	} else {
+		    		$('.header').removeClass('visible is-fixed');
+		    	}
+		    } else {
+		    	//if scrolling down...
+		    	$('.header').removeClass('visible');
+		    	if( currentTop > headerHeight && !$('.header').hasClass('is-fixed')) $('.header').addClass('is-fixed');
+		    }
+		    this.previousTop = currentTop;
+		});
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
+	$('.trigger').on('click', function(){
+		$('.menu-icon').toggleClass('is-clicked'); 
+		$('.header').toggleClass('menu-is-open');
+		$(".menu-text").css({"color": "#433a97"}, 200);
 
-	menu = container.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	menu.setAttribute( 'aria-expanded', 'false' );
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
+		
+		if( $('.primary-nav').hasClass('visible') ) {
+			$('.primary-nav').removeClass('visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').removeClass('overflow-hidden');
+				$(".menu-text").css({"color": "#fff"}, 200);
+			});
 		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
+			$('.primary-nav').addClass('visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').addClass('overflow-hidden');
+				// $(".menu-text").animate({"color": "#433a97"});
+
+			});	
 		}
-	};
+	});
+});
 
-	// Get all the link elements within the menu.
-	links    = menu.getElementsByTagName( 'a' );
-	subMenus = menu.getElementsByTagName( 'ul' );
+var $btns = $('.btn').click(function() {
+  if (this.id == 'all') {
+    $('#parent > div').fadeIn(450);
+  } else {
+    var $el = $('.' + this.id).fadeIn(450);
+    $('#parent > div').not($el).hide();
+  }
+  $btns.removeClass('active');
+  $(this).addClass('active');
+})
 
-	// Set menu items with submenus to aria-haspopup="true".
-	for ( i = 0, len = subMenus.length; i < len; i++ ) {
-		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
-	}
-
-	// Each time a menu link is focused or blurred, toggle focus.
-	for ( i = 0, len = links.length; i < len; i++ ) {
-		links[i].addEventListener( 'focus', toggleFocus, true );
-		links[i].addEventListener( 'blur', toggleFocus, true );
-	}
-
-	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		var self = this;
-
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
-
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
-				} else {
-					self.className += ' focus';
-				}
-			}
-
-			self = self.parentElement;
-		}
-	}
-} )();
