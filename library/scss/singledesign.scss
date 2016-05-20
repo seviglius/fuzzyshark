@@ -1,7 +1,7 @@
 .single {
 
 		background: $white;
-		color: $purple;
+		color: $black;
 		padding-top: 25px;
 
 		a {
@@ -11,7 +11,10 @@
 		}
 
 		p {
-			font-size: 16px;
+			font-size: 20px;
+			@media screen and (max-width: 768px) {
+				font-size: 16px;
+			}
 		}
 
 		.profile-header {
@@ -26,6 +29,12 @@
 			p {
 				font-size: 20px;
 				margin-bottom: 36px;
+			}
+			img {
+				width: 235px;
+				height: auto;
+				display: block;
+				margin: 0 auto;
 			}
  
 
@@ -67,19 +76,110 @@
 
 		}
 
-		.module {
-			margin-bottom: 400px;
-			img {
-				margin-bottom: 15px;
-			}
+		
+
+
+		@media screen and (min-width: 768px) {
+
+				.caption-box {
+					position: fixed;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					height: 100%;
+					width: 100%;
+					div {
+						margin-top: 15%;
+					}
+					.bwb-push-1 {
+						margin-left: calc(8.333333% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-2 {
+						margin-left: calc(16.666666667% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-3 {
+						margin-left: calc(25% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-4 {
+						margin-left: calc(33.333333333% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-5 {
+						margin-left: calc(41.6666666667% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-6 {
+						margin-left: calc(50% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-7 {
+						margin-left: calc(58.333333333333% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-8 {
+						margin-left: calc(66.66666666667% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-9 {
+						margin-left: calc(75% + 5px);
+						left: auto;
+						right: auto;
+					}
+					.bwb-push-10 {
+						margin-left: calc(83.3333333333% + 5px);
+						left: auto;
+						right: auto;
+					}
+				}
+
+				.module {
+					margin-bottom: 400px;
+					img {
+						margin-bottom: 15px;
+					}
+					p {
+						opacity: 0;
+						transition: 0.5s;
+					}
+					.caption.opacity-toggle {
+					opacity: 1;
+				}
+
+				}
 
 		}
 
 
-
-
-
-
+.container>div>.caption-box {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	@media (min-width: 768px) {
+	    width: 750px;
+	}
+	@media (min-width: 992px) {
+	    width: 970px;
+	}
+	@media (min-width: 1200px) {
+	    width: 1170px;
+	 }
+}
+.background-red {
+	background: red;
+}
 
 
 

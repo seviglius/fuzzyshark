@@ -6,10 +6,8 @@
 	<div class="row">
 		<div class="profile-header col-sm-12">
 			<h1><?php the_title(); ?></h1>
-			<p><a href="http://<?php the_field('portfolio_site'); ?>"><?php the_field('portfolio_site'); ?></a></p>
-			<div class="col-sm-4 col-sm-offset-4">
-				<img src="<?php the_field('headshot'); ?>" alt="<?php the_title(); ?>">
-			</div>
+			<p><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
+			<img src="<?php the_field('headshot'); ?>" alt="<?php the_title(); ?>">
 		</div>
 		<div class="project-header col-sm-12">
 			<h2><?php the_field('project_title'); ?></h2>
@@ -83,9 +81,11 @@
 					<img id="module-3-img" src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption') ) : ?>
-					<div class="col-sm-5 col-sm-offset-1 mobile-add-margin stick-in-parent">
-						<p id="module-3-p"><?php the_sub_field('caption'); ?></p>
+					<div class="caption-box">
+					<div class="col-sm-5 col-sm-offset-1 mobile-add-margin stick-in-parent bwb-push-6">
+						<p class="caption"><?php the_sub_field('caption'); ?></p>
 					</div>
+				</div>
 				<?php endif; ?>
 			</div>
 	<?php endif; ?>
@@ -97,10 +97,12 @@
 		<?php if(get_sub_field('caption')): ?>
 			<div class="col-sm-5 col-sm-offset-1 col-sm-push-6 stick-in-parent">
 				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+			</div>
+			<div class="caption-box">
+				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin stick-in-parent bwb-push-1">
+					<p class="caption"><?php the_sub_field('caption'); ?></p>
 				</div>
-		<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin stick-in-parent">
-			<p><?php the_sub_field('caption'); ?></p>
-		</div>
+			</div>
 			<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
@@ -117,9 +119,11 @@
 		<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 		</div>
 		<?php if(get_sub_field('caption')): ?>
-		<div class="col-sm-3 mobile-add-margin stick-in-parent">
-			<p><?php the_sub_field('caption'); ?></p>
+		<div class="caption-box">
+		<div class="col-sm-3 mobile-add-margin stick-in-parent bwb-push-8">
+			<p class="caption"><?php the_sub_field('caption'); ?></p>
 	</div>
+</div>
 	<?php endif; ?>
 	</div>
 	<?php endif; ?>
@@ -132,9 +136,11 @@
 			<div class="col-sm-8 col-sm-push-4 stick-in-parent">
 				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
-		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin stick-in-parent">
-			<p><?php the_sub_field('caption'); ?></p>
+				<div class="caption-box">
+		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin stick-in-parent bwb-push-1">
+			<p class="caption"><?php the_sub_field('caption'); ?></p>
 		</div>
+	</div>
 			<?php else : ?>
 				<div class="col-sm-8 col-sm-offset-4 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
@@ -150,9 +156,11 @@
 				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 			</div>
 			<?php if(get_sub_field('caption')): ?>
-				<div class="col-sm-5 mobile-add-margin stick-in-parent">
-					<p><?php the_sub_field('caption'); ?></p>
+			<div class="caption-box">
+				<div class="col-sm-5 mobile-add-margin stick-in-parent bwb-push-6">
+					<p class="caption"><?php the_sub_field('caption'); ?></p>
 				</div>
+			</div>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
@@ -163,10 +171,11 @@
 			<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 col-sm-push-6 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</div><div class="caption-box">
+				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin stick-in-parent bwb-push-1">
+					<p class="caption"><?php the_sub_field('caption'); ?></p>
 				</div>
-				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin stick-in-parent">
-					<p><?php the_sub_field('caption'); ?></p>
-				</div>
+			</div>
 			<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
@@ -189,9 +198,11 @@
 							</div>
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
+						<div class="caption-box">
 							<div class="col-sm-4 stick-in-parent">
-								<p><?php the_sub_field('caption'); ?></p>
+								<p class="caption"><?php the_sub_field('caption'); ?></p>
 							</div>
+						</div>
 						<?php endif; ?>
 					
 			<?php endwhile; endif; endwhile; endif;
@@ -229,9 +240,11 @@
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption')): ?>
-					<div class="col-sm-6 col-sm-offset-1 stick-in-parent">
-						<p><?php the_sub_field('caption'); ?></p>
+				<div class="caption-box">
+					<div class="col-sm-6 col-sm-offset-1 stick-in-parent bwb-push-6">
+						<p class="caption"><?php the_sub_field('caption'); ?></p>
 					</div>
+				</div>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -246,7 +259,7 @@
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
-					<p><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php the_sub_field('caption'); ?></p>
 				</div>
 				<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7 mobile-no-margin stick-in-parent">
@@ -267,8 +280,8 @@
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption')): ?>
-					<div class="col-sm-6 stick-in-parent">
-						<p><?php the_sub_field('caption'); ?></p>
+					<div class="col-sm-6 stick-in-parent caption-box bwb-push-6">
+						<p class="caption"><?php the_sub_field('caption'); ?></p>
 					</div>
 				<?php endif; ?>
 			</div>
@@ -283,8 +296,10 @@
 				<div class="col-sm-6 mobile-no-margin col-sm-push-6 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
+				<div class="caption-box">
 				<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
-					<p><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php the_sub_field('caption'); ?></p>
+				</div>
 				</div>
 				<?php else : ?>
 				<div class="col-sm-6 col-sm-offset-6 mobile-no-margin stick-in-parent">
@@ -309,7 +324,7 @@
 <div class="container">
 	<div class="row profile-footer">
 		<div class="col-sm-12">
-			<p><a href="http://<?php the_field('portfolio_site'); ?>"><?php the_field('portfolio_site'); ?></a></p>
+			<p><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
 			<div class="social-icons">
 				<?php if(get_field('linkedin_page') ): ?>
 					<a class="social-icon" href="<?php the_field('linkedin_page'); ?>" target="_blank">
