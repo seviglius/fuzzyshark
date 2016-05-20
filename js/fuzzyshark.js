@@ -25,7 +25,7 @@ $(document).scroll(function(){
     if(scrollPercent >= 50){
         target.css('opacity', scrollPercent);
     }
-}); 
+});
   
 $(".module:nth-of-type(3)").addClass("module-3");
 $(".module:nth-of-type(4)").addClass("module-4");

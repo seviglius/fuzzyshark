@@ -7466,6 +7466,9 @@ a.underlined {
     width: 1170px;
   }
 }
+.single .background-red {
+  background: red;
+}
 
 /*////////////////////////////////////////////////////
 SITEMAP
