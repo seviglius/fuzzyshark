@@ -1,36 +1,182 @@
-/*////////////////////////////////////////////////////
-SITEMAP-NAVBAR
-////////////////////////////////////////////////////*/
-
-div.sitemap-navbar{
-	position: fixed;
-	top:0;
-	left:0;
-	right:0;
-	padding: 0;
-	ul#menu-sitemap{
-		padding:1% 0;
-		margin:0;
-		position: relative;
-		text-align: center;
-		li{
-			position: relative;
-			list-style: none;
-			display: inline-block;
-			&:nth-of-type(1){
-				position: absolute;
-				left:1%;
-			}
-			&:nth-of-type(3){
-				position: absolute;
-				right:1%;
-			}
-			a{
-				padding:.5rem 1rem;
-				height:inherit;
-				display: block;
-				text-transform: uppercase;
-			}
-		}
-	}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+html, body {
+  height: 100%;
+}
+body.overflow-hidden {
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+.indexName a {
+	color: #433a97;
+	font-size: 14px; 
+}
+#parent div {
+	transition: all 0.5s;
+}
+.primary-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+.primary-nav.visible {
+  transform: translateY(0);
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  z-index: 3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 30px;
+    box-shadow: none;
+  }
+}
+@media only screen and (min-width: 0px) {
+  .header {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .header.is-fixed {
+    position: fixed;
+    top: -20px;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .header.visible {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+}
+@media only screen and (min-width: 768px) {
+}
+.trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+}
+.menu-text {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.purple {
+	color: #433a97;
+}
+@media only screen and (min-width: 768px) {
+  .trigger {
+    width: 60px;
+    padding-left: 1em;
+    background-color: transparent;
+    height: 30px;
+    line-height: 30px;
+    right: 2.2em;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.primary-nav {
+  /* by default it's hidden - on top of the viewport */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: 2;
+  text-align: center;
+  padding: 20px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.primary-nav h1{
+  font-size: 18px;
+  color: #433a97;
+}
+.primary-nav li {
+  list-style-type: none;
+  font-size: 30px;
+  color: #433a97;
+  text-align: center;
+}
+.primary-nav ul {
+  -webkit-padding-start: 0px !important;
+}
+.primary-nav .row {
+  padding-bottom: 40px;
+}
+.primary-nav a {
+  display: inline-block;
+  padding: .4em 1em;
+  border-radius: 0.25em;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+/*.no-touch .primary-nav a:hover {
+  background-color: red;
+}*/
+.primary-nav.visible {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+@media only screen and (min-width: 768px) {
+  .primary-nav {
+    padding: 80px 0;
+  }
+}
+
+
+
