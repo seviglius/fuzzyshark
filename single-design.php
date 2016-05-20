@@ -65,8 +65,8 @@
 	<?php //module 2
 	if (get_row_layout() == 'module_2' ): ?>
 		<div class="container">
-			<div class="row module">
-				<div class="col-md-8 col-md-offset-2">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 margin-bottom-400px">
 					<p><?php the_sub_field('caption'); ?></p>
 				</div>
 			</div>
@@ -188,8 +188,8 @@
 	<?php //module 9 4column image 2 column margin + gutter on left 1 column padding text 5 column text
 	if(get_row_layout() == 'module_9' ): ?>
 		
-	<div class="container">
-					<div class="row module">
+	<div class="module container">
+		<div class="row">
 		<?php if(have_rows('repeater')): while(have_rows('repeater')): the_row(); ?>
 			<?php if(have_rows('row')): while(have_rows('row')): the_row(); ?>
 						<?php if(get_row_layout() == 'image' ): ?>
@@ -198,11 +198,9 @@
 							</div>
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
-						<div class="caption-box">
 							<div class="col-sm-4 stick-in-parent">
-								<p class="caption"><?php the_sub_field('caption'); ?></p>
+								<p><?php the_sub_field('caption'); ?></p>
 							</div>
-						</div>
 						<?php endif; ?>
 					
 			<?php endwhile; endif; endwhile; endif;
@@ -216,8 +214,8 @@
 
 	<?php //module 10 6 column image large no gutter image 6 column text
 	if (get_row_layout() == 'module_10' ): ?>
-		<div class="container">
-			<div class="row module">
+		<div class="container module">
+			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1 mobile-no-margin">
 					<?php if (have_rows('image_video') ): while ( have_rows('image_video') ): the_row(); ?>
 					<?php if (get_row_layout() == 'image' ): ?>
@@ -234,8 +232,8 @@
 
 	<?php //module 11 6 column image no gutter image 6 column column text
 	if (get_row_layout() == 'module_11' ): ?>
-		<div class="container">
-			<div class="row module">
+		<div class="container module">
+			<div class="row">
 				<div class="col-sm-5 mobile-no-margin stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
@@ -252,14 +250,14 @@
 
 	<?php //module 12
 	if (get_row_layout() == 'module_12' ): ?>
-		<div class="container">
-			<div class="row module">
+		<div class="container module">
+			<div class="row">
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 mobile-no-margin col-sm-push-6 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="caption-box">
-					<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
+					<div class="col-sm-6 col-sm-pull-6 stick-in-parent bwb-push-0">
 						<p class="caption"><?php the_sub_field('caption'); ?></p>
 					</div>
 				</div>
@@ -276,8 +274,8 @@
 
 	<?php //module 13 6 column image no gutter image 6 column column text
 	if (get_row_layout() == 'module_13' ): ?>
-		<div class="container">
-			<div class="row module">
+		<div class="container module">
+			<div class="row">
 				<div class="col-sm-6 mobile-no-margin stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
@@ -294,14 +292,14 @@
 
 	<?php //module 14 6 column image no gutter image 6 column column text
 	if (get_row_layout() == 'module_14' ): ?>
-		<div class="container">
-			<div class="row module">
+		<div class="container module">
+			<div class="row">
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-6 mobile-no-margin col-sm-push-6 stick-in-parent">
 					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="caption-box">
-					<div class="col-sm-6 col-sm-pull-6 stick-in-parent">
+					<div class="col-sm-6 col-sm-pull-6 stick-in-parent bwb-push-0">
 						<p class="caption"><?php the_sub_field('caption'); ?></p>
 					</div>
 				</div>

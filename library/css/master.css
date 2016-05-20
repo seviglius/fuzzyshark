@@ -7369,6 +7369,9 @@ a.underlined {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
+  .single .margin-bottom-400px {
+    margin-bottom: 400px;
+  }
   .single .caption-box {
     position: fixed;
     top: 0;
@@ -7380,6 +7383,11 @@ a.underlined {
   }
   .single .caption-box div {
     margin-top: 15%;
+  }
+  .single .caption-box .bwb-push-0 {
+    margin-left: 0;
+    left: auto;
+    right: auto;
   }
   .single .caption-box .bwb-push-1 {
     margin-left: calc(8.333333% + 5px);
@@ -7437,7 +7445,7 @@ a.underlined {
   .single .module img {
     margin-bottom: 15px;
   }
-  .single .module p {
+  .single .module p.caption {
     opacity: 0;
     transition: 0.5s;
   }

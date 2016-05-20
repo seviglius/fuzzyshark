@@ -35,6 +35,14 @@ $(".module:nth-of-type(7)").addClass("module-7");
 $(".module:nth-of-type(8)").addClass("module-8");
 $(".module:nth-of-type(9)").addClass("module-9");
 $(".module:nth-of-type(10)").addClass("module-10");
+$(".module:nth-of-type(11)").addClass("module-11");
+$(".module:nth-of-type(12)").addClass("module-12");
+$(".module:nth-of-type(13)").addClass("module-13");
+$(".module:nth-of-type(14)").addClass("module-14");
+$(".module:nth-of-type(15)").addClass("module-15");
+$(".module:nth-of-type(16)").addClass("module-16");
+$(".module:nth-of-type(17)").addClass("module-17");
+$(".module:nth-of-type(18)").addClass("module-18");
 
 $(".module-3").waypoint(function() {
   $(".module-3").find("p.caption").toggleClass("opacity-toggle");
@@ -116,5 +124,84 @@ $(".module-10").waypoint(function() {
  }, { offset: '-30%'
 });
 
+$(".module-11").waypoint(function() {
+  $(".module-11").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-11").waypoint(function() {
+  $(".module-11").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-12").waypoint(function() {
+  $(".module-12").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-12").waypoint(function() {
+  $(".module-12").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-13").waypoint(function() {
+  $(".module-13").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-13").waypoint(function() {
+  $(".module-13").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-14").waypoint(function() {
+  $(".module-14").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-14").waypoint(function() {
+  $(".module-14").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-15").waypoint(function() {
+  $(".module-15").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-15").waypoint(function() {
+  $(".module-15").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-16").waypoint(function() {
+  $(".module-16").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-16").waypoint(function() {
+  $(".module-16").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-17").waypoint(function() {
+  $(".module-17").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-17").waypoint(function() {
+  $(".module-17").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
+
+$(".module-18").waypoint(function() {
+  $(".module-18").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '30%'
+});
+
+$(".module-18").waypoint(function() {
+  $(".module-18").find("p.caption").toggleClass("opacity-toggle");
+ }, { offset: '-30%'
+});
 
 });

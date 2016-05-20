@@ -81,6 +81,10 @@
 
 		@media screen and (min-width: 768px) {
 
+				.margin-bottom-400px {
+					margin-bottom: 400px;
+				}
+
 				.caption-box {
 					position: fixed;
 					top: 0;
@@ -91,6 +95,12 @@
 					width: 100%;
 					div {
 						margin-top: 15%;
+					}
+					
+					.bwb-push-0 {
+						margin-left: 0;
+						left: auto;
+						right: auto;
 					}
 					.bwb-push-1 {
 						margin-left: calc(8.333333% + 5px);
@@ -149,7 +159,7 @@
 					img {
 						margin-bottom: 15px;
 					}
-					p {
+					p.caption {
 						opacity: 0;
 						transition: 0.5s;
 					}
