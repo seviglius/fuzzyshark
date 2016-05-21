@@ -204,4 +204,9 @@ $(".module-18").waypoint(function() {
  }, { offset: '-30%'
 });
 
+
+//responsive videos
+$(".fitvid-container").fitVids();
+
+
 });

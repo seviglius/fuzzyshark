@@ -129,6 +129,8 @@ function fuzzyshark_scripts() {
 
 	wp_enqueue_script( 'inview', get_template_directory_uri() . '/js/inview.js' );
 
+	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js' );
+
 	wp_enqueue_script( 'stickykit', get_template_directory_uri() . '/js/jquery.sticky-kit.min.js' );
 
 	wp_enqueue_script( 'fuzzyshark-js', get_template_directory_uri() . '/js/fuzzyshark.js', array('fuzzyshark-jquery'), '1', true );

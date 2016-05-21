@@ -222,7 +222,7 @@
 						<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 					<?php endif; ?>
 					<?php if (get_row_layout() == 'video' ): ?>
-						<?php the_sub_field('video'); ?>
+						<div class="fitvid-container"><?php the_sub_field('video'); ?></div>
 					<?php endif; ?>
 				<?php endwhile; endif; ?>
 				</div>
