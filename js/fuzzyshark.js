@@ -208,5 +208,9 @@ $(".module-18").waypoint(function() {
 //responsive videos
 $(".fitvid-container").fitVids();
 
+$(".profile-header").waypoint(function() {
+  $(".profile-header").find("p").toggleClass("scroll-opacity");
+  $(".profile-header").find("img").toggleClass("scroll-opacity");
+});
 
 });

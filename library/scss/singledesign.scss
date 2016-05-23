@@ -4,23 +4,52 @@
 		color: $black;
 		padding-top: 25px;
 
+		.home-button {
+			text-transform: uppercase;
+			position: fixed;
+			z-index: 99999;
+			top: 25px;
+			left: 25px;
+			a {
+				display: block;
+			}
+			i {
+				font-size: 25px;
+			}
+			span {
+				margin-left: 5px;
+				font-size: 20px;
+			}
+		}
+
+		#student-name {
+			position: fixed;
+			top: 0;
+			left: 40px;
+			right: 40px;
+			z-index: 9999;
+			width: calc(100% - 80px);
+			text-align: center;
+		}
+
 		a {
 			&:hover, &:link, &:active, &:visited{
-				color: $purple;
+				color: $black;
 			}
 		}
 
 		p {
 			font-size: 20px;
-			@media screen and (max-width: 768px) {
-				font-size: 16px;
-			}
 		}
 
 		.profile-header {
 			
 			text-align: center;
 			margin-bottom: 200px;
+
+			.student-url {
+				margin-top: 50px;
+			}
 
 			h1 {
 			margin-bottom: 15px;
@@ -35,6 +64,17 @@
 				height: auto;
 				display: block;
 				margin: 0 auto;
+			}
+			p {
+				opacity: 1;
+				transition: opacity .5s;
+			}
+			img {
+				opacity: 1;
+				transition: opacity .5s;
+			}
+			.scroll-opacity {
+				opacity: 0;
 			}
  
 
@@ -67,7 +107,9 @@
 
 			p {
 				margin-bottom: 25px;
+				@media screen and (min-width: 768px) {
 				font-size: 50px;
+			}
 			}
 
 			.social-icons {
@@ -186,6 +228,34 @@
 	@media (min-width: 1200px) {
 	    width: 1170px;
 	 }
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.home-button {
+					span {
+						display: none;
+					}
+				}
+	.module {
+		margin-bottom: 200px;
+		img {
+			margin-bottom: 15px;
+		}
+	}
+	p {
+		font-size: 16px;
+	}
+	.profile-footer {
+		margin-bottom: 200px;
+		.student-url {
+				font-size: 30px;
+		}
+	}
+	.margin-bottom-400px {
+		margin-bottom: 200px;
+	}
 }
 
 
