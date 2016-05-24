@@ -24,7 +24,17 @@ html,body {
 #parent div {
 	transition: all .5s;
 }
-
+.purple {
+	color: #433a97;
+	transition: all .5s;
+}
+.white {
+	transition: all .5s;
+}
+.opacity {
+	opacity: 0;
+	transition: all .5s;
+}
 .primary-nav {
 	position: fixed;
 	left: 0;
@@ -111,10 +121,6 @@ html,body {
 	animation-timing-function: linear;
 }
 
-#purple {
-	opacity: 0;
-}
-
 .header {
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
@@ -147,6 +153,7 @@ html,body {
 	font-weight: 700;
 	text-align: center;
 	text-decoration: none;
+	transition: all .5s;
 }
 
 .trigger {
@@ -158,7 +165,6 @@ html,body {
 	transform: translateY(-50%);
 }
 
-<<<<<<< HEAD
 @keyframes tremble {
 	0% {
 		-webkit-transform: scale(0.8) translate(-2px,-1px) rotate(0deg);
@@ -256,9 +262,8 @@ html,body {
 	.primary-nav ul {
 		padding-top: 50px;
 	}
-=======
-.trigger-open-color {
-  color: $white;
->>>>>>> origin/master
 }
-
+.trigger-open-color {
+	  color: white;
+	  transition: all .5s;
+	}

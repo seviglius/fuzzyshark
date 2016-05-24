@@ -7600,6 +7600,20 @@ html, body {
   transition: all .5s;
 }
 
+.purple {
+  color: #433a97;
+  transition: all .5s;
+}
+
+.white {
+  transition: all .5s;
+}
+
+.opacity {
+  opacity: 0;
+  transition: all .5s;
+}
+
 .primary-nav {
   position: fixed;
   left: 0;
@@ -7687,10 +7701,6 @@ html, body {
   animation-timing-function: linear;
 }
 
-#purple {
-  opacity: 0;
-}
-
 .header {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -7723,6 +7733,7 @@ html, body {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+  transition: all .5s;
 }
 
 .trigger {
@@ -7823,5 +7834,6 @@ html, body {
   }
 }
 .trigger-open-color {
-  color: #fff;
+  color: white;
+  transition: all .5s;
 }
