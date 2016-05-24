@@ -7316,10 +7316,25 @@ a.underlined {
   color: #000;
   padding-top: 25px;
 }
+.single header.header {
+  z-index: 99999999;
+}
+.single .primary-nav {
+  z-index: 9999999;
+}
+.single .menu-text {
+  color: #000;
+}
+.single .trigger-open-color {
+  color: #433a97;
+}
+.single iframe {
+  z-index: 9999;
+}
 .single .home-button {
   text-transform: uppercase;
   position: fixed;
-  z-index: 99999;
+  z-index: 999999;
   top: 25px;
   left: 25px;
 }
@@ -7333,27 +7348,30 @@ a.underlined {
   margin-left: 5px;
   font-size: 20px;
 }
-.single #student-name {
-  position: fixed;
-  top: 0;
-  left: 40px;
-  right: 40px;
-  z-index: 9999;
-  width: calc(100% - 80px);
-  text-align: center;
-}
 .single a:hover, .single a:link, .single a:active, .single a:visited {
   color: #000;
 }
 .single p {
   font-size: 20px;
 }
+.single #student-name {
+  position: fixed;
+  z-index: 99999;
+  left: 35px;
+  right: 35px;
+  top: 0;
+  width: calc(100% - 70px);
+  text-align: center;
+  font-size: 36px;
+  transition: font-size 1s;
+}
+.single #student-name.font-size-20px {
+  font-size: 20px;
+}
 .single .profile-header {
   text-align: center;
   margin-bottom: 200px;
-}
-.single .profile-header .student-url {
-  margin-top: 50px;
+  padding-top: 75px;
 }
 .single .profile-header h1 {
   margin-bottom: 15px;
@@ -7376,7 +7394,10 @@ a.underlined {
   opacity: 1;
   transition: opacity .5s;
 }
-.single .profile-header .scroll-opacity {
+.single .scroll-opacity p {
+  opacity: 0;
+}
+.single .scroll-opacity img {
   opacity: 0;
 }
 .single .project-header {
@@ -7740,4 +7761,7 @@ img {
   .primary-nav {
     padding: 80px 0;
   }
+}
+.trigger-open-color {
+  color: #fff;
 }

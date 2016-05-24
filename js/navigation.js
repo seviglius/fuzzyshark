@@ -34,13 +34,14 @@ jQuery(document).ready(function($){
 	$('.trigger').on('click', function(){
 		$('.menu-icon').toggleClass('is-clicked'); 
 		$('.header').toggleClass('menu-is-open');
-		$(".menu-text").css({"color": "#433a97"}, 200);
+		$(".menu-text").toggleClass('trigger-open-color');
 
 		
 		if( $('.primary-nav').hasClass('visible') ) {
 			$('.primary-nav').removeClass('visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
-				$(".menu-text").css({"color": "#fff"}, 200);
+				//$(".menu-text").css({"color": "#fff"}, 200);
+				//$(".menu-text").toggleClass('trigger-open-color');
 			});
 		} else {
 			$('.primary-nav').addClass('visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){

@@ -1,5 +1,27 @@
 .single {
 
+		header.header {
+			z-index: 99999999;
+		}
+
+		.primary-nav {
+			z-index: 9999999;
+		}
+
+		.menu-text {
+			color: $black;
+		}
+
+		.trigger-open-color {
+			color: $darkblue;
+		}
+
+		
+
+		iframe {
+			z-index: 9999;
+		}
+
 		background: $white;
 		color: $black;
 		padding-top: 25px;
@@ -7,7 +29,7 @@
 		.home-button {
 			text-transform: uppercase;
 			position: fixed;
-			z-index: 99999;
+			z-index: 999999;
 			top: 25px;
 			left: 25px;
 			a {
@@ -22,16 +44,6 @@
 			}
 		}
 
-		#student-name {
-			position: fixed;
-			top: 0;
-			left: 40px;
-			right: 40px;
-			z-index: 9999;
-			width: calc(100% - 80px);
-			text-align: center;
-		}
-
 		a {
 			&:hover, &:link, &:active, &:visited{
 				color: $black;
@@ -42,14 +54,26 @@
 			font-size: 20px;
 		}
 
+		#student-name {
+				position: fixed;
+				z-index: 99999;
+				left: 35px;
+				right: 35px;
+				top: 0;
+				width: calc(100% - 70px);
+				text-align: center;
+				font-size: 36px;
+				transition: font-size 1s;
+			}
+			#student-name.font-size-20px {
+				font-size: 20px;
+			}
+
 		.profile-header {
 			
 			text-align: center;
 			margin-bottom: 200px;
-
-			.student-url {
-				margin-top: 50px;
-			}
+			padding-top: 75px;
 
 			h1 {
 			margin-bottom: 15px;
@@ -73,12 +97,18 @@
 				opacity: 1;
 				transition: opacity .5s;
 			}
-			.scroll-opacity {
-				opacity: 0;
-			}
  
 
 		}
+
+		.scroll-opacity {
+				p {
+					opacity: 0;
+				}
+				img {
+					opacity: 0;
+				}
+			}
 
 		.project-header {
 			text-align: center;

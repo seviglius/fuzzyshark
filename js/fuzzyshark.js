@@ -209,8 +209,10 @@ $(".module-18").waypoint(function() {
 $(".fitvid-container").fitVids();
 
 $(".profile-header").waypoint(function() {
-  $(".profile-header").find("p").toggleClass("scroll-opacity");
-  $(".profile-header").find("img").toggleClass("scroll-opacity");
+  $(".profile-header").toggleClass("scroll-opacity");
+  $("#student-name").toggleClass("font-size-20px");
 });
+
+//$("#student-name").sticky({topSpacing:25});
 
 });
