@@ -7311,6 +7311,13 @@ a.underlined {
     margin-left: -15px;
   }
 }
+.home .menu-text {
+  color: #fff;
+}
+.home .trigger-open-color {
+  color: #433a97;
+}
+
 .single {
   background: #fff;
   color: #000;

@@ -31,6 +31,15 @@ jQuery(document).ready(function($){
 		});
 	}
 
+
+$('.trigger').on('click', function(){
+		$('.menu-icon').toggleClass('is-clicked'); 
+		$('.header').toggleClass('menu-is-open');
+		$(".menu-text").toggleClass('trigger-open-color');
+		$('.primary-nav').toggleClass('visible');
+	});
+
+/*
 	$('.trigger').on('click', function(){
 		$('.menu-icon').toggleClass('is-clicked'); 
 		$('.header').toggleClass('menu-is-open');
@@ -51,6 +60,8 @@ jQuery(document).ready(function($){
 			});	
 		}
 	});
+
+*/
 });
 
 var $btns = $('.btn').click(function() {
