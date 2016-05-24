@@ -1,17 +1,23 @@
 <header class="header">
+  <a href="#">
+    <img id="white" src="wp-content/themes/fuzzyshark/img/header_logo.svg">
+  </a>
+  <a href="#">
+    <img id="purple" src="wp-content/themes/fuzzyshark/img/header_logo_purple.svg">
+  </a>
   <a class="trigger" href="#0">
-    <!-- <span class="">Home</span> --><span class="menu-text">Index</span>
+    <span class="menu-text">Index</span>
   </a> <!-- cd-primary-nav-trigger -->
 </header>
 
 <nav>
   <div class="primary-nav">
-    <div class="container">
+    <div class="container filters">
       <div class="row">
             <ul>
-              <a class="btn" class="active btn" id="all" href=#><li>All</li></a>
-              <a class="btn" id="design" href=#><li>Design</li></a>
-              <a class="btn" id="photography" href=#><li>Photo</li></a>
+              <a class="click active" id="all" href=#><li>All</li></a>
+              <a class="click" id="design" href=#><li>Design</li></a>
+              <a class="click" id="photography" href=#><li>Photo</li></a>
             </ul>
       </div><!-- <div class="row"> -->
       <div id="parent">

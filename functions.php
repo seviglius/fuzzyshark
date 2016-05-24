@@ -192,18 +192,3 @@ add_filter('upload_mimes', 'my_myme_types', 1, 1);
 
 
 
-
-
-
-// Adds classes for custom post types to body_class() and post_class()
-function add_design_class( $dclass ) {
-	$post_type = 'designer'; // the Post Type
-
-	if ( get_query_var('post_type') === $post_type ) { // only, if post type is active
-		$dclass[] = $post_type;
-		$dclass[] = 'type-' . $post_type;
-	}
-
-	return $dclass;
-}
-add_filter( 'design', 'add_design_class' );
