@@ -7311,25 +7311,74 @@ a.underlined {
     margin-left: -15px;
   }
 }
+.home .menu-text {
+  color: #fff;
+}
+.home .trigger-open-color {
+  color: #433a97;
+}
+
 .single {
   background: #fff;
   color: #000;
   padding-top: 25px;
 }
+.single header.header {
+  z-index: 99999999;
+}
+.single .primary-nav {
+  z-index: 9999999;
+}
+.single .menu-text {
+  color: #000;
+}
+.single .trigger-open-color {
+  color: #433a97;
+}
+.single iframe {
+  z-index: 9999;
+}
+.single .home-button {
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 999999;
+  top: 25px;
+  left: 25px;
+}
+.single .home-button a {
+  display: block;
+}
+.single .home-button i {
+  font-size: 25px;
+}
+.single .home-button span {
+  margin-left: 5px;
+  font-size: 20px;
+}
 .single a:hover, .single a:link, .single a:active, .single a:visited {
-  color: #b1246e;
+  color: #000;
 }
 .single p {
   font-size: 20px;
 }
-@media screen and (max-width: 768px) {
-  .single p {
-    font-size: 16px;
-  }
+.single #student-name {
+  position: fixed;
+  z-index: 99999;
+  left: 35px;
+  right: 35px;
+  top: 0;
+  width: calc(100% - 70px);
+  text-align: center;
+  font-size: 36px;
+  transition: font-size 1s;
+}
+.single #student-name.font-size-20px {
+  font-size: 20px;
 }
 .single .profile-header {
   text-align: center;
   margin-bottom: 200px;
+  padding-top: 75px;
 }
 .single .profile-header h1 {
   margin-bottom: 15px;
@@ -7343,6 +7392,20 @@ a.underlined {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+.single .profile-header p {
+  opacity: 1;
+  transition: opacity .5s;
+}
+.single .profile-header img {
+  opacity: 1;
+  transition: opacity .5s;
+}
+.single .scroll-opacity p {
+  opacity: 0;
+}
+.single .scroll-opacity img {
+  opacity: 0;
 }
 .single .project-header {
   text-align: center;
@@ -7363,12 +7426,19 @@ a.underlined {
 }
 .single .profile-footer p {
   margin-bottom: 25px;
-  font-size: 50px;
+}
+@media screen and (min-width: 768px) {
+  .single .profile-footer p {
+    font-size: 50px;
+  }
 }
 .single .profile-footer .social-icons {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
+  .single .margin-bottom-400px {
+    margin-bottom: 400px;
+  }
   .single .caption-box {
     position: fixed;
     top: 0;
@@ -7380,6 +7450,11 @@ a.underlined {
   }
   .single .caption-box div {
     margin-top: 15%;
+  }
+  .single .caption-box .bwb-push-0 {
+    margin-left: 0;
+    left: auto;
+    right: auto;
   }
   .single .caption-box .bwb-push-1 {
     margin-left: calc(8.333333% + 5px);
@@ -7437,7 +7512,7 @@ a.underlined {
   .single .module img {
     margin-bottom: 15px;
   }
-  .single .module p {
+  .single .module p.caption {
     opacity: 0;
     transition: 0.5s;
   }
@@ -7466,8 +7541,28 @@ a.underlined {
     width: 1170px;
   }
 }
-.single .background-red {
-  background: red;
+@media screen and (max-width: 768px) {
+  .single .home-button span {
+    display: none;
+  }
+  .single .module {
+    margin-bottom: 200px;
+  }
+  .single .module img {
+    margin-bottom: 15px;
+  }
+  .single p {
+    font-size: 16px;
+  }
+  .single .profile-footer {
+    margin-bottom: 200px;
+  }
+  .single .profile-footer .student-url {
+    font-size: 30px;
+  }
+  .single .margin-bottom-400px {
+    margin-bottom: 200px;
+  }
 }
 
 /*////////////////////////////////////////////////////
@@ -7726,4 +7821,7 @@ html, body {
   .primary-nav ul {
     padding-top: 50px;
   }
+}
+.trigger-open-color {
+  color: #fff;
 }

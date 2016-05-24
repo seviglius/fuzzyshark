@@ -3,7 +3,7 @@
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part( navbar ); ?>
+<?php get_template_part( 'navbar' ); ?>
 <div id="video-container">
 	<img src="wp-content/themes/fuzzyshark/img/Logo_Play_2.png" alt="Play Video">
 </div>

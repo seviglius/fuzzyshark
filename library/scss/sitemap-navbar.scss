@@ -158,6 +158,7 @@ html,body {
 	transform: translateY(-50%);
 }
 
+<<<<<<< HEAD
 @keyframes tremble {
 	0% {
 		-webkit-transform: scale(0.8) translate(-2px,-1px) rotate(0deg);
@@ -255,5 +256,9 @@ html,body {
 	.primary-nav ul {
 		padding-top: 50px;
 	}
+=======
+.trigger-open-color {
+  color: $white;
+>>>>>>> origin/master
 }
 
