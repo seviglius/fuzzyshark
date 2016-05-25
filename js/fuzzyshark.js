@@ -27,6 +27,8 @@ $(document).scroll(function(){
     }
 }); 
   
+$(".module:nth-of-type(1)").addClass("module-1");
+$(".module:nth-of-type(2)").addClass("module-2");
 $(".module:nth-of-type(3)").addClass("module-3");
 $(".module:nth-of-type(4)").addClass("module-4");
 $(".module:nth-of-type(5)").addClass("module-5");
@@ -172,7 +174,7 @@ $(".module-15").waypoint(function() {
 $(".module-15").waypoint(function() {
   $(".module-15").find("p.caption").toggleClass("opacity-toggle");
  }, { offset: '-30%'
-});
+}); 
 
 $(".module-16").waypoint(function() {
   $(".module-16").find("p.caption").toggleClass("opacity-toggle");
@@ -210,9 +212,7 @@ $(".fitvid-container").fitVids();
 
 $(".profile-header").waypoint(function() {
   $(".profile-header").toggleClass("scroll-opacity");
-  $("#student-name").toggleClass("font-size-20px");
+  $("#student-name").toggleClass("scrolled-name");
 });
-
-//$("#student-name").sticky({topSpacing:25});
 
 });

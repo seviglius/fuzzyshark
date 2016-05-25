@@ -7322,6 +7322,23 @@ a.underlined {
   background: #fff;
   color: #000;
   padding-top: 25px;
+  /*.home-button {
+  	text-transform: uppercase;
+  	position: fixed;
+  	z-index: 999999;
+  	top: 25px;
+  	left: 25px;
+  	a {
+  		display: block;
+  	}
+  	i {
+  		font-size: 25px;
+  	}
+  	span {
+  		margin-left: 5px;
+  		font-size: 20px;
+  	} 
+  }*/
 }
 .single header.header {
   z-index: 99999999;
@@ -7337,23 +7354,6 @@ a.underlined {
 }
 .single iframe {
   z-index: 9999;
-}
-.single .home-button {
-  text-transform: uppercase;
-  position: fixed;
-  z-index: 999999;
-  top: 25px;
-  left: 25px;
-}
-.single .home-button a {
-  display: block;
-}
-.single .home-button i {
-  font-size: 25px;
-}
-.single .home-button span {
-  margin-left: 5px;
-  font-size: 20px;
 }
 .single a:hover, .single a:link, .single a:active, .single a:visited {
   color: #000;
@@ -7372,7 +7372,7 @@ a.underlined {
   font-size: 36px;
   transition: font-size 1s;
 }
-.single #student-name.font-size-20px {
+.single #student-name.scrolled-name {
   font-size: 20px;
 }
 .single .profile-header {
@@ -7447,6 +7447,7 @@ a.underlined {
     right: 0;
     height: 100%;
     width: 100%;
+    z-index: -999999999;
   }
   .single .caption-box div {
     margin-top: 15%;

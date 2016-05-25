@@ -2,9 +2,11 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<!--
 <div class="home-button">
 	<a href="<?php bloginfo('url'); ?>"><i class="fa fa-angle-left"></i><span>Home</span></a>
 </div>
+-->
 
 <h1 id="student-name"><?php the_title(); ?></h1>
 
