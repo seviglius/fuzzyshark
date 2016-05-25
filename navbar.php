@@ -1,9 +1,9 @@
 <header class="header">
   <a href="#">
-    <img class="white" src="wp-content/themes/fuzzyshark/img/header_logo.svg">
+    <img class="white" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo.svg">
   </a>
   <a href="#">
-    <img class="purple opacity" src="wp-content/themes/fuzzyshark/img/header_logo_purple.svg">
+    <img class="purple opacity" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo_purple.svg">
   </a>
   <a class="trigger" href="#0">
     <span class="menu-text">Index</span>
