@@ -1,8 +1,6 @@
 <header class="header">
-  <a href="#">
+  <a href="<?php bloginfo('url'); ?>" class="tremble">
     <img class="white" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo.svg">
-  </a>
-  <a href="#">
     <img class="purple opacity" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo_purple.svg">
   </a>
   <a class="trigger" href="#0">

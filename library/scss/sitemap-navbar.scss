@@ -92,7 +92,7 @@ html,body {
 }
 
 .active li {
-	transition: all .5s;
+	transition: all .2s;
 	color: #433a97;
 	-webkit-text-stroke-color: #433a97;
 }
@@ -113,7 +113,7 @@ html,body {
 	max-width: 50px;
 }
 
-.header a:hover > img {
+.tremble:hover img {
 	animation-name: tremble;
 	animation-duration: .2s;
 	transform-origin: 50% 50%;

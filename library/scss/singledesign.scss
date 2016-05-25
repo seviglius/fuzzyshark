@@ -12,6 +12,14 @@
 
 .single {
 
+		.purple {
+			opacity: 1;
+		}
+
+		.white {
+			display: none;
+		}
+
 		header.header {
 			z-index: 99999999;
 		}
@@ -21,7 +29,7 @@
 		}
 
 		.menu-text {
-			color: $black;
+			color: $darkblue;
 		}
 
 		.trigger-open-color {
