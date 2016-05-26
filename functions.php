@@ -211,3 +211,5 @@ function add_design_class( $dclass ) {
 	return $dclass;
 }
 add_filter( 'design', 'add_design_class' );
+
+add_image_size( 'front-page-mobile', 1150 );
