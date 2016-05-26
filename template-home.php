@@ -30,9 +30,6 @@
 
 
 		<?php
-    remove_all_filters('posts_orderby');
-    global $post; $cntr = 1;
-
     $args = array(
         'post_type' => array('design', 'photography'),
         'posts_per_page' => 100,
@@ -44,15 +41,18 @@
 ?>
 
 
-<div class="col-sm-12 student-list">
+<div class="col-sm-12">
 <?php while ($query->have_posts()) : $query->the_post(); ?> 
-       <div class="scca-student-name"><a href="<?php the_permalink(); ?>" class="name" id="<?php echo "name-" . $cntr; ?>"><?php the_title(); ?></a></div>
-       <div class="scca-student-photo"><a href="<?php the_permalink(); ?>"><img src="<?php the_field('project_featured_image'); ?>" alt="<?php the_title(); ?>" class="featured-project-image" id="<?php echo "featured-project-image-" . $cntr; ?>"></a></div>
-  
-<?php $cntr++; ?>
-
-<?php wp_reset_query(); ?>
-
+	<div class="student-list">
+		<div class="scca-student-name">
+			<a href="<?php the_permalink(); ?>" class="name"><?php the_title(); ?></a>
+		</div>
+		<div class="scca-student-photo">
+			<a href="<?php the_permalink(); ?>">
+				<img src="<?php the_field('project_featured_image'); ?>" alt="<?php the_title(); ?>" class="featured-project-image">
+			</a>
+		</div>
+	</div>
 <?php endwhile; ?>
 
 		</div>

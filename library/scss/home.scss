@@ -36,9 +36,15 @@ a {
 	color: $white;
 	text-decoration: none;
 	}
-	&.underlined {
-	text-decoration: underline;
 }
+
+.in-range {
+	.featured-project-image {
+		display: block;
+	}
+	.name {
+		text-decoration: underline;
+	}
 }
 
 
@@ -76,8 +82,8 @@ a {
 }
 
 .student-list {
-	margin-top: 300px;
-	margin-bottom: 50vh;
+	margin-top: 200px;
+	margin-bottom: 200px;
 }
 
 .sticky {

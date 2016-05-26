@@ -7174,7 +7174,11 @@ a:link, a:hover, a:active, a:visited {
   color: #fff;
   text-decoration: none;
 }
-a.underlined {
+
+.in-range .featured-project-image {
+  display: block;
+}
+.in-range .name {
   text-decoration: underline;
 }
 
@@ -7212,8 +7216,8 @@ a.underlined {
 }
 
 .student-list {
-  margin-top: 300px;
-  margin-bottom: 50vh;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 
 .sticky {
