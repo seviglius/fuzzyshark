@@ -26,6 +26,8 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
+	opacity: 1;
+	transition: 1s;
 }
 
 a {
@@ -45,6 +47,32 @@ a {
 	.name {
 		text-decoration: underline;
 	}
+}
+
+.in-range-overridden {
+	.featured-project-image {
+		display: none;
+	}
+	.name {
+		text-decoration: none;
+	}
+}
+
+.hovered {
+	.featured-project-image {
+		display: block;
+	}
+	.name {
+		text-decoration: underline;
+	}
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.display-block {
+	display: block;
 }
 
 
@@ -202,4 +230,8 @@ a {
 		margin-left: -15px;
 	}
 	
+}
+
+#logo.opacity-zero {
+	opacity: 0;
 }

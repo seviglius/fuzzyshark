@@ -7168,6 +7168,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   text-indent: -9999px;
+  opacity: 1;
+  transition: 1s;
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -7180,6 +7182,28 @@ a:link, a:hover, a:active, a:visited {
 }
 .in-range .name {
   text-decoration: underline;
+}
+
+.in-range-overridden .featured-project-image {
+  display: none;
+}
+.in-range-overridden .name {
+  text-decoration: none;
+}
+
+.hovered .featured-project-image {
+  display: block;
+}
+.hovered .name {
+  text-decoration: underline;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.display-block {
+  display: block;
 }
 
 .intro {
@@ -7315,6 +7339,10 @@ a:link, a:hover, a:active, a:visited {
     margin-left: -15px;
   }
 }
+#logo.opacity-zero {
+  opacity: 0;
+}
+
 /*////////////////////////////////////////////////////
 SITEMAP
 ////////////////////////////////////////////////////*/
@@ -7719,8 +7747,10 @@ html, body {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
-  .single .margin-bottom-400px {
-    margin-bottom: 400px;
+  .single .centered-excerpt {
+    margin-bottom: 300px;
+    margin-top: -120px;
+    font-size: 27px;
   }
   .single .caption-box {
     position: fixed;
@@ -7844,7 +7874,7 @@ html, body {
   .single .profile-footer .student-url {
     font-size: 30px;
   }
-  .single .margin-bottom-400px {
+  .single .centered-excerpt {
     margin-bottom: 200px;
   }
 }

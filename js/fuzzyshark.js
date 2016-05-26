@@ -10,6 +10,26 @@ $('.student-list').waypoint(function() {
  }, { offset: '55%'
 });
 
+// $('.student-list').not('in-range').hover(function(){
+//   $(this).toggleClass("hovered");
+//   //$(".in-range").toggleClass("in-range-overridden");
+//   $(".in-range").toggleClass("in-range");
+// });
+
+// $('.student-list').not('.in-range').hover(function(){
+//   $(this).toggleClass("hovered");
+//   $('.in-range').toggleClass('in-range');
+// });
+
+$('.student-list').hover(function(){
+  $(this).toggleClass("hovered");
+  $('.in-range').toggleClass('in-range-overridden');
+});
+
+$('#school-name').waypoint(function() {
+  $('#logo').toggleClass("opacity-zero");
+});
+
 var target = $('#video-container');
 var targetHeight = target.outerHeight();
 

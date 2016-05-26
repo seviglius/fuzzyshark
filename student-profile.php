@@ -73,7 +73,7 @@
 	if (get_row_layout() == 'module_2' ): ?>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 margin-bottom-400px">
+				<div class="col-md-8 col-md-offset-2 centered-excerpt">
 					<p><?php the_sub_field('caption'); ?></p>
 				</div>
 			</div>

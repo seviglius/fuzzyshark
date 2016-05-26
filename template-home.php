@@ -15,7 +15,7 @@
 
 		<div class="col-md-8 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
-			<h2>Seattle Central Creative Academy</h2>
+			<h2 id="school-name">Seattle Central Creative Academy</h2>
 			<?php 
 			if (have_posts()) {
 			  while (have_posts()) {
