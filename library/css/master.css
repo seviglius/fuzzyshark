@@ -7369,6 +7369,10 @@ html, body {
   width: 100%;
 }
 
+.primary-nav svg {
+  height: 30px;
+}
+
 .indexName a {
   color: #433a97;
   font-size: 16px;
@@ -7452,6 +7456,11 @@ html, body {
   transition: all .2s;
   color: #433a97;
   -webkit-text-stroke-color: #433a97;
+}
+
+.active path {
+  fill: #433a97 !important;
+  transition: all .2s;
 }
 
 .header {
@@ -7569,7 +7578,7 @@ html, body {
     transform: scale(0.8) translate(-1px, -2px) rotate(-1deg);
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 520px) {
   .indexName a {
     color: #433a97;
     font-size: 20px;
@@ -7577,6 +7586,10 @@ html, body {
 
   .primary-nav li {
     font-size: 50px;
+  }
+
+  .primary-nav svg {
+    height: 50px;
   }
 
   .filters .row:first-child {
