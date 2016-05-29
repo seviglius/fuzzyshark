@@ -54,17 +54,21 @@ $(".module").waypoint(function() {
 //responsive videos
 $(".fitvid-container").fitVids();
 
-$(".project-header").waypoint(function() {
-  $("#student-name").toggleClass("scrolled-name");
+$(".profile-header ").waypoint(function() {
+  $(".profile-header").toggleClass("scroll-opacity");
 });
 
-var $window = $(window),
-       $stickyEl = $('#student-name'),
-       elTop = $stickyEl.offset().top;
+$(".profile-footer").waypoint(function() {
+  $(".profile-header").toggleClass("scroll-opacity");
+});
 
-   $window.scroll(function() {
-        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
-        $('#student-name').toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
-    });
+// var $window = $(window),
+//        $stickyEl = $('.profile-header'),
+//        elTop = $stickyEl.offset().top;
+
+//    $window.scroll(function() {
+//         $stickyEl.toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
+//         // $('#student-url').toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
+//     });
 
 });

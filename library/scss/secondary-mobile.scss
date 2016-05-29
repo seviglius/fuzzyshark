@@ -59,11 +59,12 @@
 		}
 	}
 
-	.header p {
+	.single .header p {
 		font-size: 17px;
 		position: absolute;
 		left: 80px;
 		top:20px;
+		margin-top:0;
 	}
 	.menu-text {
 		font-size: 17px;
@@ -77,6 +78,10 @@
 		p {
 			font-size: 20px;
 		}
+		.header p {
+			font-size: 17px;
+		}
 	}
+	
 
 }

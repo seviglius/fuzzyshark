@@ -15,7 +15,7 @@
 			<h1 id="student-name"><?php the_title(); ?></h1>
 			<p class="student-url"><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
 		</div>
-	</div>
+	</div> 
 	<div class="project-header col-sm-12">
 			<h2><?php the_field('project_title'); ?></h2>
 			<?php
@@ -332,6 +332,7 @@
 <div class="container">
 	<div class="row profile-footer">
 		<div class="col-sm-12">
+			<!-- <h1 id="student-name"><?php the_title(); ?></h1> -->
 			<p class="student-url"><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
 			<div class="social-icons">
 				<?php if(get_field('linkedin_page') ): ?>

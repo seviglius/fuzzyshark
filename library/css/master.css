@@ -7569,12 +7569,20 @@ body {
   color: #433a97;
   overflow-x: hidden;
 }
+body a:hover {
+  font-style: italic;
+}
 
 .home .menu-text {
   color: #fff;
 }
 .home .trigger-open-color {
   color: #433a97;
+}
+
+.parent div {
+  padding-bottom: 20px;
+  padding: 0 5px 16px 5px;
 }
 
 .profile-header-wrapper {
@@ -7584,12 +7592,14 @@ body {
 }
 
 .single .header p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #student-name.sticky {
   position: fixed;
-  top: 0;
+  top: 700px;
+  right: 500px;
+  z-index: 99999;
 }
 
 .single {
@@ -7628,7 +7638,6 @@ body {
   text-align: center;
   margin-top: 30px;
   font-size: 40px;
-  transition: font-size 0.5s;
 }
 .single .profile-header {
   position: absolute;
@@ -7639,6 +7648,7 @@ body {
   text-align: center;
   margin-bottom: 200px;
   padding-top: 75px;
+  transition: opacity .5s;
 }
 .single .profile-header p {
   font-size: 20px;
@@ -7660,16 +7670,28 @@ body {
 }
 .single .scroll-opacity {
   opacity: 0;
+  transition: opacity .5s;
+}
+.single .project-header {
+  color: #433a97;
 }
 .single .project-header h2 {
   text-align: center;
   color: #433a97;
-  font-size: 25px;
+  font-size: 40px;
   margin-bottom: 75px;
-  font-weight: 700;
 }
-.single .project-header h2 a:hover, .single .project-header h2 a:active, .single .project-header h2 a:link, .single .project-header h2 avisited {
-  color: #433a97;
+.single .project-header p {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  margin: -60px 0 60px 0;
+  text-align: center;
+}
+.single .project-header a:active, .single .project-header a:link, .single .project-header avisited {
+  text-decoration: underline;
+}
+.single .project-header a:hover {
+  font-style: italic;
 }
 .single .project-featured-image {
   margin-bottom: 100px;
@@ -7682,6 +7704,7 @@ body {
 }
 .single .profile-footer {
   text-align: center;
+  color: #433a97;
 }
 .single .profile-footer p {
   margin-bottom: 25px;
@@ -7865,11 +7888,12 @@ body {
     width: 230px;
   }
 
-  .header p {
+  .single .header p {
     font-size: 17px;
     position: absolute;
     left: 80px;
     top: 20px;
+    margin-top: 0;
   }
 
   .menu-text {
@@ -7879,5 +7903,8 @@ body {
 @media (min-width: 768px) and (max-width: 992px) {
   .single p {
     font-size: 20px;
+  }
+  .single .header p {
+    font-size: 17px;
   }
 }
