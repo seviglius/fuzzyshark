@@ -1,15 +1,28 @@
+body {
+	color: $darkblue;
+	overflow-x: hidden;
+}
 .home {
 	.menu-text {
 		color: $white;
 	}
-
 	.trigger-open-color {
 			color: $darkblue;
 		}
 
-
 }
-
+.profile-header-wrapper {
+	height: 100vh;
+	position: relative;
+	margin-top:0 !important;
+}
+.single .header p {
+	font-size: 20px;
+	}
+ #student-name.sticky {
+     position: fixed;
+     top: 0;
+  }
 .single {
 
 		.purple {
@@ -36,75 +49,49 @@
 			color: $darkblue;
 		}
 
-		
-
 		iframe {
 			z-index: 9999;
 		}
 
 		background: $white;
-		color: $black;
-		padding-top: 25px;
-
-		/*.home-button {
-			text-transform: uppercase;
-			position: fixed;
-			z-index: 999999;
-			top: 25px;
-			left: 25px;
-			a {
-				display: block;
-			}
-			i {
-				font-size: 25px;
-			}
-			span {
-				margin-left: 5px;
-				font-size: 20px;
-			} 
-		}*/
+		color: $darkblue;
 
 		a {
 			&:hover, &:link, &:active, &:visited{
-				color: $black;
+				color: darkblue;
 			}
 		}
 
 		p {
-			font-size: 20px;
+			font-size: 23px;
 		}
 
 		#student-name {
-				position: fixed;
 				z-index: 99999;
-				left: 35px;
-				right: 35px;
-				top: 0;
-				width: calc(100% - 70px);
 				text-align: center;
-				font-size: 36px;
-				transition: font-size 1s;
+				margin-top: 30px;
+				font-size: 40px;
+				transition: font-size 0.5s;
 			}
-			#student-name.scrolled-name {
-				font-size: 20px;
-			}
+			
 
 		.profile-header {
-			
+			position: absolute;
+		    top: 48%;
+		    left: 50%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -52%);
 			text-align: center;
 			margin-bottom: 200px;
 			padding-top: 75px;
 
-			h1 {
-			margin-bottom: 15px;
-			}
  
 			p {
 				font-size: 20px;
 				margin-bottom: 36px;
 			}
 			img {
-				width: 235px;
+				width: 270px;
 				height: auto;
 				display: block;
 				margin: 0 auto;
@@ -122,22 +109,19 @@
 		}
 
 		.scroll-opacity {
-				p {
-					opacity: 0;
-				}
-				img {
-					opacity: 0;
-				}
-			}
+			opacity: 0;
+		}
 
-		.project-header {
+		.project-header h2{
 			text-align: center;
-			color: $black;
+			color: $darkblue;
+			font-size: 25px;
 			margin-bottom: 75px;
+			font-weight: 700;
 
 			a {
 				&:hover, &:active, &:link, &visited {
-					color: $black;
+					color: $darkblue;
 				}
 			}
 
@@ -150,6 +134,10 @@
 
 		.project-introduction {
 			margin-bottom: 300px;
+
+			p {
+				font-size: 30px;
+			}
 		}
 
 		.profile-footer {
@@ -176,7 +164,10 @@
 				.centered-excerpt {
 					margin-bottom: 300px;
 					margin-top: -120px;
-					font-size: 27px;
+
+					p {
+						font-size: 30px
+					}
 				}
 
 				.caption-box {
@@ -260,10 +251,8 @@
 					}
 					.caption.opacity-toggle {
 					opacity: 1;
+					}
 				}
-
-				}
-
 		}
 
 
@@ -283,34 +272,4 @@
 	 }
 }
 
-
-@media screen and (max-width: 768px) {
-
-	.home-button {
-					span {
-						display: none;
-					}
-				}
-	.module {
-		margin-bottom: 200px;
-		img {
-			margin-bottom: 15px;
-		}
-	}
-	p {
-		font-size: 16px;
-	}
-	.profile-footer {
-		margin-bottom: 200px;
-		.student-url {
-				font-size: 30px;
-		}
-	}
-	.centered-excerpt {
-		margin-bottom: 200px;
-	}
 }
-
-
-
-	}

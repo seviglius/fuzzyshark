@@ -54,9 +54,17 @@ $(".module").waypoint(function() {
 //responsive videos
 $(".fitvid-container").fitVids();
 
-$(".profile-header").waypoint(function() {
-  $(".profile-header").toggleClass("scroll-opacity");
+$(".project-header").waypoint(function() {
   $("#student-name").toggleClass("scrolled-name");
 });
+
+var $window = $(window),
+       $stickyEl = $('#student-name'),
+       elTop = $stickyEl.offset().top;
+
+   $window.scroll(function() {
+        $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+        $('#student-name').toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
+    });
 
 });

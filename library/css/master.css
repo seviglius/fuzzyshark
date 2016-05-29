@@ -7369,10 +7369,6 @@ html, body {
   width: 100%;
 }
 
-.primary-nav svg {
-  height: 30px;
-}
-
 .indexName a {
   color: #433a97;
   font-size: 16px;
@@ -7458,11 +7454,6 @@ html, body {
   -webkit-text-stroke-color: #433a97;
 }
 
-.active path {
-  fill: #433a97 !important;
-  transition: all .2s;
-}
-
 .header {
   position: absolute;
   top: 10px;
@@ -7472,6 +7463,13 @@ html, body {
   z-index: 3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .header img {
@@ -7480,22 +7478,27 @@ html, body {
   max-width: 50px;
 }
 
-.tremble:hover img {
-  animation-name: tremble;
-  animation-duration: .2s;
-  transform-origin: 50% 50%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.header p {
+  position: absolute;
+  left: 90px;
+  top: 20px;
 }
 
-.header {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+.menu-text {
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .5s;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.trigger {
+  position: absolute;
+  right: 25px;
+  top: 33px;
+  background-color: transparent;
+  bottom: auto;
+  transform: translateY(-50%);
 }
 
 .header.is-fixed {
@@ -7514,71 +7517,7 @@ html, body {
   transform: translate3d(0, 100%, 0);
 }
 
-.menu-text {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  transition: all .5s;
-}
-
-.trigger {
-  position: absolute;
-  right: 25px;
-  top: 24px;
-  background-color: transparent;
-  bottom: auto;
-  transform: translateY(-50%);
-}
-
-@keyframes tremble {
-  0% {
-    -webkit-transform: scale(0.8) translate(-2px, -1px) rotate(0deg);
-    transform: scale(0.8) translate(-2px, -1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: scale(0.8) translate(-9px, -8px) rotate(-1deg);
-    transform: scale(0.8) translate(-9px, -8px) rotate(-1deg);
-  }
-  20% {
-    -webkit-transform: scale(0.8) translate(-7px, 0px) rotate(1deg);
-    transform: scale(0.8) translate(-7px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: scale(0.8) translate(0px, -2px) rotate(0deg);
-    transform: scale(0.8) translate(0px, -2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: scale(0.8) translate(-1px, -9px) rotate(1deg);
-    transform: scale(0.8) translate(-1px, -9px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: scale(0.8) translate(-9px, -2px) rotate(-1deg);
-    transform: scale(0.8) translate(-9px, -2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: scale(0.8) translate(-7px, -1px) rotate(0deg);
-    transform: scale(0.8) translate(-7px, -1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: scale(0.8) translate(-2px, -1px) rotate(-1deg);
-    transform: scale(0.8) translate(-2px, -1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: scale(0.8) translate(-9px, -9px) rotate(1deg);
-    transform: scale(0.8) translate(-9px, -9px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: scale(0.8) translate(-2px, -2px) rotate(0deg);
-    transform: scale(0.8) translate(-2px, -2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: scale(0.8) translate(-1px, -2px) rotate(-1deg);
-    transform: scale(0.8) translate(-1px, -2px) rotate(-1deg);
-  }
-}
-@media (min-width: 520px) {
+@media (min-width: 500px) {
   .indexName a {
     color: #433a97;
     font-size: 20px;
@@ -7586,10 +7525,6 @@ html, body {
 
   .primary-nav li {
     font-size: 50px;
-  }
-
-  .primary-nav svg {
-    height: 50px;
   }
 
   .filters .row:first-child {
@@ -7629,6 +7564,11 @@ html, body {
   transition: all .5s;
 }
 
+body {
+  color: #433a97;
+  overflow-x: hidden;
+}
+
 .home .menu-text {
   color: #fff;
 }
@@ -7636,27 +7576,24 @@ html, body {
   color: #433a97;
 }
 
+.profile-header-wrapper {
+  height: 100vh;
+  position: relative;
+  margin-top: 0 !important;
+}
+
+.single .header p {
+  font-size: 20px;
+}
+
+#student-name.sticky {
+  position: fixed;
+  top: 0;
+}
+
 .single {
   background: #fff;
-  color: #000;
-  padding-top: 25px;
-  /*.home-button {
-  	text-transform: uppercase;
-  	position: fixed;
-  	z-index: 999999;
-  	top: 25px;
-  	left: 25px;
-  	a {
-  		display: block;
-  	}
-  	i {
-  		font-size: 25px;
-  	}
-  	span {
-  		margin-left: 5px;
-  		font-size: 20px;
-  	} 
-  }*/
+  color: #433a97;
 }
 .single .purple {
   opacity: 1;
@@ -7680,39 +7617,34 @@ html, body {
   z-index: 9999;
 }
 .single a:hover, .single a:link, .single a:active, .single a:visited {
-  color: #000;
+  color: darkblue;
 }
 .single p {
-  font-size: 20px;
+  font-size: 23px;
 }
 .single #student-name {
-  position: fixed;
   z-index: 99999;
-  left: 35px;
-  right: 35px;
-  top: 0;
-  width: calc(100% - 70px);
   text-align: center;
-  font-size: 36px;
-  transition: font-size 1s;
-}
-.single #student-name.scrolled-name {
-  font-size: 20px;
+  margin-top: 30px;
+  font-size: 40px;
+  transition: font-size 0.5s;
 }
 .single .profile-header {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -52%);
   text-align: center;
   margin-bottom: 200px;
   padding-top: 75px;
-}
-.single .profile-header h1 {
-  margin-bottom: 15px;
 }
 .single .profile-header p {
   font-size: 20px;
   margin-bottom: 36px;
 }
 .single .profile-header img {
-  width: 235px;
+  width: 270px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -7725,25 +7657,27 @@ html, body {
   opacity: 1;
   transition: opacity .5s;
 }
-.single .scroll-opacity p {
+.single .scroll-opacity {
   opacity: 0;
 }
-.single .scroll-opacity img {
-  opacity: 0;
-}
-.single .project-header {
+.single .project-header h2 {
   text-align: center;
-  color: #000;
+  color: #433a97;
+  font-size: 25px;
   margin-bottom: 75px;
+  font-weight: 700;
 }
-.single .project-header a:hover, .single .project-header a:active, .single .project-header a:link, .single .project-header avisited {
-  color: #000;
+.single .project-header h2 a:hover, .single .project-header h2 a:active, .single .project-header h2 a:link, .single .project-header h2 avisited {
+  color: #433a97;
 }
 .single .project-featured-image {
   margin-bottom: 100px;
 }
 .single .project-introduction {
   margin-bottom: 300px;
+}
+.single .project-introduction p {
+  font-size: 30px;
 }
 .single .profile-footer {
   text-align: center;
@@ -7763,7 +7697,9 @@ html, body {
   .single .centered-excerpt {
     margin-bottom: 300px;
     margin-top: -120px;
-    font-size: 27px;
+  }
+  .single .centered-excerpt p {
+    font-size: 30px;
   }
   .single .caption-box {
     position: fixed;
@@ -7868,26 +7804,79 @@ html, body {
     width: 1170px;
   }
 }
+
 @media screen and (max-width: 768px) {
-  .single .home-button span {
-    display: none;
-  }
-  .single .module {
+  .module {
     margin-bottom: 200px;
   }
-  .single .module img {
+  .module img {
     margin-bottom: 15px;
   }
-  .single p {
-    font-size: 16px;
-  }
-  .single .profile-footer {
+
+  .profile-footer {
     margin-bottom: 200px;
   }
-  .single .profile-footer .student-url {
+  .profile-footer .student-url {
     font-size: 30px;
   }
-  .single .centered-excerpt {
+
+  .centered-excerpt {
     margin-bottom: 200px;
+  }
+
+  .single p {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 15px;
+  }
+
+  .centered-excerpt p {
+    font-size: 23px;
+    line-height: 31px;
+    margin-top: 0;
+  }
+
+  .single .project-introduction p {
+    font-size: 23px;
+    line-height: 31px;
+    margin-top: 0;
+  }
+
+  #student-name {
+    font-size: 30px;
+  }
+
+  .project-header h2 {
+    font-size: 20px;
+  }
+
+  .single .profile-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 200px;
+    padding-top: 75px;
+  }
+  .single .profile-header img {
+    width: 230px;
+  }
+
+  .single .header p {
+    font-size: 17px;
+    position: absolute;
+    left: 80px;
+    top: 6px;
+  }
+
+  .menu-text {
+    font-size: 17px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .single p {
+    font-size: 20px;
   }
 }
