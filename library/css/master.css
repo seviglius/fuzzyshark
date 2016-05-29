@@ -7580,7 +7580,7 @@ body a:hover {
   color: #433a97;
 }
 
-.parent div {
+#parent div {
   padding-bottom: 20px;
   padding: 0 5px 16px 5px;
 }
