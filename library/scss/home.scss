@@ -78,12 +78,13 @@ a {
 
 .intro {
 	margin-top: 200px;
+	color: $white;
 	h2 {
 	font-weight: bold;
 	font-size: 3rem;
 	}
 	p {
-	line-height: 2;
+	line-height: 1.5;
 	font-size: 3rem;
 	}
 }
@@ -122,7 +123,13 @@ a {
 #video-container {
 	width: 100%;
 	height: 70vh;
-	background-color: $purple;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+64,b1246e+64,ee2624+101 */
+	background: #433a97; /* Old browsers */
+	background: -moz-linear-gradient(top,  #433a97 0%, #b1246e 64%, #b1246e 64%, #ee2624 101%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #433a97 0%,#b1246e 64%,#b1246e 64%,#ee2624 101%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #433a97 0%,#b1246e 64%,#b1246e 64%,#ee2624 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#ee2624',GradientType=0 ); /* IE6-9 */
+
 	img {
 		width: 280px;
 		height: 400px;
@@ -133,16 +140,6 @@ a {
 		right: 0;
 		margin: auto;
 	}
-}
-
-#gradient {
-	width: 100%;
-	height: 300px;
-	background: transparent;
-    background: -webkit-linear-gradient($purple, transparent);
-    background: -o-linear-gradient($purple, transparent);
-    background: -moz-linear-gradient($purple, transparent);
-    background: linear-gradient($purple, transparent);
 }
 
 .collaborators {

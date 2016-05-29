@@ -7208,13 +7208,14 @@ a:link, a:hover, a:active, a:visited {
 
 .intro {
   margin-top: 200px;
+  color: #fff;
 }
 .intro h2 {
   font-weight: bold;
   font-size: 3rem;
 }
 .intro p {
-  line-height: 2;
+  line-height: 1.5;
   font-size: 3rem;
 }
 
@@ -7252,7 +7253,17 @@ a:link, a:hover, a:active, a:visited {
 #video-container {
   width: 100%;
   height: 70vh;
-  background-color: #b1246e;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+64,b1246e+64,ee2624+101 */
+  background: #433a97;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #433a97 0%, #b1246e 64%, #b1246e 64%, #ee2624 101%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #433a97 0%, #b1246e 64%, #b1246e 64%, #ee2624 101%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #433a97 0%, #b1246e 64%, #b1246e 64%, #ee2624 101%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#ee2624',GradientType=0 );
+  /* IE6-9 */
 }
 #video-container img {
   width: 280px;
@@ -7263,16 +7274,6 @@ a:link, a:hover, a:active, a:visited {
   left: 0;
   right: 0;
   margin: auto;
-}
-
-#gradient {
-  width: 100%;
-  height: 300px;
-  background: transparent;
-  background: -webkit-linear-gradient(#b1246e, transparent);
-  background: -o-linear-gradient(#b1246e, transparent);
-  background: -moz-linear-gradient(#b1246e, transparent);
-  background: linear-gradient(#b1246e, transparent);
 }
 
 .collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
@@ -7864,11 +7865,11 @@ body {
     width: 230px;
   }
 
-  .single .header p {
+  .header p {
     font-size: 17px;
     position: absolute;
     left: 80px;
-    top: 6px;
+    top: 20px;
   }
 
   .menu-text {

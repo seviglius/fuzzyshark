@@ -8,8 +8,6 @@
 	<img src="wp-content/themes/fuzzyshark/img/Logo_Play_2.png" alt="Play Video">
 </div>
 
-<div id="gradient"></div>
-
 <div class="container">
 	<div class="row">
 
