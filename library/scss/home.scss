@@ -29,6 +29,15 @@ body {
     z-index: 0;
     background: url('../../img/bigonewhite.gif') center no-repeat transparent;
     background-size: 30%;
+    @media (max-width: 800px) {
+    	background-size: 40%;
+    }
+    @media (max-width: 650px) {
+    	background-size: 50%;
+    }
+    @media (max-width: 500px) {
+    	background-size: 75%;
+    }
 }
 /*End Loader*/
 
