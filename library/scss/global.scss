@@ -1,0 +1,36 @@
+/*//////////////////////////////////////////////
+GLOBAL STYLES//////////////////////////
+GLOBAL STYLES//////////////////////////
+//////////////////////////////////////////////*/
+/*Scrollbars*/
+::-webkit-scrollbar{
+	width:5px;}
+::-webkit-scrollbar-track{
+	background: transparent;}
+::-webkit-scrollbar-thumb{
+	background: $darkblue;
+	border-radius:0;
+	max-width:5px;}
+/*Text Selection*/
+*::selection {
+	background: $darkblue;
+	color:$white;
+	text-shadow: 0 0 transparent;}
+/*Media Query Mixins*/
+@mixin bp($point) {
+  @if $point == iphone{
+    @media (min-width: 320px) { @content; }
+  }
+  @else if $point == extra-small {
+    @media (min-width: 480px)  { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 768)  { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px)  { @content; }
+  }
+}
