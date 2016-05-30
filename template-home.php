@@ -11,7 +11,7 @@ Magnific Pop Link ////////////
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/magnific.js"></script>
 
 <!-- ///////////////////////////////
-Header Video ////////////
+Header Video Section////////////
 //////////////////////////////////-->
 <div id="video-container" class="justify-center">
 <!-- 	<div class="container">
