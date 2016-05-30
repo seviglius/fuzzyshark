@@ -76,6 +76,7 @@ a {
 .in-range {
 	.featured-project-image {
 		display: block;
+		animation: featured-fadeIn linear forwards .5s;
 	}
 	.name {
 		text-decoration: underline;
@@ -94,6 +95,7 @@ a {
 .hovered {
 	.featured-project-image {
 		display: block;
+		animation: featured-fadeIn linear forwards .5s;
 	}
 	.name {
 		text-decoration: underline;
@@ -125,8 +127,8 @@ a {
 .scca-student-name {
 	font-size: 10rem;
 	line-height: 1;
-	margin-top: 10rem;
-	margin-bottom: 10rem;
+	margin-top: 35rem;
+	margin-bottom: 35rem;
 	&:last-of-type {
 		margin-bottom: 0;
 	}
@@ -217,6 +219,10 @@ $yVal: 10px;
 			}
 		}
 	}
+}
+
+.intro{
+	margin-bottom: 100px;
 }
 
 .collaborators {
