@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Import all stylesheets here
    ========================================================================== */
@@ -5585,7 +5586,8 @@ GLOBAL STYLES//////////////////////////
   color: #fff;
   text-shadow: 0 0 transparent; }
 
-/*Media Query Mixins*/
+/*Media Query Mixins
+These aren't working right now and I can't figure out why —Joe*/
 /*Animations*/
 @-webkit-keyframes play_break-left {
   0% {
@@ -6351,6 +6353,34 @@ a:link, a:hover, a:active, a:visited {
     left: 0;
     right: 0;
     margin: auto; }
+  #video-container .inner-video-container svg#play-button {
+    -webkit-transition: 0.05s;
+    transition: 0.05s;
+    overflow: visible;
+    width: 45%;
+    /*			#left-piece{
+    				@include bp(iphone){
+    					animation:play_break-left infinite linear 4s;
+    				}
+    			}
+    			#right-piece{
+    				@include bp(iphone){
+    					animation:play_break-right infinite linear 4s;
+    				}
+    			}*/ }
+    #video-container .inner-video-container svg#play-button #left-piece,
+    #video-container .inner-video-container svg#play-button #right-piece {
+      -webkit-transition: inherit;
+      transition: inherit;
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 1px; }
+  #video-container .inner-video-container a:hover > .videothumb > svg#play-button #left-piece {
+    -webkit-transform: translate3d(2px, -10px, 0);
+            transform: translate3d(2px, -10px, 0); }
+  #video-container .inner-video-container a:hover > .videothumb > svg#play-button #right-piece {
+    -webkit-transform: translate3d(2px, 10px, 0);
+            transform: translate3d(2px, 10px, 0); }
 
 .collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
   content: ","; }
