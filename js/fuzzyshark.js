@@ -21,8 +21,12 @@ $('.student-list').waypoint(function() {
 //   $('.in-range').toggleClass('in-range');
 // });
 
-// $('.student-list').hover(function(){
-//   $(this).toggleClass("hovered");
+$('.scca-student-name').hover(function(){
+  $(this).toggleClass("hovered");
+  $('.in-range').toggleClass('in-range-overridden');
+});
+// $('.scca-student-name').mouseout(function(){
+//   $(this).removeClass("hovered");
 //   $('.in-range').toggleClass('in-range-overridden');
 // });
 
