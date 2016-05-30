@@ -19,3 +19,7 @@
 	55%{transform: translate3d(7px,-10px,0);}
 	100%{transform: translate3d(0,0,0);}
 }
+@keyframes featured-fadeIn{
+	from{opacity:0;}
+	to{opacity:1;}
+}
