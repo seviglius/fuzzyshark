@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ==========================================================================
    Import all stylesheets here
    ========================================================================== */
@@ -5586,8 +5585,7 @@ GLOBAL STYLES//////////////////////////
   color: #fff;
   text-shadow: 0 0 transparent; }
 
-/*Media Query Mixins
-These aren't working right now and I can't figure out why —Joe*/
+/*Media Query Mixins*/
 /*Animations*/
 @-webkit-keyframes play_break-left {
   0% {
