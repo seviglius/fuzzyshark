@@ -75,25 +75,25 @@ $(".profile-footer").waypoint(function() {
 
 
 
-//Slow down the scroll speed on the student rolodex
-if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-window.onmousewheel = document.onmousewheel = wheel;
+///Slow down the scroll speed on the student rolodex
+// if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+// window.onmousewheel = document.onmousewheel = wheel;
 
-function wheel(event) {
-    var delta = 0;
-    if (event.wheelDelta) delta = event.wheelDelta / 12;
-    else if (event.detail) delta = -event.detail / 3;
+// function wheel(event) {
+//     var delta = 0;
+//     if (event.wheelDelta) delta = event.wheelDelta / 12;
+//     else if (event.detail) delta = -event.detail / 3;
 
-    handle(delta);
-    if (event.preventDefault) event.preventDefault();
-    event.returnValue = false;
-}
+//     handle(delta);
+//     if (event.preventDefault) event.preventDefault();
+//     event.returnValue = false;
+// }
 
-function handle(delta) {
-    var time = 1;
-  var distance = 3;
+// function handle(delta) {
+//     var time = 1;
+//   var distance = 3;
     
-    $('html, slowSpeed').stop().animate({
-        scrollTop: $(window).scrollTop() - (distance * delta)
-    }, time );
-}
+//     $('html, slowSpeed').stop().animate({
+//         scrollTop: $(window).scrollTop() - (distance * delta)
+//     }, time );
+// }
