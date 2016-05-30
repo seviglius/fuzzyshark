@@ -44,6 +44,7 @@ $('.trigger').on('click', function(){
 		$('.primary-nav').toggleClass('visible');
         $('.purple').toggleClass('opacity');
         $('.white').toggleClass('opacity');
+        $('body').toggleClass('overflow');
 	});
 
 
