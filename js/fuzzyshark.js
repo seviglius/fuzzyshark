@@ -1,3 +1,8 @@
+//Loading script
+$(window).load(function() {
+    $(".se-pre-con").fadeOut("slow");
+});
+
 $( document ).ready(function() {
 
 $('.student-list').waypoint(function() {
