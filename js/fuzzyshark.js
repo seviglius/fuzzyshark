@@ -21,10 +21,10 @@ $('.student-list').waypoint(function() {
 //   $('.in-range').toggleClass('in-range');
 // });
 
-$('.student-list').hover(function(){
-  $(this).toggleClass("hovered");
-  $('.in-range').toggleClass('in-range-overridden');
-});
+// $('.student-list').hover(function(){
+//   $(this).toggleClass("hovered");
+//   $('.in-range').toggleClass('in-range-overridden');
+// });
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
