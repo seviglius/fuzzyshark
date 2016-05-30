@@ -16,6 +16,15 @@ html,body {
 	width: 100%;
 }
 
+.primary-nav svg {
+  height: 30px;
+}
+
+.active path {
+  fill: #433a97 !important;
+  transition: all .2s;
+}
+
 .indexName a {
 	color: #433a97;
 	font-size: 16px;
@@ -159,7 +168,7 @@ html,body {
 	transform: translate3d(0,100%,0);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 520px) {
 	.indexName a {
 		color: #433a97;
 		font-size: 20px;
@@ -168,6 +177,10 @@ html,body {
 	.primary-nav li {
 		font-size: 50px;
 	}
+
+	.primary-nav svg {
+    	height: 50px;
+  	}
 
 	.filters .row:first-child {
 		padding-bottom: 60px;
