@@ -1,0 +1,21 @@
+/*Animations*/
+@keyframes play_break-left{
+	0%{transform: translate3d(0,0,0);}
+	50%{transform: translate3d(-5px,10px,0);}
+	51%{transform: translate3d(4px,4px,0);}
+	52%{transform: translate3d(-5px,10px,0);}
+	53%{transform: translate3d(-5px,10px,0);}
+	54%{transform: translate3d(4px,4px,0);}
+	55%{transform: translate3d(-5px,10px,0);}
+	100%{transform: translate3d(0,0,0);}
+}
+@keyframes play_break-right{
+	0%{transform: translate3d(0,0,0);}
+	50%{transform: translate3d(7px,-10px,0);}
+	51%{transform: translate3d(4px,4px,0);}
+	52%{transform: translate3d(7px,-10px,0);}
+	53%{transform: translate3d(7px,-10px,0);}
+	54%{transform: translate3d(4px,4px,0);}
+	55%{transform: translate3d(7px,-10px,0);}
+	100%{transform: translate3d(0,0,0);}
+}

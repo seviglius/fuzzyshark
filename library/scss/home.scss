@@ -119,16 +119,22 @@ a {
 	top: 0;
 	position: fixed;
 }
-
+.justify-center{
+	display: flex;
+	flex-flow:row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
 #video-container {
 	width: 100%;
-	height: 70vh;
+	height: 100vh;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+64,b1246e+64,ee2624+101 */
 	background: #433a97; /* Old browsers */
 	background: -moz-linear-gradient(top,  #433a97 0%, #b1246e 64%, #b1246e 64%, #ee2624 101%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  #433a97 0%,#b1246e 64%,#b1246e 64%,#ee2624 101%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #433a97 0%,#b1246e 64%,#b1246e 64%,#ee2624 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#ee2624',GradientType=0 ); /* IE6-9 */
+
 
 	img {
 		width: 280px;
@@ -139,6 +145,44 @@ a {
 		left: 0;
 		right: 0;
 		margin: auto;
+	}
+
+//quick vars. use these for the play button hover.
+$trans: .05s;
+$xVal: 2px;
+$yVal: 10px;
+
+	.inner-video-container{
+		svg#play-button{
+			transition:$trans;
+			overflow: visible;
+			width:45%;
+			#left-piece,
+			#right-piece{
+				transition: inherit;
+				fill:$white;
+				stroke: $white;
+				stroke-width:1px;
+			}
+/*			#left-piece{
+				@include bp(iphone){
+					animation:play_break-left infinite linear 4s;
+				}
+			}
+			#right-piece{
+				@include bp(iphone){
+					animation:play_break-right infinite linear 4s;
+				}
+			}*/
+		}
+		a:hover > .videothumb > svg#play-button{
+			#left-piece{
+					transform: translate3d($xVal,-$yVal,0);
+			}
+			#right-piece{
+					transform: translate3d($xVal,$yVal,0);
+			}
+		}
 	}
 }
 
@@ -232,3 +276,10 @@ a {
 #logo.opacity-zero {
 	opacity: 0;
 }
+
+
+
+
+
+
+
