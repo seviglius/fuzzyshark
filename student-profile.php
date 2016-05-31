@@ -46,6 +46,7 @@
 				    <?php echo $img['sizes']['fuzzy-300']; ?> 300w"
 				  alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>"
 				  class="featured-project-image">
+				  <?php var_dump(get_field('project_featured_image')) ?>
 	</div>
 </div>
 
