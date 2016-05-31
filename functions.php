@@ -212,4 +212,13 @@ function add_design_class( $dclass ) {
 }
 add_filter( 'design', 'add_design_class' );
 
-add_image_size( 'front-page-mobile', 1150 );
+
+add_image_size( 'fuzzy-300', 300 );
+add_image_size( 'fuzzy-500', 500 );
+add_image_size( 'fuzzy-700', 700 );
+add_image_size( 'fuzzy-900', 900 );
+add_image_size( 'fuzzy-1100', 1100 );
+add_image_size( 'fuzzy-1300', 1300 );
+add_image_size( 'fuzzy-1500', 1500 );
+add_image_size( 'fuzzy-1700', 1700 );
+add_image_size( 'fuzzy-1920', 1920 );
