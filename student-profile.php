@@ -54,7 +54,7 @@
 				  class="featured-project-image">
 				  <?php /* var_dump(get_field('project_featured_image')) */ ?>
 
-				<?php endif; ?>
+				<?php endif ?>
 	</div>
 </div>
 
@@ -566,7 +566,7 @@
 						    <?php echo $module11['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module11['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
-				</a>
+				<?php endif; ?>
 				</div>
 				<?php if(get_sub_field('caption')): ?>
 				<div class="caption-box">
@@ -769,7 +769,7 @@
 	<?php endif; ?>
 
 	<?php //module 15 no margin hero image because the photographers are such whiners
-	/* if (get_row_layout() == 'module_15' ): ?>
+	 if (get_row_layout() == 'module_15' ): ?>
 			<div class="row module">
 				<div class="col-sm-12">
 					<?php $module15 = get_sub_field('image'); ?>
@@ -800,7 +800,7 @@
 				<?php endif; ?>
 				</div>
 			</div>
-	<?php endif; */ ?>
+	<?php endif; ?>
 
 <?php endwhile; endif; ?>
 
