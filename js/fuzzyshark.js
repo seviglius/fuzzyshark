@@ -1,12 +1,14 @@
 $( document ).ready(function() {
 
 $('.student-list').waypoint(function() {
-  $(this.element).toggleClass("in-range");
+  $(this.element).siblings().removeClass('in-range');
+  $(this.element).addClass("in-range");
  }, { offset: '5%'
 });
 
 $('.student-list').waypoint(function() {
-  $(this.element).toggleClass("in-range");
+  $(this.element).siblings().removeClass('in-range');
+  $(this.element).addClass("in-range");
  }, { offset: '60%'
 });
 
