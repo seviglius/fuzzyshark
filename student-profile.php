@@ -32,12 +32,11 @@
 <div class="container">
 <div class="row">
 	<div class="col-md-12 project-featured-image mobile-no-margin">
-		<?php $img = get_field('project_featured_image');
-						$filetype = $img['mime_type']; ?>
+		<?php $img = get_field('project_featured_image'); ?>
 
-				<?php if( $filetype == 'image/gif' ) : ?>
+				<?php if( $img['mime_type'] == 'image/gif' ) : ?>
 
-				<img src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>" class="featured-project-image">
+				<img src="<?php echo $img['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>" class="featured-project-image">
 
 				<?php else : ?>
 		<img
@@ -81,6 +80,13 @@
 					<?php /* <img src="<?php the_sub_field('image'); ?>" 
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>"> */ ?>
 					<?php $module1 = get_sub_field('image'); ?>
+
+					<?php if( $module1['mime_type'] == 'image/gif' ) : ?>
+
+				<img src="<?php echo $module1['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+
+				<?php else : ?>
+
 					<img src="<?php echo $module1['url']; ?>" 
 					sizes="(min-width: 1200px) 1140px, (min-width: 992px) 940px, (min-width: 768px) 720px, 100vw"
 					srcset="<?php echo $module1['sizes']['fuzzy-3700']; ?> 3700w,
@@ -102,6 +108,7 @@
 						    <?php echo $module1['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module1['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -124,6 +131,11 @@
 			<div class="row module">
 				<div class="col-sm-5">
 					<?php $module3 = get_sub_field('image'); ?>
+
+					<?php if( $module3['mime_type'] == 'image/gif' ) : ?>
+					<img src="<?php echo $module3['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php else : ?>
+
 					<img src="<?php echo $module3['url']; ?>" 
 					sizes="(min-width: 768px) 40vw, 100vw"
 					srcset="<?php echo $module3['sizes']['fuzzy-3700']; ?> 3700w,
@@ -145,6 +157,7 @@
 						    <?php echo $module3['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module3['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<?php if(get_sub_field('caption') ) : ?>
 					<div class="caption-box">
@@ -163,6 +176,11 @@
 		<?php if(get_sub_field('caption')): ?>
 			<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
 				<?php $module4 = get_sub_field('image'); ?>
+
+				<?php if( $module4['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module4['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
+
 				<img src="<?php echo $module4['url']; ?>" 
 					sizes="(min-width: 768px) 40vw, 100vw"
 					srcset="<?php echo $module4['sizes']['fuzzy-3700']; ?> 3700w,
@@ -184,6 +202,7 @@
 						    <?php echo $module4['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module4['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 			</div>
 			<div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
@@ -193,6 +212,9 @@
 			<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7">
 					<?php $module4 = get_sub_field('image'); ?>
+					<?php if( $module4['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module4['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 					<img src="<?php echo $module4['url']; ?>" 
 					sizes="(min-width: 768px) 40vw, 100vw"
 					srcset="<?php echo $module4['sizes']['fuzzy-3700']; ?> 3700w,
@@ -214,6 +236,7 @@
 						    <?php echo $module4['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module4['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 					</div>
 				<?php endif; ?>
 	</div>
@@ -225,6 +248,9 @@
 	<div class="row module">
 	<div class="col-sm-8">
 		<?php $module5 = get_sub_field('image'); ?>
+		<?php if( $module5['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module5['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module5['url']; ?>" 
 					sizes="(min-width: 768px) 66vw, 100vw"
 					srcset="<?php echo $module5['sizes']['fuzzy-3700']; ?> 3700w,
@@ -246,6 +272,7 @@
 						    <?php echo $module5['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module5['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 		</div>
 		<?php if(get_sub_field('caption')): ?>
 		<div class="caption-box">
@@ -264,6 +291,9 @@
 		<?php if(get_sub_field('caption')): ?>
 			<div class="col-sm-8 col-sm-push-4">
 				<?php $module6 = get_sub_field('image'); ?>
+				<?php if( $module6['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module6['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module6['url']; ?>" 
 					sizes="(min-width: 768px) 66vw, 100vw"
 					srcset="<?php echo $module6['sizes']['fuzzy-3700']; ?> 3700w,
@@ -285,6 +315,7 @@
 						    <?php echo $module6['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module6['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<div class="caption-box">
 		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin bwb-push-1">
@@ -294,6 +325,9 @@
 			<?php else : ?>
 				<div class="col-sm-8 col-sm-offset-4">
 					<?php $module6 = get_sub_field('image'); ?>
+					<?php if( $module6['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module6['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module6['url']; ?>" 
 					sizes="(min-width: 768px) 66vw, 100vw"
 					srcset="<?php echo $module6['sizes']['fuzzy-3700']; ?> 3700w,
@@ -315,6 +349,7 @@
 						    <?php echo $module6['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module6['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 					</div>
 				<?php endif; ?>
 	</div>
@@ -325,6 +360,9 @@
 		<div class="row module">
 			<div class="col-sm-6">
 				<?php $module7 = get_sub_field('image'); ?>
+				<?php if( $module7['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module7['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module7['url']; ?>" 
 					sizes="(min-width: 768px) 49vw, 100vw"
 					srcset="<?php echo $module7['sizes']['fuzzy-3700']; ?> 3700w,
@@ -346,6 +384,7 @@
 						    <?php echo $module7['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module7['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 			</div>
 			<?php if(get_sub_field('caption')): ?>
 			<div class="caption-box">
@@ -363,6 +402,9 @@
 			<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
 					<?php $module8 = get_sub_field('image'); ?>
+					<?php if( $module8['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module8['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module8['url']; ?>" 
 					sizes="(min-width: 768px) 40vw, 100vw"
 					srcset="<?php echo $module8['sizes']['fuzzy-3700']; ?> 3700w,
@@ -384,6 +426,7 @@
 						    <?php echo $module8['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module8['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div><div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
 					<p class="caption"><?php the_sub_field('caption'); ?></p>
@@ -408,6 +451,9 @@
 						<?php if(get_row_layout() == 'image' ): ?>
 							<div class="col-sm-4 mobile-no-margin">
 								<?php $module9 = get_sub_field('image'); ?>
+								<?php if( $module9['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module9['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module9['url']; ?>" 
 					sizes="(min-width: 1200px) 360px, (min-width: 992px) 293px, (min-width: 768px) 220px, 100vw"
 					srcset="<?php echo $module9['sizes']['fuzzy-3700']; ?> 3700w,
@@ -429,6 +475,7 @@
 						    <?php echo $module9['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module9['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 							</div>
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
@@ -454,6 +501,9 @@
 					<?php if (have_rows('image_video') ): while ( have_rows('image_video') ): the_row(); ?>
 					<?php if (get_row_layout() == 'image' ): ?>
 						<?php $module10 = get_sub_field('image'); ?>
+						<?php if( $module10['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module10['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module10['url']; ?>" 
 					sizes="(min-width: 1200px) 945px, (min-width: 992px) 778px, (min-width: 768px) 595px, 100vw"
 					srcset="<?php echo $module10['sizes']['fuzzy-3700']; ?> 3700w,
@@ -475,6 +525,7 @@
 						    <?php echo $module10['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module10['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 					<?php endif; ?>
 					<?php if (get_row_layout() == 'video' ): ?>
 						<div class="fitvid-container"><?php the_sub_field('video'); ?></div>
@@ -491,6 +542,9 @@
 			<div class="row">
 				<div class="col-sm-5 mobile-no-margin">
 					<?php $module11 = get_sub_field('image'); ?>
+					<?php if( $module11['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module11['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module11['url']; ?>" 
 					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
 					srcset="<?php echo $module11['sizes']['fuzzy-3700']; ?> 3700w,
@@ -512,6 +566,7 @@
 						    <?php echo $module11['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module11['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				</a>
 				</div>
 				<?php if(get_sub_field('caption')): ?>
 				<div class="caption-box">
@@ -531,6 +586,9 @@
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 mobile-no-margin col-sm-push-6">
 					<?php $module12 = get_sub_field('image'); ?>
+					<?php if( $module12['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module12['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module12['url']; ?>" 
 					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
 					srcset="<?php echo $module12['sizes']['fuzzy-3700']; ?> 3700w,
@@ -552,6 +610,7 @@
 						    <?php echo $module12['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module12['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
@@ -561,6 +620,9 @@
 				<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7 mobile-no-margin">
 					<?php $module12 = get_sub_field('image'); ?>
+					<?php if( $module12['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module12['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module12['url']; ?>" 
 					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
 					srcset="<?php echo $module12['sizes']['fuzzy-3700']; ?> 3700w,
@@ -582,6 +644,7 @@
 						    <?php echo $module12['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module12['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -596,6 +659,9 @@
 			<div class="row">
 				<div class="col-sm-6 mobile-no-margin">
 					<?php $module13 = get_sub_field('image'); ?>
+					<?php if( $module13['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module13['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module13['url']; ?>" 
 					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
 					srcset="<?php echo $module13['sizes']['fuzzy-3700']; ?> 3700w,
@@ -617,6 +683,7 @@
 						    <?php echo $module13['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module13['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<?php if(get_sub_field('caption')): ?>
 					<div class="caption-box">
@@ -636,6 +703,9 @@
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-6 mobile-no-margin col-sm-push-6">
 					<?php $module14 = get_sub_field('image'); ?>
+					<?php if( $module14['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module14['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module14['url']; ?>" 
 					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
 					srcset="<?php echo $module14['sizes']['fuzzy-3700']; ?> 3700w,
@@ -657,6 +727,7 @@
 						    <?php echo $module14['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module14['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
@@ -666,6 +737,9 @@
 				<?php else : ?>
 				<div class="col-sm-6 col-sm-offset-6 mobile-no-margin">
 					<?php $module14 = get_sub_field('image'); ?>
+					<?php if( $module14['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module14['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module14['url']; ?>" 
 					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
 					srcset="<?php echo $module14['sizes']['fuzzy-3700']; ?> 3700w,
@@ -687,6 +761,7 @@
 						    <?php echo $module14['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module14['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 				<?php endif; ?>
 			</div>
@@ -698,6 +773,9 @@
 			<div class="row module">
 				<div class="col-sm-12">
 					<?php $module15 = get_sub_field('image'); ?>
+					<?php if( $module15['mime_type'] == 'image/gif' ) : ?>
+				<img src="<?php echo $module15['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php else : ?>
 		<img src="<?php echo $module15['url']; ?>" 
 					sizes="100vw"
 					srcset="<?php echo $module15['sizes']['fuzzy-3700']; ?> 3700w,
@@ -719,6 +797,7 @@
 						    <?php echo $module15['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module15['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php endif; ?>
 				</div>
 			</div>
 	<?php endif; ?>

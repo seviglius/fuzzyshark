@@ -87,6 +87,13 @@ Studen Rolodex ////////////
 
 				<?php $img = get_field('project_featured_image'); ?>
 
+				<?php if( $img['mime_type'] == 'image/gif' ) : ?>
+
+				<img src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>" class="featured-project-image">
+
+				<?php else : ?>
+
+
 				<img
 					src="<?php echo $img['url']; ?>"
 					sizes="(min-width: 768px) 80vw, 100vw"
@@ -110,6 +117,8 @@ Studen Rolodex ////////////
 						    <?php echo $img['sizes']['fuzzy-300']; ?> 300w""
 				  alt="<?php the_title(); ?>"
 				  class="featured-project-image">
+
+				<?php endif; ?>
 			</a>
 		</div>
 	</div>
