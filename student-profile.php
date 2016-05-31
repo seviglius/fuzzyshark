@@ -800,9 +800,9 @@
 				<?php endif; ?>
 				</div>
 			</div>
-	<?php /* endif; */ ?>
+	<?php endif; ?>
 
-<?php endwhile; endif; ?>
+<?php /* endwhile; */ endif; ?>
 
 <div class="container">
 	<div class="row profile-footer">
