@@ -802,7 +802,7 @@
 			</div>
 	<?php endif; ?>
 
-
+<?php endwhile; endif; ?>
 
 <div class="container">
 	<div class="row profile-footer">
