@@ -800,7 +800,7 @@
 				<?php endif; ?>
 				</div>
 			</div>
-	<?php endif; ?>
+	<?php /* endif; */ ?>
 
 <?php endwhile; endif; ?>
 
