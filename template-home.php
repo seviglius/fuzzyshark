@@ -96,7 +96,7 @@ Studen Rolodex ////////////
 				    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
 				    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
 				    <?php echo $img['sizes']['fuzzy-1700']; ?> 1700w"
-				  sizes="(min-width: 768px) 80vw, 100vw"
+				   <?php /* sizes="(min-width: 768px) 80vw, 100vw" */ ?>
 				  src="<?php echo $img['sizes']['fuzzy-1920']; ?>"
 				  alt="<?php the_title(); ?>"
 				  class="featured-project-image">
