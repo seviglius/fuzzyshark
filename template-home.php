@@ -90,12 +90,12 @@ Studen Rolodex ////////////
 				<img
 				  srcset="<?php echo $img['sizes']['fuzzy-300']; ?> 300w,
 				    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
-				    <?php echo $img['sizes']['fuzzy-700']; ?> 700w
-				    <?php echo $img['sizes']['fuzzy-900']; ?> 900w
-				    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w
-				    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w
-				    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w
-				    <?php echo $img['sizes']['fuzzy-1700']; ?> 1700w
+				    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
+				    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
+				    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w,
+				    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
+				    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
+				    <?php echo $img['sizes']['fuzzy-1700']; ?> 1700w,
 				    <?php echo $img['sizes']['fuzzy-1920']; ?> 1920w"
 				  sizes="(min-width: 768px) 80vw, 100vw"
 				  src="<?php echo $img ?>"
