@@ -7147,21 +7147,6 @@ button.close {
 GLOBAL STYLES//////////////////////////
 GLOBAL STYLES//////////////////////////
 //////////////////////////////////////////////*/
-/*Scrollbars*/
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #433a97;
-  border-radius: 0;
-  max-width: 5px;
-}
-
 /*Text Selection*/
 *::selection {
   background: #433a97;
