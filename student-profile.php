@@ -772,7 +772,7 @@
 	if (get_row_layout() == 'module_15' ): ?>
 			<div class="row module">
 				<div class="col-sm-12">
-					<?php $module15 = get_sub_field('image'); ?>
+					<?php /* $module15 = get_sub_field('image'); ?>
 					<?php if( $module15['mime_type'] == 'image/gif' ) : ?>
 				<img src="<?php echo $module15['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				<?php else : ?>
@@ -797,12 +797,12 @@
 						    <?php echo $module15['sizes']['fuzzy-500']; ?> 500w,
 						    <?php echo $module15['sizes']['fuzzy-300']; ?> 300w"
 					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
-				<?php endif; ?>
+				<?php endif; */ ?>
 				</div>
 			</div>
 	<?php endif; ?>
 
-<?php /* endwhile; */ endif; ?>
+<?php endwhile; endif; ?>
 
 <div class="container">
 	<div class="row profile-footer">
