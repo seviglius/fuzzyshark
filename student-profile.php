@@ -32,7 +32,14 @@
 <div class="container">
 <div class="row">
 	<div class="col-md-12 project-featured-image mobile-no-margin">
-		<?php $img = get_field('project_featured_image'); ?>
+		<?php $img = get_field('project_featured_image');
+						$filetype = $img['mime_type']; ?>
+
+				<?php if( $filetype == 'image/gif' ) : ?>
+
+				<img src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>" class="featured-project-image">
+
+				<?php else : ?>
 		<img
 					src="<?php echo $img['url']; ?>"
 					sizes="(min-width: 1200px) 1140px, (min-width: 992px) 720px, (min-width: 768px) 100vw, 100vw"
@@ -46,7 +53,9 @@
 				    <?php echo $img['sizes']['fuzzy-300']; ?> 300w"
 				  alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>"
 				  class="featured-project-image">
-				  <?php var_dump(get_field('project_featured_image')) ?>
+				  <?php /* var_dump(get_field('project_featured_image')) */ ?>
+
+				<?php endif; ?>
 	</div>
 </div>
 
