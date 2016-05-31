@@ -2,12 +2,6 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<!--
-<div class="home-button">
-	<a href="<?php bloginfo('url'); ?>"><i class="fa fa-angle-left"></i><span>Home</span></a>
-</div>
--->
-
 <div class="container">
 	<div class="row profile-header-wrapper">
 		<div class="profile-header col-sm-12">
@@ -38,10 +32,22 @@
 <div class="container">
 <div class="row">
 	<div class="col-md-12 project-featured-image mobile-no-margin">
-		<img src="<?php the_field('project_featured_image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+		<?php $img = get_field('project_featured_image'); ?>
+		<img
+					src="<?php echo $img['url']; ?>"
+					sizes="(min-width: 1200px) 1140px, (min-width: 992px) 720px, (min-width: 768px) 100vw, 100vw"
+				  srcset="<?php echo $img['sizes']['fuzzy-1700']; ?> 1700w,
+				    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
+				    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
+				    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w,
+				    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
+				    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
+				    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
+				    <?php echo $img['sizes']['fuzzy-300']; ?> 300w"
+				  alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>"
+				  class="featured-project-image">
 	</div>
 </div>
-
 
 	<div class="module row project-introduction">
 		<div class="col-md-8 col-md-offset-2">
@@ -62,7 +68,30 @@
 		<div class="container">
 			<div class="row module">
 				<div class="col-md-12 mobile-no-margin">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php /* <img src="<?php the_sub_field('image'); ?>" 
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>"> */ ?>
+					<?php $module1 = get_sub_field('image'); ?>
+					<img src="<?php echo $module1['url']; ?>" 
+					sizes="(min-width: 1200px) 1140px, (min-width: 992px) 940px, (min-width: 768px) 720px, 100vw"
+					srcset="<?php echo $module1['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module1['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module1['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module1['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module1['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module1['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module1['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module1['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module1['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module1['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module1['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module1['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module1['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module1['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module1['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module1['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module1['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module1['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 			</div>
 		</div>
@@ -84,7 +113,28 @@
 	if (get_row_layout() == 'module_3' ): ?>
 			<div class="row module">
 				<div class="col-sm-5">
-					<img id="module-3-img" src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module3 = get_sub_field('image'); ?>
+					<img src="<?php echo $module3['url']; ?>" 
+					sizes="(min-width: 768px) 40vw, 100vw"
+					srcset="<?php echo $module3['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module3['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module3['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module3['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module3['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module3['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module3['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module3['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module3['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module3['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module3['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module3['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module3['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module3['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module3['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module3['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module3['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module3['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption') ) : ?>
 					<div class="caption-box">
@@ -102,7 +152,28 @@
 	<div class="row module">
 		<?php if(get_sub_field('caption')): ?>
 			<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
-				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php $module4 = get_sub_field('image'); ?>
+				<img src="<?php echo $module4['url']; ?>" 
+					sizes="(min-width: 768px) 40vw, 100vw"
+					srcset="<?php echo $module4['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module4['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module4['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module4['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module4['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module4['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module4['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module4['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module4['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module4['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module4['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module4['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module4['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module4['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module4['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module4['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module4['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module4['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 			</div>
 			<div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
@@ -111,7 +182,28 @@
 			</div>
 			<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module4 = get_sub_field('image'); ?>
+					<img src="<?php echo $module4['url']; ?>" 
+					sizes="(min-width: 768px) 40vw, 100vw"
+					srcset="<?php echo $module4['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module4['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module4['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module4['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module4['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module4['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module4['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module4['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module4['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module4['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module4['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module4['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module4['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module4['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module4['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module4['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module4['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module4['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 					</div>
 				<?php endif; ?>
 	</div>
@@ -122,7 +214,28 @@
 	if (get_row_layout() == 'module_5' ): ?>
 	<div class="row module">
 	<div class="col-sm-8">
-		<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+		<?php $module5 = get_sub_field('image'); ?>
+		<img src="<?php echo $module5['url']; ?>" 
+					sizes="(min-width: 768px) 66vw, 100vw"
+					srcset="<?php echo $module5['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module5['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module5['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module5['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module5['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module5['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module5['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module5['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module5['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module5['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module5['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module5['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module5['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module5['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module5['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module5['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module5['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module5['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 		</div>
 		<?php if(get_sub_field('caption')): ?>
 		<div class="caption-box">
@@ -140,7 +253,28 @@
 	<div class="row module">
 		<?php if(get_sub_field('caption')): ?>
 			<div class="col-sm-8 col-sm-push-4">
-				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php $module6 = get_sub_field('image'); ?>
+		<img src="<?php echo $module6['url']; ?>" 
+					sizes="(min-width: 768px) 66vw, 100vw"
+					srcset="<?php echo $module6['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module6['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module6['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module6['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module6['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module6['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module6['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module6['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module6['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module6['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module6['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module6['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module6['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module6['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module6['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module6['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module6['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module6['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="caption-box">
 		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin bwb-push-1">
@@ -149,7 +283,28 @@
 	</div>
 			<?php else : ?>
 				<div class="col-sm-8 col-sm-offset-4">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module6 = get_sub_field('image'); ?>
+		<img src="<?php echo $module6['url']; ?>" 
+					sizes="(min-width: 768px) 66vw, 100vw"
+					srcset="<?php echo $module6['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module6['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module6['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module6['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module6['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module6['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module6['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module6['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module6['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module6['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module6['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module6['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module6['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module6['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module6['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module6['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module6['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module6['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 					</div>
 				<?php endif; ?>
 	</div>
@@ -159,7 +314,28 @@
 	if (get_row_layout() == 'module_7' ): ?>
 		<div class="row module">
 			<div class="col-sm-6">
-				<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+				<?php $module7 = get_sub_field('image'); ?>
+		<img src="<?php echo $module7['url']; ?>" 
+					sizes="(min-width: 768px) 49vw, 100vw"
+					srcset="<?php echo $module7['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module7['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module7['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module7['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module7['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module7['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module7['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module7['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module7['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module7['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module7['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module7['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module7['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module7['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module7['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module7['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module7['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module7['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 			</div>
 			<?php if(get_sub_field('caption')): ?>
 			<div class="caption-box">
@@ -176,7 +352,28 @@
 		<div class="row module">
 			<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 col-sm-push-6">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module8 = get_sub_field('image'); ?>
+		<img src="<?php echo $module8['url']; ?>" 
+					sizes="(min-width: 768px) 40vw, 100vw"
+					srcset="<?php echo $module8['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module8['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module8['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module8['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module8['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module8['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module8['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module8['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module8['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module8['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module8['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module8['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module8['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module8['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module8['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module8['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module8['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module8['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div><div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
 					<p class="caption"><?php the_sub_field('caption'); ?></p>
@@ -200,7 +397,28 @@
 			<?php if(have_rows('row')): while(have_rows('row')): the_row(); ?>
 						<?php if(get_row_layout() == 'image' ): ?>
 							<div class="col-sm-4 mobile-no-margin">
-								<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+								<?php $module9 = get_sub_field('image'); ?>
+		<img src="<?php echo $module9['url']; ?>" 
+					sizes="(min-width: 1200px) 360px, (min-width: 992px) 293px, (min-width: 768px) 220px, 100vw"
+					srcset="<?php echo $module9['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module9['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module9['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module9['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module9['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module9['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module9['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module9['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module9['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module9['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module9['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module9['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module9['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module9['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module9['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module9['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module9['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module9['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 							</div>
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
@@ -225,7 +443,28 @@
 				<div class="col-sm-10 col-sm-offset-1 mobile-no-margin">
 					<?php if (have_rows('image_video') ): while ( have_rows('image_video') ): the_row(); ?>
 					<?php if (get_row_layout() == 'image' ): ?>
-						<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+						<?php $module10 = get_sub_field('image'); ?>
+		<img src="<?php echo $module10['url']; ?>" 
+					sizes="(min-width: 1200px) 945px, (min-width: 992px) 778px, (min-width: 768px) 595px, 100vw"
+					srcset="<?php echo $module10['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module10['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module10['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module10['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module10['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module10['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module10['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module10['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module10['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module10['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module10['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module10['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module10['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module10['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module10['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module10['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module10['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module10['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 					<?php endif; ?>
 					<?php if (get_row_layout() == 'video' ): ?>
 						<div class="fitvid-container"><?php the_sub_field('video'); ?></div>
@@ -241,7 +480,28 @@
 		<div class="container module">
 			<div class="row">
 				<div class="col-sm-5 mobile-no-margin">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module11 = get_sub_field('image'); ?>
+		<img src="<?php echo $module11['url']; ?>" 
+					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
+					srcset="<?php echo $module11['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module11['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module11['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module11['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module11['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module11['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module11['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module11['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module11['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module11['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module11['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module11['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module11['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module11['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module11['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module11['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module11['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module11['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption')): ?>
 				<div class="caption-box">
@@ -260,7 +520,28 @@
 			<div class="row">
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-5 col-sm-offset-1 mobile-no-margin col-sm-push-6">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module12 = get_sub_field('image'); ?>
+		<img src="<?php echo $module12['url']; ?>" 
+					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
+					srcset="<?php echo $module12['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module12['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module12['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module12['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module12['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module12['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module12['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module12['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module12['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module12['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module12['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module12['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module12['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module12['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module12['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module12['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module12['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module12['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
@@ -269,7 +550,28 @@
 				</div>
 				<?php else : ?>
 				<div class="col-sm-5 col-sm-offset-7 mobile-no-margin">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module12 = get_sub_field('image'); ?>
+		<img src="<?php echo $module12['url']; ?>" 
+					sizes="(min-width: 1200px) 458px, (min-width: 992px) 374px, (min-width: 768px) 283px, 100vw"
+					srcset="<?php echo $module12['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module12['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module12['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module12['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module12['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module12['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module12['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module12['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module12['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module12['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module12['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module12['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module12['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module12['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module12['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module12['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module12['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module12['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php endif; ?>
 			</div>
@@ -283,7 +585,28 @@
 		<div class="container module">
 			<div class="row">
 				<div class="col-sm-6 mobile-no-margin">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module13 = get_sub_field('image'); ?>
+		<img src="<?php echo $module13['url']; ?>" 
+					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
+					srcset="<?php echo $module13['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module13['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module13['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module13['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module13['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module13['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module13['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module13['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module13['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module13['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module13['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module13['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module13['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module13['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module13['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module13['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module13['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module13['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php if(get_sub_field('caption')): ?>
 					<div class="caption-box">
@@ -302,7 +625,28 @@
 			<div class="row">
 				<?php if(get_sub_field('caption')): ?>
 				<div class="col-sm-6 mobile-no-margin col-sm-push-6">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module14 = get_sub_field('image'); ?>
+		<img src="<?php echo $module14['url']; ?>" 
+					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
+					srcset="<?php echo $module14['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module14['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module14['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module14['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module14['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module14['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module14['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module14['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module14['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module14['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module14['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module14['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module14['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module14['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module14['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module14['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module14['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module14['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
@@ -311,7 +655,28 @@
 				</div>
 				<?php else : ?>
 				<div class="col-sm-6 col-sm-offset-6 mobile-no-margin">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module14 = get_sub_field('image'); ?>
+		<img src="<?php echo $module14['url']; ?>" 
+					sizes="(min-width: 1200px) 555px, (min-width: 992px) 455px, (min-width: 768px) 345px, 100vw"
+					srcset="<?php echo $module14['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module14['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module14['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module14['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module14['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module14['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module14['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module14['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module14['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module14['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module14['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module14['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module14['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module14['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module14['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module14['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module14['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module14['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 				<?php endif; ?>
 			</div>
@@ -322,7 +687,28 @@
 	if (get_row_layout() == 'module_15' ): ?>
 			<div class="row module">
 				<div class="col-sm-12">
-					<img src="<?php the_sub_field('image'); ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
+					<?php $module15 = get_sub_field('image'); ?>
+		<img src="<?php echo $module15['url']; ?>" 
+					sizes="100vw"
+					srcset="<?php echo $module15['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $module15['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $module15['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $module15['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $module15['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $module15['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $module15['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $module15['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $module15['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $module15['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $module15['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $module15['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $module15['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $module15['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $module15['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $module15['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $module15['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $module15['sizes']['fuzzy-300']; ?> 300w"
+					alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 				</div>
 			</div>
 	<?php endif; ?>

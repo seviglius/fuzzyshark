@@ -88,16 +88,26 @@ Studen Rolodex ////////////
 				<?php $img = get_field('project_featured_image'); ?>
 
 				<img
-				  srcset="<?php echo $img['sizes']['fuzzy-300']; ?> 300w,
-				    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
-				    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
-				    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
-				    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w,
-				    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
-				    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
-				    <?php echo $img['sizes']['fuzzy-1700']; ?> 1700w"
-				   <?php /* sizes="(min-width: 768px) 80vw, 100vw" */ ?>
-				  src="<?php echo $img['sizes']['fuzzy-1920']; ?>"
+					src="<?php echo $img['url']; ?>"
+					sizes="(min-width: 768px) 80vw, 100vw"
+				  srcset="<?php echo $img['sizes']['fuzzy-3700']; ?> 3700w,
+							<?php echo $img['sizes']['fuzzy-3500']; ?> 3500w,
+							<?php echo $img['sizes']['fuzzy-3300']; ?> 3300w,
+							<?php echo $img['sizes']['fuzzy-3100']; ?> 3100w,
+							<?php echo $img['sizes']['fuzzy-2900']; ?> 2900w,
+							<?php echo $img['sizes']['fuzzy-2700']; ?> 2700w,
+							<?php echo $img['sizes']['fuzzy-2500']; ?> 2500w,
+							<?php echo $img['sizes']['fuzzy-2300']; ?> 2300w,
+							<?php echo $img['sizes']['fuzzy-2100']; ?> 2100w,
+							<?php echo $img['sizes']['fuzzy-1900']; ?> 1900w,
+							<?php echo $img['sizes']['fuzzy-1700']; ?> 1700w,
+						    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
+						    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
+						    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w,
+						    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
+						    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
+						    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
+						    <?php echo $img['sizes']['fuzzy-300']; ?> 300w""
 				  alt="<?php the_title(); ?>"
 				  class="featured-project-image">
 			</a>

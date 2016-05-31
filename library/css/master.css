@@ -7945,7 +7945,6 @@ a:link, a:hover, a:active, a:visited {
 
 .in-range .featured-project-image {
   display: block;
-  animation: featured-fadeIn linear forwards .5s;
 }
 .in-range .name {
   text-decoration: underline;
@@ -7960,7 +7959,6 @@ a:link, a:hover, a:active, a:visited {
 
 .hovered .featured-project-image {
   display: block;
-  animation: featured-fadeIn linear forwards .5s;
 }
 .hovered .name {
   text-decoration: underline;
