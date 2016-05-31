@@ -11,7 +11,7 @@
 		</div>
 	</div> 
 	<div class="project-header col-sm-12">
-			<h2><?php the_field('project_title'); ?></h2>
+			<h2><?php echo wptexturize(get_field('project_title')); ?></h2>
 			<?php
 
 				$post_objects = get_field('collaborators');
@@ -60,7 +60,7 @@
 
 	<div class="module row project-introduction">
 		<div class="col-md-8 col-md-offset-2">
-			<p><?php the_field('project_introduction'); ?></p>
+			<p class="caption"><?php echo wptexturize(get_field('project_introduction')); ?></p>
 		</div>
 	</div>
 </div>
@@ -119,7 +119,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 centered-excerpt">
-					<p><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 				</div>
 			</div>
 		</div>
@@ -162,7 +162,7 @@
 				<?php if(get_sub_field('caption') ) : ?>
 					<div class="caption-box">
 					<div class="col-sm-5 col-sm-offset-1 mobile-add-margin bwb-push-6">
-						<p class="caption"><?php the_sub_field('caption'); ?></p>
+						<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 					</div>
 				</div>
 				<?php endif; ?>
@@ -206,7 +206,7 @@
 			</div>
 			<div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
-					<p class="caption"><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 				</div>
 			</div>
 			<?php else : ?>
@@ -277,7 +277,7 @@
 		<?php if(get_sub_field('caption')): ?>
 		<div class="caption-box">
 		<div class="col-sm-3 mobile-add-margin bwb-push-8">
-			<p class="caption"><?php the_sub_field('caption'); ?></p>
+			<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 	</div>
 </div>
 	<?php endif; ?>
@@ -319,7 +319,7 @@
 				</div>
 				<div class="caption-box">
 		<div class="col-sm-3 col-sm-offset-1 col-sm-pull-8 mobile-add-margin bwb-push-1">
-			<p class="caption"><?php the_sub_field('caption'); ?></p>
+			<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 		</div>
 	</div>
 			<?php else : ?>
@@ -389,7 +389,7 @@
 			<?php if(get_sub_field('caption')): ?>
 			<div class="caption-box">
 				<div class="col-sm-5 mobile-add-margin bwb-push-6">
-					<p class="caption"><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 				</div>
 			</div>
 			<?php endif; ?>
@@ -429,7 +429,7 @@
 				<?php endif; ?>
 				</div><div class="caption-box">
 				<div class="col-sm-5 col-sm-offset-1 col-sm-pull-6 mobile-add-margin bwb-push-1">
-					<p class="caption"><?php the_sub_field('caption'); ?></p>
+					<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 				</div>
 			</div>
 			<?php else : ?>
@@ -480,7 +480,7 @@
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
 							<div class="col-sm-4">
-								<p><?php the_sub_field('caption'); ?></p>
+								<p><?php echo wptexturize(get_sub_field('caption')); ?></p>
 							</div>
 						<?php endif; ?>
 					
@@ -571,7 +571,7 @@
 				<?php if(get_sub_field('caption')): ?>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-offset-1 bwb-push-6">
-						<p class="caption"><?php the_sub_field('caption'); ?></p>
+						<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 					</div>
 				</div>
 				<?php endif; ?>
@@ -614,7 +614,7 @@
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
-						<p class="caption"><?php the_sub_field('caption'); ?></p>
+						<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 					</div>
 				</div>
 				<?php else : ?>
@@ -688,7 +688,7 @@
 				<?php if(get_sub_field('caption')): ?>
 					<div class="caption-box">
 						<div class="col-sm-6 bwb-push-6">
-							<p class="caption"><?php the_sub_field('caption'); ?></p>
+							<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -731,7 +731,7 @@
 				</div>
 				<div class="caption-box">
 					<div class="col-sm-6 col-sm-pull-6 bwb-push-0">
-						<p class="caption"><?php the_sub_field('caption'); ?></p>
+						<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 					</div>
 				</div>
 				<?php else : ?>
