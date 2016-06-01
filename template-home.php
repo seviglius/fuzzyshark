@@ -9,7 +9,6 @@
 Magnific Pop Link ////////////
 //////////////////////////////////-->
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/magnific.js"></script>
-
 <!-- ///////////////////////////////
 Header Video Section////////////
 //////////////////////////////////-->
@@ -18,7 +17,7 @@ Header Video Section////////////
 <!-- ///////////////////////////////
 Header Video Section////////////
 //////////////////////////////////-->
-<div id="video-container" class="justify-center">
+<div id="video-container" class="justify-center gradient">
 <!-- 	<div class="container">
 		<div class="row justify-center"> -->
 			<div class="inner-video-container">
@@ -128,6 +127,39 @@ Studen Rolodex ////////////
 	</div>
 </div>
 
+<!-- ///////////////////////////////////
+Page Bottom Info Section//////
+//////////////////////////////////////-->
+<div id="pageBottom" class="justify-center gradient-rotated">
+	<div class="container">
+		<div class="row thank-you">
+			<div class="col-md-8 date-icons">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Portshowlio 2016 <span class="line-break">June 15 + 16, 5—9pm</span></h2>
+					</div>
+					<div class="col-md-6">
+						<li>fb</li>
+						<li>instagram</li>
+						<li>twitter?</li>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<p>
+					The SCCA class of 2016 would like to thank the incredible faculty,  alumni, and many professionals who have inspired and supported us over the last two years. Your dedication and patience are unmatched,  and we are thrilled to be entering a community with so much talent. 
+				</p>
+			</div>
+		</div>
+		<div class="row directions-parking">
+			<div class="col-md-6">
+				<p>Directions + Parking</p>
+				<p>The Creative Academy is located on the 5th floor of <a href="/">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find <a href="/">paid parking in the lot</a>.</p>
+			</div>
+		</div>
+	</div>
+	<span id="bottomLogo"></span>
+</div>
 <!-- ///////////////////////////////
 Magnific Pop Run Script ////////////
 //////////////////////////////////-->
