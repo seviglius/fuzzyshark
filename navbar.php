@@ -100,7 +100,7 @@
         <?php 
         $bs_clearfix = 0;
         while ($query->have_posts()) : $query->the_post(); 
-        $clearfix = bootstrap_clearfix( $bs_clearfix, array( 'xs' => 6, 'sm' => 3 ) );
+        $clearfix = bootstrap_clearfix( $bs_clearfix, array( 'xs' => 6, 'lg' => 3 ) );
     echo $clearfix;
     $bs_clearfix ++;
         ?> 
