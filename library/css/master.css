@@ -8708,6 +8708,7 @@ body a:hover {
   width: 100%;
   padding-top: 55%;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 .single .bottom-img-container img {
   position: absolute;
@@ -8722,7 +8723,6 @@ body a:hover {
 }
 .single .bottom-nav {
   background: #433a97;
-  padding-bottom: 30px;
 }
 .single .bottom-nav svg {
   height: 50px;
