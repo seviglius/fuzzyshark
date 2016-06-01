@@ -111,3 +111,33 @@ $('#bottom-photo-button').click(function(){
   $(this).addClass("active");
   $(this).siblings().removeClass("active");
 });
+
+// $('#parent>div:nth-child(4n)').after('<div class="clearfix visible-all">');
+// $('#parent>.design:nth-child(4n)').after('<div class="clearfix visible-design">');
+// $('#parent>.photography:nth-child(4n)').after('<div class="clearfix visible-photo">');
+
+$('#parent>div:nth-child(4n)').after('<div class="clearfix visible-all">');
+
+$('#parent>.design').filter(function(index){
+ return (index%4 == 3);
+}).after('<div class="clearfix visible-design">');
+
+$('#parent>.photography').filter(function(index){
+ return (index%4 == 3);
+}).after('<div class="clearfix visible-photo">');
+
+$('#all').click(function() {
+  $('.visible-all').css('display', 'block');
+  $('.visible-design').css('display', 'none');
+  $('.visible-photo').css('display', 'none');
+});
+$('#design').click(function() {
+  $('.visible-all').css('display', 'none');
+  $('.visible-design').css('display', 'block');
+  $('.visible-photo').css('display', 'none');
+});
+$('#photography').click(function() {
+  $('.visible-all').css('display', 'none');
+  $('.visible-design').css('display', 'none');
+  $('.visible-photo').css('display', 'block');
+});
