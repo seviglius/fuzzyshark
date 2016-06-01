@@ -959,6 +959,7 @@ while($bottom_query_photo->have_posts()) : $bottom_query_photo->the_post(); ?>
 <div class="col-md-6">
 	<a href="<?php the_permalink(); ?>">
 	<?php $bottomdesign = get_field('project_featured_image'); ?>
+	<div class="bottom-img-container">
 
 				<?php if( $bottomdesign['mime_type'] == 'image/gif' ) : ?>
 
@@ -979,6 +980,7 @@ while($bottom_query_photo->have_posts()) : $bottom_query_photo->the_post(); ?>
 				  alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>">
 
 				<?php endif ?>
+			</div>
 	</a>
 </div>
 
