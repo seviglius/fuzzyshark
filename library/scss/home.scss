@@ -53,7 +53,7 @@ img {
 	bottom: 56%;
 	margin: auto;
 	padding-bottom: 25px;
-	right: 132px;
+	right: 90px;
 	z-index: -9999;
 	background-image: url('../../img/logo.svg');
 	background-size: 100%;
@@ -111,13 +111,11 @@ a {
 
 .intro {
 	margin-top: 200px;
+	margin-bottom: 100px;
 	color: $white;
+	background-color: $red;
 	h2 {
 	font-weight: bold;
-	font-size: 3rem;
-	}
-	p {
-	line-height: 1.5;
 	font-size: 3rem;
 	}
 }
@@ -162,12 +160,6 @@ a {
 #video-container {
 	width: 100%;
 	height: 100vh;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+51,ee2624+82,ee2624+100&1+0,1+72,0+100 */
-	background: #433a97; /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(67,58,151,1) 0%, rgba(177,36,110,1) 51%, rgba(218,37,60,1) 72%, rgba(238,38,36,0.64) 82%, rgba(238,38,36,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#00ee2624',GradientType=0 ); /* IE6-9 */
 
 
 	img {
@@ -198,16 +190,6 @@ $yVal: 10px;
 				stroke: $white;
 				stroke-width:1px;
 			}
-/*			#left-piece{
-				@include bp(iphone){
-					animation:play_break-left infinite linear 4s;
-				}
-			}
-			#right-piece{
-				@include bp(iphone){
-					animation:play_break-right infinite linear 4s;
-				}
-			}*/
 		}
 		a:hover > .videothumb > svg#play-button{
 			#left-piece{
@@ -220,8 +202,67 @@ $yVal: 10px;
 	}
 }
 
-.intro{
-	margin-bottom: 100px;
+.gradient{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+51,ee2624+82,ee2624+100&1+0,1+72,0+100 */
+	background: #433a97; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(67,58,151,1) 0%, rgba(177,36,110,1) 51%, rgba(218,37,60,1) 72%, rgba(238,38,36,0.64) 82%, rgba(238,38,36,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#00ee2624',GradientType=0 ); /* IE6-9 */
+}
+.gradient-rotated{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ee2624+0,ee2624+18,b1246e+49,433a97+100&0+0,1+28,1+100 */
+background: #433a97; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(238,38,36,0) 0%, rgba(238,38,36,0.64) 18%, rgba(218,37,60,1) 28%, rgba(177,36,110,1) 49%, rgba(67,58,151,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', endColorstr='#433a97',GradientType=0 ); /* IE6-9 */
+}
+
+#pageBottom{
+	position: relative;
+	.thank-you{
+		margin-bottom: 100px;
+	}
+	color:$white;
+	li{
+		display: inline-block;
+		margin:0 10px 0 0;
+		transform: translate3d(0,25px,0);
+		&:nth-of-type(1){
+			
+		}
+		&:nth-of-type(2){
+			
+		}
+		&:nth-of-type(3){
+			
+		}
+	}
+	.date-icons{
+		margin:0 0 20px;
+	}
+
+	.directions-parking{
+
+	}
+	#bottomLogo{
+		position: absolute;
+		width: 305px;
+		height: 437px;
+		top: 5%;
+		bottom: 56%;
+		margin: auto;
+		padding-bottom: 25px;
+		right: 90px;
+		z-index: 0;
+		background-image: url('../../img/logo.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		text-indent: -9999px;
+		opacity: 1;
+		transition: 1s;
+	}
 }
 
 .collaborators {
@@ -250,12 +291,19 @@ $yVal: 10px;
 	}
 }
 
+.intro p,
+#pageBottom p,
+#pageBottom li {
+	line-height: 1.5;
+	font-size: 3rem;
+}
+
 @media screen and (max-width: 992px) {
 
 #logo {
 		position: relative;
 		z-index: auto;
-		display: block;
+		display: none;
 		margin-left: auto;
 		margin-right: auto;
 		top: auto;
@@ -281,11 +329,14 @@ $yVal: 10px;
 		h2 {
 			font-size: 2rem;
 			}
-		p {
-			line-height: 1.5;
-			font-size: 2rem;
-		}
 	}
+
+	.intro p,
+#pageBottom p,
+#pageBottom li {
+	line-height: 1.5;
+	font-size: 2rem;
+}
 
 	.scca-student-name {
 			margin-top: 200px;
@@ -314,4 +365,3 @@ $yVal: 10px;
 #logo.opacity-zero {
 	opacity: 0;
 }
-
