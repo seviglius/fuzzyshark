@@ -88,3 +88,26 @@ $(".profile-footer").waypoint(function() {
 //         scrollTop: $(window).scrollTop() - (distance * delta)
 //     }, time );
 // }
+
+
+$('.single-design').find("#bottom-design-button").addClass("active");
+$('.single-photography').find("#bottom-photo-button").addClass("active");
+
+$('.single-design').find(".bottom-nav-design").css("display", "block");
+$('.single-design').find(".bottom-nav-photo").css("display", "none");
+$('.single-photography').find(".bottom-nav-design").css("display", "none");
+$('.single-photography').find(".bottom-nav-photo").css("display", "block");
+
+$('#bottom-design-button').click(function(){
+  $(".bottom-nav-design").css("display", "block");
+  $(".bottom-nav-photo").css("display", "none");
+  $(this).addClass("active");
+  $(this).siblings().removeClass("active");
+});
+
+$('#bottom-photo-button').click(function(){
+  $(".bottom-nav-design").css("display", "none");
+  $(".bottom-nav-photo").css("display", "block");
+  $(this).addClass("active");
+  $(this).siblings().removeClass("active");
+});

@@ -298,5 +298,40 @@ body {
 	 }
 }
 
+.bottom-nav {
+	background: $darkblue;
+	padding-bottom: 30px;
+	svg {
+		height: 50px;
+		cursor: pointer;
+		display: inline-block;
+		@media screen and (max-width: 768px) {
+			height: 30px;
+		}
+	}
+
+	.bottom-svg {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 75px;
+		margin-bottom: 75px;
+	}
+
+path {
+	fill: $darkblue !important;
+	stroke: $white !important;
 }
 
+.active {
+	path {
+  fill: $white !important;
+  path: $darkblue !important;
+  transition: all .2s;
+}
+}
+
+}
+
+
+}
