@@ -8705,6 +8705,8 @@ body a:hover {
   right: -9999px;
   margin: auto;
   display: block;
+  min-width: 100%;
+  min-height: 100%;
 }
 .single .bottom-nav {
   background: #433a97;
