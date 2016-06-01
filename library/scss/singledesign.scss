@@ -298,6 +298,23 @@ body {
 	 }
 }
 
+.bottom-img-container {
+	position: relative;
+	width: 100%;
+	padding-top: 55%;
+	overflow: hidden;
+	img {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+		bottom: -9999px;
+		right: -9999px;
+		margin: auto;
+		display: block
+
+	}
+}
+
 .bottom-nav {
 	background: $darkblue;
 	padding-bottom: 30px;
@@ -315,7 +332,7 @@ body {
 		margin: 0 auto;
 		text-align: center;
 		margin-top: 75px;
-		margin-bottom: 75px;
+		margin-bottom: 25px;
 	}
 
 path {

@@ -8691,6 +8691,21 @@ body a:hover {
     width: 1170px;
   }
 }
+.single .bottom-img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 55%;
+  overflow: hidden;
+}
+.single .bottom-img-container img {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  bottom: -9999px;
+  right: -9999px;
+  margin: auto;
+  display: block;
+}
 .single .bottom-nav {
   background: #433a97;
   padding-bottom: 30px;
@@ -8710,7 +8725,7 @@ body a:hover {
   margin: 0 auto;
   text-align: center;
   margin-top: 75px;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
 }
 .single .bottom-nav path {
   fill: #433a97 !important;
