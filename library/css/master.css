@@ -6254,6 +6254,9 @@ body {
   overflow-x: hidden;
   font-family: "azo-sans-web",sans-serif; }
 
+.intro p {
+  font-size: 20rem; }
+
 .home {
   overflow-y: hidden; }
 
