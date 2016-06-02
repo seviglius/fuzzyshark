@@ -7175,6 +7175,10 @@ GLOBAL STYLES//////////////////////////
   }
 }
 
+.comic-sans {
+  font-family: "Comic Sans", "Comic Sans MS";
+}
+
 /*Animations*/
 @keyframes play_break-left {
   0% {
@@ -7892,6 +7896,10 @@ body {
   font-family: "azo-sans-web",sans-serif;
 }
 
+.home {
+  overflow-y: hidden;
+}
+
 .overflow {
   overflow: hidden;
 }
@@ -7913,13 +7921,15 @@ body {
 }
 
 .se-pre-con {
-  position: absolute;
-  left: -10px;
-  top: -17px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  z-index: 0;
-  background: url("../../img/bigonewhite.gif") center no-repeat transparent;
+  overflow: hidden;
+  z-index: 9999;
+  background: url("../../img/bigonewhite.gif") center no-repeat #000;
   background-size: 30%;
 }
 @media (max-width: 800px) {
@@ -7934,7 +7944,7 @@ body {
 }
 @media (max-width: 500px) {
   .se-pre-con {
-    background-size: 75%;
+    background-size: 20%;
   }
 }
 
@@ -7958,7 +7968,7 @@ img {
   background-repeat: no-repeat;
   text-indent: -9999px;
   opacity: 1;
-  transition: 1s;
+  transition: .5s;
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -8275,8 +8285,8 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .scca-student-name {
-    margin-top: 207px;
-    margin-bottom: 81px;
+    margin-top: 415;
+    margin-bottom: -5px;
     font-size: 5rem;
   }
 
@@ -8287,7 +8297,7 @@ a:link, a:hover, a:active, a:visited {
     display: block;
     position: absolute;
     top: auto;
-    transform: translate(0, -10%);
+    transform: translate(0, -50%);
   }
 
   .mobile-add-margin {
@@ -8300,6 +8310,27 @@ a:link, a:hover, a:active, a:visited {
     margin-left: -15px;
   }
 }
+@media screen and (max-width: 450px) {
+  .student-list {
+    position: relative;
+  }
+
+  .scca-student-name {
+    margin-top: 207px;
+    margin-bottom: 81px;
+    font-size: 5rem;
+  }
+
+  .scca-student-photo img {
+    margin: auto 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: auto;
+    transform: translate(0, -150%);
+  }
+}
 #logo {
   opacity: 0;
 }
@@ -8308,15 +8339,19 @@ a:link, a:hover, a:active, a:visited {
   opacity: 1;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  .se-pre-con {
-    top: 0px;
-  }
-
-  .inner-video-container svg#play-button {
-    width: 15%;
-  }
+#comic-sans {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  height: 10px;
+  z-index: 9999999;
+  outline: none;
 }
+
 /*////////////////////////////////////////////////////
 SITEMAP
 ////////////////////////////////////////////////////*/
@@ -8613,6 +8648,34 @@ body a:hover {
   transform: rotate(90deg);
 }
 .social-icon-frame:hover span {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.social-icon-frame-white {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/social-icon-frame-white.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+.social-icon-frame-white span {
+  position: absolute;
+  top: -99px;
+  bottom: -99px;
+  left: -99px;
+  right: -99px;
+  margin: auto;
+}
+.social-icon-frame-white:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.social-icon-frame-white:hover span {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
