@@ -7904,8 +7904,11 @@ body {
   background-color: #ee2624;
   color: #fff;
   overflow-x: hidden;
-  overflow-y: hidden;
   font-family: "azo-sans-web",sans-serif;
+}
+
+.home {
+  overflow-y: hidden;
 }
 
 .overflow {

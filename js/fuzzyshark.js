@@ -1,6 +1,6 @@
 if($('body').hasClass("home")){
     $(".se-pre-con").delay(3000).fadeOut("slow");
-    setTimeout(function(){ $('body').css('overflow-y','auto'); },3000);
+    setTimeout(function(){ $('.home').css('overflow-y','auto'); },3000);
   }
 else {
   $(".se-pre-con").hide();
