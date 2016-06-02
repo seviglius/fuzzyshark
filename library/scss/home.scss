@@ -121,12 +121,18 @@ a {
 }
 
 .scca-student-name {
-	font-size: 10rem;
+	font-size: 100px;
 	line-height: 1;
-	margin-top: 35rem;
-	margin-bottom: 35rem;
+	margin-top: 350px;
+	margin-bottom: 350px;
 	&:last-of-type {
 		margin-bottom: 0;
+	}
+	@media screen and (min-width: 1600px) {
+		font-size: 140px;
+	}
+	@media screen and (min-width: 1800px) {
+		font-size: 160px;
 	}
 }
 
@@ -140,11 +146,6 @@ a {
 	height: auto;
 	width: 80%;
 	display: none;
-}
-
-.student-list {
-	margin-top: 200px;
-	margin-bottom: 200px;
 }
 
 .sticky {
@@ -332,6 +333,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		h2 {
 			font-size: 2rem;
 			}
+		p {
+			line-height: 1.5;
+			font-size: 2rem;
+		}
 	}
 
 	.intro p,
@@ -342,7 +347,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 
 	.scca-student-name {
-			margin-top: 200px;
+			margin-top: 175px;
+			margin-bottom: 175px;
 			font-size: 5rem;
 		}  
 
@@ -368,3 +374,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 #logo.opacity-zero {
 	opacity: 0;
 }
+

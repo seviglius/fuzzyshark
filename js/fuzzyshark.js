@@ -41,6 +41,16 @@ $(".module").waypoint(function() {
  }, { offset: '-30%'
 });
 
+$(".caption-alternate").waypoint(function() {
+  $(this.element).toggleClass("opacity-toggle");
+ }, { offset: '70%'
+});
+
+$(".caption-alternate").waypoint(function() {
+  $(this.element).toggleClass("opacity-toggle");
+ }, { offset: '10%'
+});
+
 
 //responsive videos
 $(".fitvid-container").fitVids();
@@ -140,4 +150,11 @@ $('#photography').click(function() {
   $('.visible-all').css('display', 'none');
   $('.visible-design').css('display', 'none');
   $('.visible-photo').css('display', 'block');
+});
+
+// auto runt control
+jQuery(function($) {
+    $('h1,h2,h3,li,p').each(function() {
+        $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
+    });
 });

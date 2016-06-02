@@ -5,6 +5,13 @@ body {
 	color: $darkblue;
 	overflow-x: hidden;
 }
+.caption-alternate {
+	opacity: 0;
+	transition: .5s;
+	&.opacity-toggle {
+		opacity: 1;
+	}
+}
 .home {
 	.menu-text {
 		color: $white;
@@ -67,6 +74,7 @@ body {
 		color: $darkblue;
 
 		a {
+			z-index: 999999;
 			&:hover, &:link, &:active, &:visited{
 				color: darkblue;
 			}

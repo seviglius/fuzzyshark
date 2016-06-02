@@ -119,7 +119,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 centered-excerpt">
-					<p class="caption"><?php echo wptexturize(get_sub_field('caption')); ?></p>
+					<p class="caption caption-alternate"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 				</div>
 			</div>
 		</div>
@@ -480,7 +480,7 @@
 						<?php endif; 
 						if(get_row_layout() == 'caption' ): ?>
 							<div class="col-sm-4">
-								<p><?php echo wptexturize(get_sub_field('caption')); ?></p>
+								<p class="caption-alternate"><?php echo wptexturize(get_sub_field('caption')); ?></p>
 							</div>
 						<?php endif; ?>
 					
