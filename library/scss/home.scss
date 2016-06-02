@@ -4,9 +4,6 @@ body {
 	overflow-x: hidden;
 	font-family: "azo-sans-web",sans-serif;
 }
-.home {
-	overflow-y: hidden;
-}
 
 .overflow {
 	overflow: hidden;
@@ -26,15 +23,13 @@ body {
     top: 0;
 }
 .se-pre-con {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    position: absolute;
+    left: -10px;
+    top: -17px;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: 9999;
-    background: url('../../img/bigonewhite.gif') center no-repeat #000;
+    z-index: 0;
+    background: url('../../img/bigonewhite.gif') center no-repeat transparent;
     background-size: 30%;
     @media (max-width: 800px) {
     	background-size: 40%;
@@ -43,7 +38,7 @@ body {
     	background-size: 50%;
     }
     @media (max-width: 500px) {
-    background-size: 20%;
+    	background-size: 75%;
     }
 }
 /*End Loader*/
@@ -67,7 +62,7 @@ img {
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	opacity: 1;
-	transition: .5s;
+	transition: 1s;
 }
 
 a {
@@ -427,8 +422,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		position: relative;
 	}
 	.scca-student-name {
-			margin-top: 415;
-			margin-bottom: -5px;
+			margin-top: 207px;
+			margin-bottom: 81px;
 			font-size: 5rem;
 		}  
 
@@ -439,7 +434,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		display: block;
 		position: absolute;
 		top: auto;
-		transform: translate(0,-50%);
+		transform: translate(0,-10%);
 	}
 
 	.mobile-add-margin {
@@ -454,28 +449,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	
 }
 
-@media screen and (max-width: 450px) {
-	.student-list {
-		position: relative;
-	}
-	.scca-student-name {
-			margin-top: 207px;
-			margin-bottom: 81px;
-			font-size: 5rem;
-		}  
-
-	.scca-student-photo img {
-		margin: auto 0;
-		width: 100%;
-		height: auto;
-		display: block;
-		position: absolute;
-		top: auto;
-		transform: translate(0,-150%);
-	}
-}
-
-
 #logo {
 	opacity: 0;
 }
@@ -484,33 +457,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	opacity: 1;
 }
 
-// @media only screen 
-// and (min-device-width : 375px) 
-// and (max-device-width : 667px),
-// @media only screen 
-// and (min-device-width : 414px) 
-// and (max-device-width : 736px),
-//  {
-// 	.se-pre-con {
-// 		top: 9px;
-// 	}
-// 	#video-container .inner-video-container svg#play-button {
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	.se-pre-con {
+		top: 0px;
+	}
+	.inner-video-container{
 		svg#play-button{
-// 		width: 15%;
+			width: 15%;
 		}
-// 	}
+	}
 
-// }
-
-#comic-sans {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	border: 0;
-	background: transparent;
-	width: 100%;
-	height: 10px;
-	z-index: 9999999;
-	outline: none;
 }
+

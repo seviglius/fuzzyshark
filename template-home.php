@@ -3,7 +3,6 @@
 ?>
 
 <?php get_header(); ?>
-<div class="se-pre-con" id="preloader-gif"></div>
 <?php get_template_part( 'navbar' ); ?>
 
 <!-- ///////////////////////////////
@@ -158,7 +157,7 @@ Page Bottom Info Section//////
 
 			<div class="col-md-offset-2 col-md-3">
 
-        			<div class="social-icon-frame-white">
+        			<div class="social-icon-frame">
 						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
@@ -166,7 +165,7 @@ Page Bottom Info Section//////
         				</a>
         			</div>
 
-        			<div class="social-icon-frame-white">
+        			<div class="social-icon-frame">
 						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
