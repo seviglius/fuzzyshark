@@ -7136,14 +7136,16 @@ body {
       .single .bottom-img-container {
         background: #433a97; }
         .single .bottom-img-container img {
-          mix-blend-mode: overlay; }
+          mix-blend-mode: overlay;
+          opacity: .7; }
         .single .bottom-img-container .name {
           font-size: 2rem;
           opacity: 1; }
         .single .bottom-img-container:hover .name {
           opacity: 0 !important; }
         .single .bottom-img-container:hover img {
-          mix-blend-mode: normal; } }
+          mix-blend-mode: normal;
+          opacity: 1; } }
   .single .bottom-nav {
     background: #433a97;
     background: -webkit-linear-gradient(0deg, #433a97, #fff);
