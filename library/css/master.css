@@ -7180,6 +7180,9 @@ body {
       -webkit-transition: all .2s;
       transition: all .2s; }
 
+.single .col-sm-6 .caption {
+  width: 70%; }
+
 @media screen and (max-width: 768px) {
   .caption-box .col-sm-5 p {
     width: 100%;
