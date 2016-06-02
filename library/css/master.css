@@ -8002,8 +8002,10 @@ a:link, a:hover, a:active, a:visited {
   background-color: #ee2624;
 }
 .intro h2 {
-  font-weight: bold;
-  font-size: 3rem;
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
 }
 
 .scca-student-name {
@@ -8113,12 +8115,12 @@ a:link, a:hover, a:active, a:visited {
 
 #pageBottom {
   min-height: 100vh;
-  padding-top: 200px;
+  padding-top: 100px;
   position: relative;
   color: #fff;
 }
 #pageBottom .showinfo {
-  margin: 0 0 100px 0;
+  margin: 0 0 30px 0;
 }
 #pageBottom li {
   display: inline-block;
@@ -8136,18 +8138,21 @@ a:link, a:hover, a:active, a:visited {
   content: ",";
 }
 
-#pageBottom h2 {
-  line-height: 0.55;
-  font-size: 6rem;
-  letter-spacing: 0.5px;
-  margin-bottom: 65px;
-}
-#pageBottom #dateAndTime {
+.dateAndTime {
   font-size: 2rem;
   letter-spacing: 2.7px;
+  position: relative;
+  top: -20px;
+}
+
+#pageBottom h2 {
+  line-height: 1;
+  font-size: 6rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
 }
 #pageBottom .thanks {
-  margin-bottom: 140px;
+  margin-bottom: 70px;
 }
 #pageBottom .thanks p {
   font-size: 13px;
@@ -8190,11 +8195,44 @@ a:link, a:hover, a:active, a:visited {
     top: 10px;
   }
   .intro h2 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .intro p {
     line-height: 1.5;
     font-size: 2rem;
+  }
+
+  #pageBottom .showinfo {
+    margin-bottom: 10px;
+  }
+  #pageBottom .container {
+    margin: 0 25px 0 25px;
+  }
+  #pageBottom h2 {
+    line-height: 1;
+    font-size: 3.5rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  #pageBottom .thanks {
+    margin-bottom: 40px;
+  }
+  #pageBottom .thanks p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+  }
+  #pageBottom .parking a {
+    font-weight: 700;
+  }
+  #pageBottom .parking p {
+    font-size: 17px;
+  }
+
+  .dateAndTime {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
   }
 
   .intro p,
