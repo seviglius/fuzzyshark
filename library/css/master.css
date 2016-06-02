@@ -7901,6 +7901,10 @@ body {
   display: none;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .js #loader {
   display: block;
   position: absolute;
@@ -7947,7 +7951,7 @@ img {
   bottom: 56%;
   margin: auto;
   padding-bottom: 25px;
-  right: 90px;
+  left: 90px;
   z-index: -9999;
   background-image: url("../../img/logo.svg");
   background-size: 100%;
@@ -7960,7 +7964,6 @@ img {
 a:link, a:hover, a:active, a:visited {
   color: #fff;
   text-decoration: none;
-  outline: none;
 }
 
 .in-range .featured-project-image {
@@ -8110,38 +8113,17 @@ a:link, a:hover, a:active, a:visited {
 
 #pageBottom {
   min-height: 100vh;
-  padding-top: 300px;
+  padding-top: 200px;
   position: relative;
   color: #fff;
-  /*Don't think we need this	*/
-  /*	#bottomLogo{
-  		position: absolute;
-  		width: 305px;
-  		height: 437px;
-  		top: 600px;
-  		bottom: 56%;
-  		margin: auto;
-  		padding-bottom: 25px;
-  		right: 90px;
-  		z-index: 0;
-  		background-image: url('../../img/logo.svg');
-  		background-size: 100%;
-  		background-repeat: no-repeat;
-  		text-indent: -9999px;
-  		opacity: 1;
-  		transition: 1s;
-  	}*/
 }
-#pageBottom .thank-you {
-  margin-bottom: 100px;
+#pageBottom .showinfo {
+  margin: 0 0 100px 0;
 }
 #pageBottom li {
   display: inline-block;
   margin: 0 10px 0 0;
   transform: translate3d(0, 25px, 0);
-}
-#pageBottom .date-icons {
-  margin: 0 0 20px;
 }
 
 .collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
@@ -8154,11 +8136,33 @@ a:link, a:hover, a:active, a:visited {
   content: ",";
 }
 
+#pageBottom h2 {
+  line-height: 0.55;
+  font-size: 6rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 65px;
+}
+#pageBottom #dateAndTime {
+  font-size: 2rem;
+  letter-spacing: 2.7px;
+}
+#pageBottom .thanks {
+  margin-bottom: 140px;
+}
+#pageBottom .thanks p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+#pageBottom .parking a {
+  font-weight: 700;
+}
+
 .intro p,
 #pageBottom p,
 #pageBottom li {
-  line-height: 1.5;
+  line-height: 1.25;
   font-size: 3rem;
+  letter-spacing: 0.4px;
 }
 
 @media screen and (max-width: 992px) {
@@ -8200,13 +8204,9 @@ a:link, a:hover, a:active, a:visited {
     font-size: 2rem;
   }
 
-  .student-list {
-    position: relative;
-  }
-
   .scca-student-name {
-    margin-top: 207px;
-    margin-bottom: 81px;
+    margin-top: 175px;
+    margin-bottom: 175px;
     font-size: 5rem;
   }
 
@@ -8214,10 +8214,7 @@ a:link, a:hover, a:active, a:visited {
     margin: auto 0;
     width: 100%;
     height: auto;
-    display: block;
-    position: absolute;
-    top: auto;
-    transform: translate(0, -150%);
+    display: none;
   }
 
   .mobile-add-margin {

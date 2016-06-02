@@ -14,6 +14,9 @@ body {
 .no-js #loader {
     display: none;
 }
+.btn:focus {
+  outline: none;
+}
 .js #loader {
     display: block;
     position: absolute;
@@ -53,7 +56,7 @@ img {
 	bottom: 56%;
 	margin: auto;
 	padding-bottom: 25px;
-	right: 90px;
+	left: 90px;
 	z-index: -9999;
 	background-image: url('../../img/logo.svg');
 	background-size: 100%;
@@ -70,7 +73,6 @@ a {
 	&:visited {
 	color: $white;
 	text-decoration: none;
-	outline: none;
 	}
 }
 
@@ -223,10 +225,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 
 #pageBottom{
 	min-height:100vh;
-	padding-top:300px;
+	padding-top:200px;
 	position: relative;
-	.thank-you{
-		margin-bottom: 100px;
+	.showinfo{
+		margin: 0 0 100px 0;
 	}
 	color:$white;
 	li{
@@ -243,31 +245,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 			
 		}
 	}
-	.date-icons{
-		margin:0 0 20px;
-	}
-
-	.directions-parking{
-
-	}
-/*Don't think we need this	*/
-/*	#bottomLogo{
-		position: absolute;
-		width: 305px;
-		height: 437px;
-		top: 600px;
-		bottom: 56%;
-		margin: auto;
-		padding-bottom: 25px;
-		right: 90px;
-		z-index: 0;
-		background-image: url('../../img/logo.svg');
-		background-size: 100%;
-		background-repeat: no-repeat;
-		text-indent: -9999px;
-		opacity: 1;
-		transition: 1s;
-	}*/
 }
 
 .collaborators {
@@ -295,12 +272,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		}
 	}
 }
+#pageBottom {
 
+	h2 {
+		line-height: 0.55;
+		font-size:6rem;
+		letter-spacing: 0.5px;
+		margin-bottom: 65px;
+	}
+	#dateAndTime {
+		font-size:2rem;
+		letter-spacing: 2.7px;
+	}
+	.thanks {
+		margin-bottom: 140px;
+		p {
+			font-size: 13px;
+			line-height: 1.6;
+		}
+	}
+	.parking {
+		a {
+			font-weight: 700;
+		}
+	}
+}
 .intro p,
 #pageBottom p,
 #pageBottom li {
-	line-height: 1.5;
+	line-height: 1.25;
 	font-size: 3rem;
+	letter-spacing: 0.4px;
+
 }
 
 @media screen and (max-width: 992px) {
@@ -346,12 +349,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
-	.student-list {
-		position: relative;
-	}
+
 	.scca-student-name {
-			margin-top: 207px;
-			margin-bottom: 81px;
+			margin-top: 175px;
+			margin-bottom: 175px;
 			font-size: 5rem;
 		}  
 
@@ -359,10 +360,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		margin: auto 0;
 		width: 100%;
 		height: auto;
-		display: block;
-		position: absolute;
-		top: auto;
-		transform: translate(0,-150%);
+		display: none;
 	}
 
 	.mobile-add-margin {

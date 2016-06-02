@@ -44,7 +44,7 @@ Intro & Rolodex Container //
 <!-- ///////////////////////////////
 Site Intro ////////////
 //////////////////////////////////-->
-		<div class="col-md-8 intro">
+		<div class="col-md-7 col-md-offset-4 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Seattle Central Creative Academy</h2>
 			<?php 
@@ -132,34 +132,60 @@ Page Bottom Info Section//////
 //////////////////////////////////////-->
 <div id="pageBottom" class="justify-center gradient-rotated">
 	<div class="container">
-		<div class="row thank-you">
-			<div class="col-md-8 date-icons">
-				<div class="row">
-					<div class="col-md-6">
-						<h2>Portshowlio 2016 <span class="line-break">June 15 + 16, 5—9pm</span></h2>
-					</div>
-					<div class="col-md-6">
-						<li>fb</li>
-						<li>instagram</li>
-						<li>twitter?</li>
-					</div>
+		<div class="row showinfo">
+
+			<div class="row">
+				<div class="col-md-offset-1 col-md-6">
+					<h2>Portshowlio 2016<br>
+					<span id="dateAndTime">June 15 + 16 | 5:00PM–9:00PM</span></h2>
 				</div>
 			</div>
-			<div class="col-md-8">
-				<p>
-					The SCCA class of 2016 would like to thank the incredible faculty,  alumni, and many professionals who have inspired and supported us over the last two years. Your dedication and patience are unmatched,  and we are thrilled to be entering a community with so much talent. 
-				</p>
-			</div>
-		</div>
-		<div class="row directions-parking">
-			<div class="col-md-6">
-				<p>Directions + Parking</p>
+
+			<div class="row parking">
+				<div class="col-md-offset-1 col-md-6">
 				<p>The Creative Academy is located on the 5th floor of <a href="/">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find <a href="/">paid parking in the lot</a>.</p>
+					
+				</div>
 			</div>
+
+		</div><!--THANKS-->
+
+		
+		<div class="row thanks">
+
+			<div class="col-md-offset-1 col-md-6">
+			<p>The SCCA class of 2016 would like to thank the incredible faculty,  alumni, and many professionals who have inspired and supported us over the last two years. Your dedication and patience are unmatched,  and we are thrilled to be entering a community with so much talent.</p>
+			</div>
+
+			<div class="col-md-offset-2 col-md-3">
+				<div class="social-icon-frame">
+						<a class="social-icon" href="#" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-linkedin " aria-hidden="true"></i>
+        				</span>
+        				</a>
+        			</div>
+
+        			<div class="social-icon-frame">
+						<a class="social-icon" href="#" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
+        				</span>
+        				</a>
+        			</div>
+
+        			<div class="social-icon-frame">
+						<a class="social-icon" href="#" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-tumblr" aria-hidden="true"></i>
+        				</span>
+        				</a>
+        			</div>
+
+			</div>
+
 		</div>
 	</div>
-	<!-- I don't think we need the bottom logo, to be honest. It's fucking everywhere. -->
-	<!-- <span id="bottomLogo"></span> -->
 </div>
 <!-- ///////////////////////////////
 Magnific Pop Run Script ////////////
