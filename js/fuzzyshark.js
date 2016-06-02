@@ -52,7 +52,7 @@ $('.student-list').hover(function(){
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
-}, { offset: '40%'
+}, { offset: '30%'
 });
 
 $('#school-name').waypoint(function() {
