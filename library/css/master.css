@@ -8873,6 +8873,18 @@ body a:hover {
   background: -o-linear-gradient(0deg, #433a97, #fff);
   background: -moz-linear-gradient(0deg, #433a97, #fff);
   background: linear-gradient(0deg, #433a97, #fff);
+  /*path {
+  	fill: transparent !important;
+  	stroke: $darkblue !important;
+  }
+  
+  .active {
+  	path {
+    fill: $darkblue !important;
+    path: $darkblue !important;
+    transition: all .2s;
+  }
+  }*/
 }
 .single .bottom-nav svg {
   height: 50px;
@@ -8891,6 +8903,8 @@ body a:hover {
   margin-top: 75px;
   margin-bottom: 25px;
 }
+<<<<<<< HEAD
+=======
 .single .bottom-nav path {
   fill: #433a97 !important;
   stroke: #fff !important;
@@ -8900,6 +8914,7 @@ body a:hover {
   path: #433a97 !important;
   transition: all .2s;
 }
+>>>>>>> origin/master
 
 @media screen and (max-width: 768px) {
   .module {
