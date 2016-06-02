@@ -220,6 +220,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 
 #pageBottom{
+	min-height:100vh;
+	padding-top:300px;
 	position: relative;
 	.thank-you{
 		margin-bottom: 100px;
@@ -246,11 +248,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	.directions-parking{
 
 	}
-	#bottomLogo{
+/*Don't think we need this	*/
+/*	#bottomLogo{
 		position: absolute;
 		width: 305px;
 		height: 437px;
-		top: 5%;
+		top: 600px;
 		bottom: 56%;
 		margin: auto;
 		padding-bottom: 25px;
@@ -262,7 +265,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		text-indent: -9999px;
 		opacity: 1;
 		transition: 1s;
-	}
+	}*/
 }
 
 .collaborators {

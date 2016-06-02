@@ -158,7 +158,8 @@ Page Bottom Info Section//////
 			</div>
 		</div>
 	</div>
-	<span id="bottomLogo"></span>
+	<!-- I don't think we need the bottom logo, to be honest. It's fucking everywhere. -->
+	<!-- <span id="bottomLogo"></span> -->
 </div>
 <!-- ///////////////////////////////
 Magnific Pop Run Script ////////////

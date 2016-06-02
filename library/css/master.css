@@ -6419,8 +6419,28 @@ a:link, a:hover, a:active, a:visited {
   /* IE6-9 */ }
 
 #pageBottom {
+  min-height: 100vh;
+  padding-top: 300px;
   position: relative;
-  color: #fff; }
+  color: #fff;
+  /*Don't think we need this	*/
+  /*	#bottomLogo{
+  		position: absolute;
+  		width: 305px;
+  		height: 437px;
+  		top: 600px;
+  		bottom: 56%;
+  		margin: auto;
+  		padding-bottom: 25px;
+  		right: 90px;
+  		z-index: 0;
+  		background-image: url('../../img/logo.svg');
+  		background-size: 100%;
+  		background-repeat: no-repeat;
+  		text-indent: -9999px;
+  		opacity: 1;
+  		transition: 1s;
+  	}*/ }
   #pageBottom .thank-you {
     margin-bottom: 100px; }
   #pageBottom li {
@@ -6430,23 +6450,6 @@ a:link, a:hover, a:active, a:visited {
             transform: translate3d(0, 25px, 0); }
   #pageBottom .date-icons {
     margin: 0 0 20px; }
-  #pageBottom #bottomLogo {
-    position: absolute;
-    width: 305px;
-    height: 437px;
-    top: 5%;
-    bottom: 56%;
-    margin: auto;
-    padding-bottom: 25px;
-    right: 90px;
-    z-index: 0;
-    background-image: url("../../img/logo.svg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-    opacity: 1;
-    -webkit-transition: 1s;
-    transition: 1s; }
 
 .collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
   content: ","; }
