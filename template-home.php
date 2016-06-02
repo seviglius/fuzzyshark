@@ -112,7 +112,7 @@ Student Rolodex ////////////
 						    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
 						    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
 						    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
-						    <?php echo $img['sizes']['fuzzy-300']; ?> 300w""
+						    <?php echo $img['sizes']['fuzzy-300']; ?> 300w"
 				  alt="<?php the_title(); ?>"
 				  class="featured-project-image">
 

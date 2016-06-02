@@ -8247,8 +8247,12 @@ a:link, a:hover, a:active, a:visited {
     margin-left: -15px;
   }
 }
-#logo.opacity-zero {
+#logo {
   opacity: 0;
+}
+
+#logo.opacity-zero {
+  opacity: 1;
 }
 
 /*////////////////////////////////////////////////////

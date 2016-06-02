@@ -371,7 +371,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	
 }
 
-#logo.opacity-zero {
+#logo {
 	opacity: 0;
+}
+
+#logo.opacity-zero {
+	opacity: 1;
 }
 

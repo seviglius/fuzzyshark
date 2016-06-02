@@ -52,6 +52,12 @@ $('.student-list').hover(function(){
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
+}, { offset: '10%'
+});
+
+$('#school-name').waypoint(function() {
+  $('#logo').toggleClass("opacity-zero");
+}, { offset: '60%'
 });
 
 var target = $('#video-container');
