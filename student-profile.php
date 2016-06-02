@@ -811,51 +811,71 @@
 			<p class="student-url"><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
 			<div class="social-icons">
 				<?php if(get_field('linkedin_page') ): ?>
-					<a class="social-icon" href="<?php the_field('linkedin_page'); ?>" target="_blank">
+					
+						<div class="social-icon-frame">
+							<a class="social-icon" href="<?php the_field('linkedin_page'); ?>" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-linkedin "></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
+					
 				<?php endif; ?>
 
 				<?php if(get_field('facebook_page') ): ?>
-					<a class="social-icon" href="<?php the_field('facebook_page'); ?>" target="_blank">
+					
+					<div class="social-icon-frame">	
+						<a class="social-icon" href="<?php the_field('facebook_page'); ?>" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook"></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
+					
 				<?php endif; ?>
 
 				<?php if(get_field('twitter_page') ): ?>
-					<a class="social-icon" href="<?php the_field('twitter_page'); ?>" target="_blank">
+					
+						<div class="social-icon-frame">
+							<a class="social-icon" href="<?php the_field('twitter_page'); ?>" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-twitter"></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
+					
 				<?php endif; ?>
 
 				<?php if(get_field('instagram_page') ): ?>
+					<div class="social-icon-frame">
 					<a class="social-icon" href="<?php the_field('instagram_page'); ?>"target="_blank" >
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-instagram "></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
 				<?php endif; ?>
 
 				<?php if(get_field('tumblr_page') ): ?>
-					<a class="social-icon" href="<?php the_field('tumblr_page'); ?>" target="_blank">
+						<div class="social-icon-frame">
+							<a class="social-icon" href="<?php the_field('tumblr_page'); ?>" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-tumblr"></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
 				<?php endif; ?>
 
 				<?php if(get_field('pinterest_page') ): ?>
-					<a class="social-icon" href="<?php the_field('pinterest_page'); ?>" target="_blank">
+					
+						<div class="social-icon-frame">
+							<a class="social-icon" href="<?php the_field('pinterest_page'); ?>" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-pinterest"></i>
         				</span>
-					</a>
+        				</a>
+        			</div>
+					
 				<?php endif; ?>
 			</div>
 		</div>
