@@ -52,12 +52,12 @@ $('.student-list').hover(function(){
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
-}, { offset: '10%'
+}, { offset: '40%'
 });
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
-}, { offset: '50%'
+}, { offset: '60%'
 });
 
 var target = $('#video-container');
