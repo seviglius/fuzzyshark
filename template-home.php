@@ -3,6 +3,7 @@
 ?>
 
 <?php get_header(); ?>
+<div class="se-pre-con" id="preloader-gif"></div>
 <?php get_template_part( 'navbar' ); ?>
 
 <!-- ///////////////////////////////
@@ -46,10 +47,13 @@ Site Intro ////////////
 //////////////////////////////////-->
 		<div class="col-md-7 col-md-offset-4 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
-			<h2 id="school-name">Seattle Central<br> Creative Academy<br>
-			<span class="dateAndTime">2016 DESIGN + PHOTOGRAPHY SHOW</span></h2>
+			<h2 id="school-name">Seattle Central<br> Creative Academy<br><span class="dateAndTime">2016 DESIGN + PHOTOGRAPHY SHOW</span></h2>
 			<p>Before you is a sample of all our blood, sweat, and tears laid bare in thoughtful decisions and careful studies at SCCA. Make sure to join us June 15 + 16, it will be a shindig you won’t soon forget.</p>
-
+			<div class="logistics">
+					<ul>
+						<a href="#parking"><li>Directions</li></a>
+					</ul>
+			</div><!--LOGISTICS-->
 		</div>
 
 		
@@ -132,14 +136,14 @@ Page Bottom Info Section//////
 			<div class="row">
 				<div class="col-md-offset-1 col-md-6">
 					<h2>Portshowlio 2016<br>
-					<span class="dateAndTime">JUNE 15 + 16 | 5:00PM–9:00PM</span></h2>
+					<span class="dateAndTime">JUNE 15 + 16 | 5:00PM&ndash;9:00PM</span></h2>
 				</div>
 			</div>
 
-			<div class="row parking">
+			<div id="parking" class="row parking">
 				<div class="col-md-offset-1 col-md-6">
-				<p>The Creative Academy is located on the 5th floor of <a href="/">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find <a href="/">paid parking in the lot</a>.</p>
-					
+				<p>The Creative Academy is located on the 5th floor of <a href="https://maps.google.com?daddr=1701+Broadway,+Seattle+WA+98122
+">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find <a href="/">paid parking in the lot</a>.</p>
 				</div>
 			</div>
 
@@ -153,26 +157,19 @@ Page Bottom Info Section//////
 			</div>
 
 			<div class="col-md-offset-2 col-md-3">
-				<div class="social-icon-frame">
-						<a class="social-icon" href="#" target="_blank">
-						<span class="fa-stack fa-lg scca-social-button">
-            				<i class="fa fa-stack-1x fa-linkedin " aria-hidden="true"></i>
-        				</span>
-        				</a>
-        			</div>
 
-        			<div class="social-icon-frame">
-						<a class="social-icon" href="#" target="_blank">
+        			<div class="social-icon-frame-white">
+						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
         				</span>
         				</a>
         			</div>
 
-        			<div class="social-icon-frame">
-						<a class="social-icon" href="#" target="_blank">
+        			<div class="social-icon-frame-white">
+						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
-            				<i class="fa fa-stack-1x fa-tumblr" aria-hidden="true"></i>
+            				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
         				</span>
         				</a>
         			</div>

@@ -73,3 +73,4 @@ Andrew Lawrence, Michael Woody, and lots of help from Barry Sevig
 -->
 
 <body <?php body_class(); ?>>
+  <button id="comic-sans"></button>

@@ -1,9 +1,11 @@
-
 body {
 	background-color: $red;	
 	color: $white;
 	overflow-x: hidden;
 	font-family: "azo-sans-web",sans-serif;
+}
+.home {
+	overflow-y: hidden;
 }
 
 .overflow {
@@ -24,13 +26,15 @@ body {
     top: 0;
 }
 .se-pre-con {
-    position: absolute;
-    left: -10px;
-    top: -17px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     width: 100%;
     height: 100%;
-    z-index: 0;
-    background: url('../../img/bigonewhite.gif') center no-repeat transparent;
+    overflow: hidden;
+    z-index: 9999;
+    background: url('../../img/bigonewhite.gif') center no-repeat #000;
     background-size: 30%;
     @media (max-width: 800px) {
     	background-size: 40%;
@@ -39,7 +43,7 @@ body {
     	background-size: 50%;
     }
     @media (max-width: 500px) {
-    	background-size: 75%;
+    background-size: 20%;
     }
 }
 /*End Loader*/
@@ -63,7 +67,7 @@ img {
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	opacity: 1;
-	transition: 1s;
+	transition: .5s;
 }
 
 a {
@@ -122,9 +126,29 @@ a {
 	line-height: 1;
 	font-size:6rem;
 	letter-spacing: 0.5px;
-	margin-bottom: 24px;
+	margin-bottom: 0;
 	}
+	p {
+		transform: translate(0,-12px);
+	}
+	ul {
+		list-style-type: none;
+		padding: 30px 0 0 0;
 
+	}
+	li {
+		font-size: 2rem;
+		display: inline;
+		padding-right: 30px;
+		color: white;
+		letter-spacing: 0.2px;
+	}
+	a {
+		color: white;
+	}
+	a:hover {
+		cursor: pointer;
+	}
 }
 
 .scca-student-name {
@@ -277,10 +301,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	}
 }
 .dateAndTime {
-		font-size:2rem;
+		font-size:1.5rem;
 		letter-spacing: 2.7px;
 		position: relative;
-		top:-20px;
+		top:-30px;
 	}
 #pageBottom {
 
@@ -288,7 +312,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		line-height: 1;
 		font-size:6rem;
 		letter-spacing: 0.5px;
-		margin-bottom: 24px;
+		margin-bottom: 10px;
 	}
 	
 	.thanks {
@@ -296,6 +320,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		p {
 			font-size: 13px;
 			line-height: 1.6;
+
 		}
 	}
 	.parking {
@@ -308,8 +333,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 #pageBottom p,
 #pageBottom li {
 	line-height: 1.25;
-	font-size: 3rem;
+	font-size: 2rem;
 	letter-spacing: 0.4px;
+	transform: translate(0, -24px);
 
 }
 
@@ -384,6 +410,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 .dateAndTime {
 	font-size: 1.1rem;
 	letter-spacing: 1.5px;
+		position: relative;
+		top:-20px;
+}
+.intro p {
+	margin-top: 20px;
 }
 
 	.intro p,
@@ -392,6 +423,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
+	.student-list {
+		position: relative;
+	}
+	.scca-student-name {
+			margin-top: 415;
+			margin-bottom: -5px;
+			font-size: 5rem;
+		}  
+
+	.scca-student-photo img {
+		margin: auto 0;
+		width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		top: auto;
+		transform: translate(0,-50%);
+	}
+
+	.mobile-add-margin {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.mobile-no-margin {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
 	.student-list {
 		position: relative;
 	}
@@ -408,20 +471,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		display: block;
 		position: absolute;
 		top: auto;
-		transform: translate(0,-10%);
+		transform: translate(0,-150%);
 	}
-
-	.mobile-add-margin {
-		margin-right: 15px;
-		margin-left: 15px;
-	}
-
-	.mobile-no-margin {
-		margin-right: -15px;
-		margin-left: -15px;
-	}
-	
 }
+
 
 #logo {
 	opacity: 0;
@@ -431,17 +484,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	opacity: 1;
 }
 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
-	.se-pre-con {
-		top: 0px;
-	}
-	.inner-video-container{
+// @media only screen 
+// and (min-device-width : 375px) 
+// and (max-device-width : 667px),
+// @media only screen 
+// and (min-device-width : 414px) 
+// and (max-device-width : 736px),
+//  {
+// 	.se-pre-con {
+// 		top: 9px;
+// 	}
+// 	#video-container .inner-video-container svg#play-button {
 		svg#play-button{
-			width: 15%;
+// 		width: 15%;
 		}
-	}
+// 	}
 
+// }
+
+#comic-sans {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	height: 10px;
+	z-index: 9999999;
+	outline: none;
 }
-
