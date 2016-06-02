@@ -57,7 +57,7 @@ $('#school-name').waypoint(function() {
 
 $('#school-name').waypoint(function() {
   $('#logo').toggleClass("opacity-zero");
-}, { offset: '60%'
+}, { offset: '50%'
 });
 
 var target = $('#video-container');
