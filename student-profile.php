@@ -58,9 +58,9 @@
 	</div>
 </div>
 
-	<div class="module row project-introduction">
+	<div class="row project-introduction">
 		<div class="col-md-8 col-md-offset-2">
-			<p class="caption"><?php echo wptexturize(get_field('project_introduction')); ?></p>
+			<p class="caption caption-alternate"><?php echo wptexturize(get_field('project_introduction')); ?></p>
 		</div>
 	</div>
 </div>

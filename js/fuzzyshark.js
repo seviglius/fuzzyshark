@@ -1,14 +1,33 @@
 $( document ).ready(function() {
 
-$('.student-list').waypoint(function() {
+// $('.student-list').waypoint(function(direction) {
+//   if (direction === 'up') {
+//   $(this.element).siblings().removeClass('in-range');
+//   $(this.element).addClass("in-range");
+//   console.log('5%, up');
+// }
+//  }, { offset: '5%'
+// });
+
+$('.student-list').waypoint(function(direction) {
+  if (direction === 'down') {
   $(this.element).siblings().removeClass('in-range');
   $(this.element).addClass("in-range");
- }, { offset: '5%'
+  console.log('60%, down');
+}
+ if (direction === 'up') {
+  $(this.element).removeClass('in-range');
+  $(this.element).prev().addClass("in-range");
+  console.log('60%, up');
+}
+ }, { offset: '60%'
 });
 
-$('.student-list').waypoint(function() {
-  $(this.element).siblings().removeClass('in-range');
-  $(this.element).addClass("in-range");
+$('.student-list:first-child').waypoint(function(direction) {
+  if (direction === 'up') {
+  $('.student-list').removeClass('in-range');
+  console.log('60%, up');
+}
  }, { offset: '60%'
 });
 
