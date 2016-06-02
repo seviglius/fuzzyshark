@@ -48,7 +48,7 @@ Site Intro ////////////
 		<div class="col-md-7 col-md-offset-4 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Seattle Central<br> Creative Academy<br><span class="dateAndTime">2016 DESIGN + PHOTOGRAPHY SHOW</span></h2>
-			<p>Before you is a sample of all our blood, sweat, and tears laid bare in thoughtful decisions and careful studies at SCCA. Make sure to join us June 15 + 16, it will be a shindig you won’t soon forget.</p>
+			<?php the_content(); ?>
 			<div class="logistics">
 					<ul>
 						<a href="#parking"><li>Directions</li></a>

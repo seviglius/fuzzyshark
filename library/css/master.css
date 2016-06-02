@@ -6509,7 +6509,10 @@ a:link, a:hover, a:active, a:visited {
 #pageBottom .parking a {
   font-weight: 700; }
 
-.intro p,
+.intro p {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
 #pageBottom p,
 #pageBottom li {
   line-height: 1.25;

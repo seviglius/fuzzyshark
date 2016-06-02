@@ -329,7 +329,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		}
 	}
 }
-.intro p,
+.intro p {
+	transform: translate(0, 0);
+}
 #pageBottom p,
 #pageBottom li {
 	line-height: 1.25;
