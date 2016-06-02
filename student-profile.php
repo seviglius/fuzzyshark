@@ -918,14 +918,17 @@
 $bottom_query_design = new WP_Query(array( 'post_type' => 'design', 'posts_per_page' => 6, 'orderby'=> 'rand'));
 while($bottom_query_design->have_posts()) : $bottom_query_design->the_post(); ?>
  	
-<div class="col-md-4">
+<div class="col-sm-4 col-xs-6">
 	<a href="<?php the_permalink(); ?>">
 	<?php $bottomdesign = get_field('project_featured_image'); ?>
 	<div class="bottom-img-container">
 
+			<h3 class="name"><?php the_title(); ?></h3>
+
 				<?php if( $bottomdesign['mime_type'] == 'image/gif' ) : ?>
 
 				<img src="<?php echo $bottomdesign['url']; ?>" alt="<?php the_field('project_title'); ?> by <?php the_title(); ?>" class="featured-project-image">
+				
 
 
 				<?php else : ?>
@@ -956,10 +959,12 @@ while($bottom_query_design->have_posts()) : $bottom_query_design->the_post(); ?>
 $bottom_query_photo = new WP_Query(array( 'post_type' => 'photography', 'posts_per_page' => 6, 'orderby'=> 'rand'));
 while($bottom_query_photo->have_posts()) : $bottom_query_photo->the_post(); ?>
  	
-<div class="col-md-4">
+<div class="col-sm-4 col-xs-6">
 	<a href="<?php the_permalink(); ?>">
 	<?php $bottomdesign = get_field('project_featured_image'); ?>
 	<div class="bottom-img-container">
+
+				<h3 class="name"><?php the_title(); ?></h3>
 
 				<?php if( $bottomdesign['mime_type'] == 'image/gif' ) : ?>
 
