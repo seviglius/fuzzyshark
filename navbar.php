@@ -2,7 +2,7 @@
   <a href="<?php bloginfo('url'); ?>">
     <img class="white" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo.svg">
     <img class="purple opacity" src="<?php bloginfo('url'); ?>/wp-content/themes/fuzzyshark/img/header_logo_purple.svg">
-    <p class="menu-text">June 15,16</p>
+    <p class="menu-text">June 15 + 16</p>
   </a>
   <a class="trigger" href="#0">
     <span class="menu-text">Students</span>
