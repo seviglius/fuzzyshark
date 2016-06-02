@@ -1,3 +1,8 @@
+//Loading script
+$(window).load(function() {
+    $(".se-pre-con").fadeOut("slow");
+});
+
 $( document ).ready(function() {
 
 // $('.student-list').waypoint(function(direction) {
@@ -197,3 +202,7 @@ jQuery(function($) {
         $(this).html($(this).html().replace(/\s([^\s<]+)\s*$/,'&nbsp;$1'));
     });
 });
+
+// add class of lazy to all single imgs
+$(".single img").addClass("lazy");
+$(".single iframe").addClass("lazy");
