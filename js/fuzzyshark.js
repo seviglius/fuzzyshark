@@ -1,24 +1,10 @@
-// if($('body').hasClass("home")){
-//     $(".se-pre-con").delay(3000).fadeOut("slow");
-//   }
-// else {
-//   $(".se-pre-con").hide();
-// }
-
-
-
-$(document).ready(function() {
-
-     var CookieSet = $.cookie('cookietitle', 'yourvalue');
-
-     if (CookieSet == null) {
-          $(".se-pre-con").delay(3000).fadeOut("slow");
-          $("body").css({"overflow":"hidden"}).delay(3000).css({"overflow":"auto"}).css({"overflow-x":"hidden"});
-     }
-     if (jQuery.cookie('cookietitle')) {
-          $(".se-pre-con").fadeOut("slow");
-     }
- });
+if($('body').hasClass("home")){
+    $(".se-pre-con").delay(3000).fadeOut("slow");
+    $("body").css({"overflow":"hidden"}).delay(3000).css({"overflow":"auto"}).css({"overflow-x":"hidden"});
+  }
+else {
+  $(".se-pre-con").hide();
+}
 
 $( document ).ready(function() {
 
