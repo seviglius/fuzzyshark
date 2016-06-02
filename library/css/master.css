@@ -8072,6 +8072,11 @@ a:link, a:hover, a:active, a:visited {
   overflow: visible;
   width: 30%;
 }
+@media (max-width: 768px) {
+  #video-container .inner-video-container svg#play-button {
+    width: 25%;
+  }
+}
 #video-container .inner-video-container svg#play-button #left-piece,
 #video-container .inner-video-container svg#play-button #right-piece {
   transition: inherit;
