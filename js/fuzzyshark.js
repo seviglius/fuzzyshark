@@ -13,6 +13,7 @@ $(document).ready(function() {
 
      if (CookieSet == null) {
           $(".se-pre-con").delay(3000).fadeOut("slow");
+          $("body").css({"overflow":"hidden"}).delay(3000).css({"overflow":"auto"}).css({"overflow-x":"hidden"});
      }
      if (jQuery.cookie('cookietitle')) {
           $(".se-pre-con").fadeOut("slow");
