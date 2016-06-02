@@ -8260,9 +8260,13 @@ a:link, a:hover, a:active, a:visited {
     font-size: 2rem;
   }
 
+  .student-list {
+    position: relative;
+  }
+
   .scca-student-name {
-    margin-top: 175px;
-    margin-bottom: 175px;
+    margin-top: 415;
+    margin-bottom: -5px;
     font-size: 5rem;
   }
 
@@ -8270,7 +8274,11 @@ a:link, a:hover, a:active, a:visited {
     margin: auto 0;
     width: 100%;
     height: auto;
-    display: none;
+    display: block;
+    position: absolute;
+    top: auto;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 
   .mobile-add-margin {
