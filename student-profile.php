@@ -1015,23 +1015,3 @@ while($bottom_query_photo->have_posts()) : $bottom_query_photo->the_post(); ?>
 <?php endwhile; wp_reset_postdata(); ?>
 </div>
 </div>
-
-<script type="text/javascript">
-jQuery(document).ready(function() {
-    jQuery(".lazy").lazy({
-        effect          : "fadeIn",   // this only works on images !
-        effectTime      : 1000,
-        combined        : true,
-        delay           : 12500,
-        scrollDirection : 'vertical',
-        visibleOnly     : false,      // could be removed, it's default value
-        threshold       : 2000,
-        defaultImage    : "",         // this is a bug, that the default image is set to non-images
-                                      // i'll updated this within the next version
-        afterLoad: function(element)
-        {
-            element.removeClass("loading").addClass("loaded");
-        }
-    });
-});
-</script>
