@@ -7132,16 +7132,17 @@ body {
       font-size: 1.9rem;
       opacity: 0; }
     @media (min-width: 992px) {
-      .single .bottom-img-container img {
-        background: #433a97;
-        mix-blend-mode: multiply; }
-      .single .bottom-img-container .name {
-        font-size: 2.9rem;
-        opacity: 1; }
-      .single .bottom-img-container:hover .name {
-        opacity: 0 !important; }
-      .single .bottom-img-container:hover img {
-        mix-blend-mode: normal; } }
+      .single .bottom-img-container {
+        background: #433a97; }
+        .single .bottom-img-container img {
+          mix-blend-mode: multiply; }
+        .single .bottom-img-container .name {
+          font-size: 2.9rem;
+          opacity: 1; }
+        .single .bottom-img-container:hover .name {
+          opacity: 0 !important; }
+        .single .bottom-img-container:hover img {
+          mix-blend-mode: normal; } }
   .single .bottom-nav {
     background: #433a97;
     background: -webkit-linear-gradient(0deg, #433a97, #fff);

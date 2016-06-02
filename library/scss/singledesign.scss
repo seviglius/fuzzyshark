@@ -392,8 +392,8 @@ body {
 	}
 
 	@media (min-width: 992px) {
+		background:$darkblue;
 			img{
-				background:$darkblue;
 				mix-blend-mode: multiply;
 			}
 			.name{
