@@ -6958,7 +6958,7 @@ body {
     .single a:hover, .single a:link, .single a:active, .single a:visited {
       color: darkblue; }
   .single p {
-    font-size: 23px; }
+    font-size: 16px; }
   .single #student-name {
     z-index: 99999;
     text-align: center;
