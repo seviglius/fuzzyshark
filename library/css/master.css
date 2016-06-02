@@ -6561,7 +6561,9 @@ a:link, a:hover, a:active, a:visited {
       line-height: 1.6;
       margin-bottom: 50px; }
   #pageBottom .parking a {
-    font-weight: 700; }
+    text-decoration: underline; }
+    #pageBottom .parking a:hover {
+      text-decoration: none; }
   #pageBottom .parking p {
     font-size: 17px; }
 

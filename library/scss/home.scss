@@ -400,7 +400,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	}
 	.parking {
 		a {
-			font-weight: 700;
+			text-decoration: underline;
+			&:hover{
+				text-decoration:none;
+			}
 		}
 		p {
 			font-size: 17px;
@@ -483,24 +486,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 #logo.opacity-zero {
 	opacity: 1;
 }
-
-// @media only screen 
-// and (min-device-width : 375px) 
-// and (max-device-width : 667px),
-// @media only screen 
-// and (min-device-width : 414px) 
-// and (max-device-width : 736px),
-//  {
-// 	.se-pre-con {
-// 		top: 9px;
-// 	}
-// 	#video-container .inner-video-container svg#play-button {
-		svg#play-button{
-// 		width: 15%;
-		}
-// 	}
-
-// }
 
 #comic-sans {
 	position: fixed;
