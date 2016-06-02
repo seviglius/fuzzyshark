@@ -8260,6 +8260,19 @@ a:link, a:hover, a:active, a:visited {
     font-size: 2rem;
   }
 
+  .scca-student-name {
+    margin-top: 175px;
+    margin-bottom: 175px;
+    font-size: 5rem;
+  }
+
+  .scca-student-photo img {
+    margin: auto 0;
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+
   .mobile-add-margin {
     margin-right: 15px;
     margin-left: 15px;

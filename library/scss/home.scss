@@ -385,6 +385,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
+	.scca-student-name {
+			margin-top: 175px;
+			margin-bottom: 175px;
+			font-size: 5rem;
+		}  
+
+	.scca-student-photo img {
+		margin: auto 0;
+		width: 100%;
+		height: auto;
+		display: none;
+	}
 
 	.mobile-add-margin {
 		margin-right: 15px;
