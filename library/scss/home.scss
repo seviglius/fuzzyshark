@@ -431,3 +431,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	opacity: 1;
 }
 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+	.se-pre-con {
+		top: 0px;
+	}
+	.inner-video-container{
+		svg#play-button{
+			width: 15%;
+		}
+	}
+
+}
+
