@@ -935,7 +935,8 @@
 </div>
 <div class="bottom-nav-design">
 <?php 
-$bottom_query_design = new WP_Query(array( 'post_type' => 'design', 'posts_per_page' => 6, 'orderby'=> 'rand'));
+$this_post = $post->ID;
+$bottom_query_design = new WP_Query(array( 'post_type' => 'design', 'post__not_in' => array($this_post), 'posts_per_page' => 6, 'orderby'=> 'rand'));
 while($bottom_query_design->have_posts()) : $bottom_query_design->the_post(); ?>
  	
 <div class="col-sm-4 col-xs-6">
@@ -976,7 +977,8 @@ while($bottom_query_design->have_posts()) : $bottom_query_design->the_post(); ?>
 <div class="bottom-nav-photo">
 
 <?php 
-$bottom_query_photo = new WP_Query(array( 'post_type' => 'photography', 'posts_per_page' => 6, 'orderby'=> 'rand'));
+$this_post = $post->ID;
+$bottom_query_photo = new WP_Query(array( 'post_type' => 'photography', 'post__not_in' => array($this_post), 'posts_per_page' => 6, 'orderby'=> 'rand'));
 while($bottom_query_photo->have_posts()) : $bottom_query_photo->the_post(); ?>
  	
 <div class="col-sm-4 col-xs-6">
