@@ -153,7 +153,7 @@ Page Bottom Info Section//////
 			</div>
 
 			<div class="col-md-offset-2 col-md-3">
-				<div class="social-icon-frame">
+				<div class="social-icon-frame-white">
 						<a class="social-icon" href="#" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-linkedin " aria-hidden="true"></i>
@@ -161,7 +161,7 @@ Page Bottom Info Section//////
         				</a>
         			</div>
 
-        			<div class="social-icon-frame">
+        			<div class="social-icon-frame-white">
 						<a class="social-icon" href="#" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
@@ -169,7 +169,7 @@ Page Bottom Info Section//////
         				</a>
         			</div>
 
-        			<div class="social-icon-frame">
+        			<div class="social-icon-frame-white">
 						<a class="social-icon" href="#" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-tumblr" aria-hidden="true"></i>

@@ -96,6 +96,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/social-icon-frame-white.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14979,
+		"inputAbbreviatedPath": "\/img\/social-icon-frame-white.png",
+		"outputAbbreviatedPath": "\/img\/social-icon-frame-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/social-icon-frame.png": {
 		"fileType": 32768,
 		"ignore": 0,

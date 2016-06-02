@@ -8621,6 +8621,32 @@ body a:hover {
   transform: rotate(-90deg);
 }
 
+.social-icon-frame-white {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/social-icon-frame-white.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+.social-icon-frame-white span {
+  position: absolute;
+  top: -99px;
+  bottom: -99px;
+  left: -99px;
+  right: -99px;
+  margin: auto;
+}
+.social-icon-frame-white:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.social-icon-frame-white:hover span {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 #parent div {
   padding-bottom: 20px;
   padding: 0 5px 16px 5px;
