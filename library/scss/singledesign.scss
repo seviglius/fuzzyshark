@@ -395,15 +395,13 @@ body {
 	@media (min-width: 992px) {
 		background:$darkblue;
 			img{
-				mix-blend-mode: overlay;
+				mix-blend-mode: luminosity;
+				opacity:.9;
 			}
 			.name{
 				font-size: 2rem;
-				opacity:1;
+				opacity:0;
 			}
-			&:hover .name{
-						opacity:0!important;
-					}
 			&:hover img{
 						mix-blend-mode: normal;
 						opacity: 1;
