@@ -504,3 +504,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	z-index: 9999999;
 	outline: none;
 }
+
+#pageBottom p a{
+	font-weight: 400;
+	text-decoration: underline;
+	&:hover{
+		text-decoration:none;
+	}
+}

@@ -6649,6 +6649,12 @@ a:link, a:hover, a:active, a:visited {
   z-index: 9999999;
   outline: none; }
 
+#pageBottom p a {
+  font-weight: 400;
+  text-decoration: underline; }
+  #pageBottom p a:hover {
+    text-decoration: none; }
+
 /*////////////////////////////////////////////////////
 SITEMAP
 ////////////////////////////////////////////////////*/
