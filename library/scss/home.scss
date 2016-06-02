@@ -191,9 +191,6 @@ $yVal: 10px;
 			transition:$trans;
 			overflow: visible;
 			width:30%;
-			@media (max-width: 768px) {
-				width: 25%;
-			}
 			#left-piece,
 			#right-piece{
 				transition: inherit;

@@ -8095,11 +8095,6 @@ a:link, a:hover, a:active, a:visited {
   overflow: visible;
   width: 30%;
 }
-@media (max-width: 768px) {
-  #video-container .inner-video-container svg#play-button {
-    width: 25%;
-  }
-}
 #video-container .inner-video-container svg#play-button #left-piece,
 #video-container .inner-video-container svg#play-button #right-piece {
   -webkit-transition: inherit;
@@ -8910,6 +8905,9 @@ body a:hover {
 }
 .single .bottom-nav {
   background: #433a97;
+  background: -webkit-linear-gradient(0deg, #433a97, #fff);
+  background: -webkit-linear-gradient(bottom, #433a97, #fff);
+  background: linear-gradient(0deg, #433a97, #fff);
 }
 .single .bottom-nav svg {
   height: 50px;

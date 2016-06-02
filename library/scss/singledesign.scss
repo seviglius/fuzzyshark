@@ -367,6 +367,10 @@ body {
 
 .bottom-nav {
 	background: $darkblue;
+	background: -webkit-linear-gradient(0deg, $darkblue, $white);
+	background: -o-linear-gradient(0deg, $darkblue, $white);
+	background: -moz-linear-gradient(0deg, $darkblue, $white);
+	background: linear-gradient(0deg, $darkblue, $white);
 	svg {
 		height: 50px;
 		cursor: pointer;
