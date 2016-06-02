@@ -7180,10 +7180,11 @@ body {
       -webkit-transition: all .2s;
       transition: all .2s; }
 
-.single .col-sm-6 .caption {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto; }
+@media (min-width 768px) {
+  .single .col-sm-6 .caption {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media screen and (max-width: 768px) {
   .caption-box .col-sm-5 p {
