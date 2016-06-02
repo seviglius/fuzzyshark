@@ -7136,8 +7136,7 @@ body {
       .single .bottom-img-container {
         background: #433a97; }
         .single .bottom-img-container img {
-          mix-blend-mode: overlay;
-          opacity: .7; }
+          mix-blend-mode: overlay; }
         .single .bottom-img-container .name {
           font-size: 2rem;
           opacity: 1; }
