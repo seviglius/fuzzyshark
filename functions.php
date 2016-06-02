@@ -139,7 +139,7 @@ function fuzzyshark_scripts() {
 
 	wp_enqueue_script( 'fuzzyshark-js', get_template_directory_uri() . '/js/fuzzyshark.js', array('fuzzyshark-jquery'), '1', true );
 
-	wp_enqueue_script( 'font-awesome',  '//use.fontawesome.com/ca6014a4d4.js', true );
+	wp_enqueue_script( 'font-awesome',  '//use.fontawesome.com/b9e949a2a9.js', true );
 
 	
 
