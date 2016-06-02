@@ -7128,16 +7128,17 @@ body {
       text-align: center;
       bottom: calc(50% - 20px);
       height: 20px;
-      left: 20px;
+      left: 0px;
+      width: 100%;
       font-size: 1.9rem;
       opacity: 0; }
     @media (min-width: 992px) {
       .single .bottom-img-container {
         background: #433a97; }
         .single .bottom-img-container img {
-          mix-blend-mode: multiply; }
+          mix-blend-mode: overlay; }
         .single .bottom-img-container .name {
-          font-size: 2.9rem;
+          font-size: 2rem;
           opacity: 1; }
         .single .bottom-img-container:hover .name {
           opacity: 0 !important; }
