@@ -3,6 +3,7 @@
 ?>
 
 <?php get_header(); ?>
+<div class="se-pre-con" id="preloader-gif"></div>
 <?php get_template_part( 'navbar' ); ?>
 
 <!-- ///////////////////////////////
@@ -12,7 +13,6 @@ Magnific Pop Link ////////////
 <!-- ///////////////////////////////
 Header Video Section////////////
 //////////////////////////////////-->
-<div class="se-pre-con"></div>
 
 <!-- ///////////////////////////////
 Header Video Section////////////
@@ -156,17 +156,35 @@ Page Bottom Info Section//////
 			</div>
 
 			<div class="col-md-offset-2 col-md-3">
+<<<<<<< HEAD
 
         			<div class="social-icon-frame">
 						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
+=======
+				<div class="social-icon-frame-white">
+						<a class="social-icon" href="#" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-linkedin " aria-hidden="true"></i>
+        				</span>
+        				</a>
+        			</div>
+
+        			<div class="social-icon-frame-white">
+						<a class="social-icon" href="#" target="_blank">
+>>>>>>> origin/master
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
         				</span>
         				</a>
         			</div>
 
+<<<<<<< HEAD
         			<div class="social-icon-frame">
 						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
+=======
+        			<div class="social-icon-frame-white">
+						<a class="social-icon" href="#" target="_blank">
+>>>>>>> origin/master
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
         				</span>
