@@ -73,6 +73,7 @@ a {
 	&:visited {
 	color: $white;
 	text-decoration: none;
+	outline: none;
 	}
 }
 
@@ -391,10 +392,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
-
+	.student-list {
+		position: relative;
+	}
 	.scca-student-name {
-			margin-top: 175px;
-			margin-bottom: 175px;
+			margin-top: 207px;
+			margin-bottom: 81px;
 			font-size: 5rem;
 		}  
 
@@ -402,7 +405,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		margin: auto 0;
 		width: 100%;
 		height: auto;
-		display: none;
+		display: block;
+		position: absolute;
+		top: auto;
+		transform: translate(0,-10%);
 	}
 
 	.mobile-add-margin {
