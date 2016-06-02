@@ -143,7 +143,7 @@ Page Bottom Info Section//////
 			<div id="parking" class="row parking">
 				<div class="col-md-offset-1 col-md-6">
 				<p>The Creative Academy is located on the 5th floor of <a href="https://maps.google.com?daddr=1701+Broadway,+Seattle+WA+98122
-">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find <a href="/">paid parking in the lot</a>.</p>
+">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find paid parking in the lot.</p>
 				</div>
 			</div>
 
