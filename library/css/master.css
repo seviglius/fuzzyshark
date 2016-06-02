@@ -7180,7 +7180,7 @@ body {
       -webkit-transition: all .2s;
       transition: all .2s; }
 
-@media (min-width 768px) {
+@media (min-width: 768px) {
   .single .col-sm-6 .caption {
     width: 70%;
     margin-left: auto;
