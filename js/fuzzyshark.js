@@ -36,9 +36,11 @@ $('.student-list:first-child').waypoint(function(direction) {
 $('.student-list:last-child').waypoint(function(direction) {
   if (direction === 'down') {
   $(this.element).removeClass('in-range');
+  console.log('remove last element');
 }
 if (direction === 'up') {
   $(this.element).addClass('in-range');
+  console.log('bring back last element');
 }
  }, { offset: '15%'
 });
