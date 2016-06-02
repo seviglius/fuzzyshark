@@ -435,12 +435,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 and (min-device-width : 375px) 
 and (max-device-width : 667px) {
 	.se-pre-con {
-		top: 0px;
+		top: 9px;
 	}
-	.inner-video-container{
-		svg#play-button{
-			width: 15%;
-		}
+	#video-container .inner-video-container svg#play-button {
+		width: 15%;
 	}
 
 }
