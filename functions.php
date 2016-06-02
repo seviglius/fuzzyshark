@@ -135,6 +135,8 @@ function fuzzyshark_scripts() {
 
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/js/jquery.sticky.js' );
 
+	wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js' );
+
 	wp_enqueue_script( 'fuzzyshark-js', get_template_directory_uri() . '/js/fuzzyshark.js', array('fuzzyshark-jquery'), '1', true );
 
 	wp_enqueue_script( 'font-awesome',  '//use.fontawesome.com/ca6014a4d4.js', true );

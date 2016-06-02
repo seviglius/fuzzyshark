@@ -1,9 +1,23 @@
-if($('body').hasClass("home")){
-    $(".se-pre-con").delay(3000).fadeOut("slow");
-  }
-else {
-  $(".se-pre-con").hide();
-}
+// if($('body').hasClass("home")){
+//     $(".se-pre-con").delay(3000).fadeOut("slow");
+//   }
+// else {
+//   $(".se-pre-con").hide();
+// }
+
+
+
+$(document).ready(function() {
+
+     var CookieSet = $.cookie('cookietitle', 'yourvalue');
+
+     if (CookieSet == null) {
+          $(".se-pre-con").delay(3000).fadeOut("slow");
+     }
+     if (jQuery.cookie('cookietitle')) {
+          $(".se-pre-con").fadeOut("slow");
+     }
+ });
 
 $( document ).ready(function() {
 

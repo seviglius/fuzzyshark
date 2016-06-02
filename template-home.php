@@ -3,7 +3,7 @@
 ?>
 
 <?php get_header(); ?>
-<div class="se-pre-con"></div>
+<div class="se-pre-con" id="preloader-gif"></div>
 <?php get_template_part( 'navbar' ); ?>
 
 <!-- ///////////////////////////////
