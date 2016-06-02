@@ -385,6 +385,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
+
+	.mobile-add-margin {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.mobile-no-margin {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
 	.student-list {
 		position: relative;
 	}
@@ -401,20 +415,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		display: block;
 		position: absolute;
 		top: auto;
-		transform: translate(0,-10%);
+		transform: translate(0,-150%);
 	}
-
-	.mobile-add-margin {
-		margin-right: 15px;
-		margin-left: 15px;
-	}
-
-	.mobile-no-margin {
-		margin-right: -15px;
-		margin-left: -15px;
-	}
-	
 }
+
 
 #logo {
 	opacity: 0;

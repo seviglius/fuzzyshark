@@ -8260,6 +8260,17 @@ a:link, a:hover, a:active, a:visited {
     font-size: 2rem;
   }
 
+  .mobile-add-margin {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .mobile-no-margin {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+@media screen and (max-width: 450px) {
   .student-list {
     position: relative;
   }
@@ -8277,18 +8288,8 @@ a:link, a:hover, a:active, a:visited {
     display: block;
     position: absolute;
     top: auto;
-    -webkit-transform: translate(0, -10%);
-            transform: translate(0, -10%);
-  }
-
-  .mobile-add-margin {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-
-  .mobile-no-margin {
-    margin-right: -15px;
-    margin-left: -15px;
+    -webkit-transform: translate(0, -150%);
+            transform: translate(0, -150%);
   }
 }
 #logo {
