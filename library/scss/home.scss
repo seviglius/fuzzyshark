@@ -1,3 +1,4 @@
+
 body {
 	background-color: $red;	
 	color: $white;
@@ -121,29 +122,9 @@ a {
 	line-height: 1;
 	font-size:6rem;
 	letter-spacing: 0.5px;
-	margin-bottom: 0;
+	margin-bottom: 24px;
 	}
-	p {
-		transform: translate(0,-12px);
-	}
-	ul {
-		list-style-type: none;
-		padding: 30px 0 0 0;
 
-	}
-	li {
-		font-size: 2rem;
-		display: inline;
-		padding-right: 30px;
-		color: white;
-		letter-spacing: 0.2px;
-	}
-	a {
-		color: white;
-	}
-	a:hover {
-		cursor: pointer;
-	}
 }
 
 .scca-student-name {
@@ -296,10 +277,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	}
 }
 .dateAndTime {
-		font-size:1.5rem;
+		font-size:2rem;
 		letter-spacing: 2.7px;
 		position: relative;
-		top:-30px;
+		top:-20px;
 	}
 #pageBottom {
 
@@ -307,7 +288,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		line-height: 1;
 		font-size:6rem;
 		letter-spacing: 0.5px;
-		margin-bottom: 10px;
+		margin-bottom: 24px;
 	}
 	
 	.thanks {
@@ -315,7 +296,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		p {
 			font-size: 13px;
 			line-height: 1.6;
-
 		}
 	}
 	.parking {
@@ -328,9 +308,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 #pageBottom p,
 #pageBottom li {
 	line-height: 1.25;
-	font-size: 2rem;
+	font-size: 3rem;
 	letter-spacing: 0.4px;
-	transform: translate(0, -24px);
 
 }
 
@@ -405,11 +384,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 .dateAndTime {
 	font-size: 1.1rem;
 	letter-spacing: 1.5px;
-		position: relative;
-		top:-20px;
-}
-.intro p {
-	margin-top: 20px;
 }
 
 	.intro p,
