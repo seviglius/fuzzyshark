@@ -1,7 +1,9 @@
-//Loading script
-$(window).load(function() {
-    $(".se-pre-con").fadeOut("slow");
-});
+if($('body').hasClass("home")){
+    $(".se-pre-con").delay(3000).fadeOut("slow");
+  }
+else {
+  $(".se-pre-con").hide();
+}
 
 $( document ).ready(function() {
 

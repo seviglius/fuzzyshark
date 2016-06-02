@@ -3,6 +3,7 @@
 ?>
 
 <?php get_header(); ?>
+<div class="se-pre-con"></div>
 <?php get_template_part( 'navbar' ); ?>
 
 <!-- ///////////////////////////////
