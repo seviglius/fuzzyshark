@@ -6509,8 +6509,6 @@ a:link, a:hover, a:active, a:visited {
   #pageBottom .thanks p {
     font-size: 13px;
     line-height: 1.6; }
-#pageBottom .parking a {
-  font-weight: 700; }
 
 .intro p {
   -webkit-transform: translate(0, 0);
@@ -6650,7 +6648,6 @@ a:link, a:hover, a:active, a:visited {
   outline: none; }
 
 #pageBottom p a {
-  font-weight: 400;
   text-decoration: underline; }
   #pageBottom p a:hover {
     text-decoration: none; }
