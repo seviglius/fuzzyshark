@@ -9,6 +9,8 @@ $( document ).ready(function() {
 //  }, { offset: '5%'
 // });
 
+
+
 $('.student-list').waypoint(function(direction) {
   if (direction === 'down') {
   $(this.element).siblings().removeClass('in-range');
@@ -29,6 +31,16 @@ $('.student-list:first-child').waypoint(function(direction) {
   console.log('60%, up');
 }
  }, { offset: '60%'
+});
+
+$('.student-list:last-child').waypoint(function(direction) {
+  if (direction === 'down') {
+  $(this.element).removeClass('in-range');
+}
+if (direction === 'up') {
+  $(this.element).addClass('in-range');
+}
+ }, { offset: '15%'
 });
 
 $('.student-list').hover(function(){

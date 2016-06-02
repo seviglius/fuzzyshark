@@ -22,9 +22,8 @@ Header Video Section////////////
 		<div class="row justify-center"> -->
 			<div class="inner-video-container">
 				<a href="<?php the_field('vimeo_url'); ?>" class="videoitem popup-youtube">
-					<div class="videothumb justify-center");" ><!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="150px" height="180px" viewBox="0 0 150 180" style="enable-background:new 0 0 150 180;"
-						xml:space="preserve" id="play-button"	>
+					<div class="videothumb justify-center"><!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="150px" height="180px" viewBox="0 0 150 180" style="enable-background:new 0 0 150 180;" xml:space="preserve" id="play-button">
 							<polygon id="right-piece" points="79.8,47.9 37.9,157.2 150,90 "/>
 							<polygon id="left-piece" points="79.8,47.9 0,0 0,180 37.9,157.2 "/>
 						</svg>
@@ -61,7 +60,7 @@ Site Intro ////////////
 		
 
 <!-- ///////////////////////////////
-Studen Rolodex ////////////
+Student Rolodex ////////////
 //////////////////////////////////-->
 		<?php
     $args = array(
@@ -122,6 +121,7 @@ Studen Rolodex ////////////
 		</div>
 	</div>
 <?php endwhile; ?>
+</div>
 		</div>
 
 	</div>
