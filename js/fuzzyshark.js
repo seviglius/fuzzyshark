@@ -57,14 +57,32 @@ $('.student-list').hover(function(){
   $(this).siblings().toggleClass('in-range-overridden');
 });
 
-$('#school-name').waypoint(function() {
-  $('#logo').toggleClass("opacity-zero");
-}, { offset: '10%'
+$('#video-container').waypoint(function(direction) {
+  if (direction === 'down') {
+  $('#logo').addClass("opacity-zero");
+}
+}, { offset: '-80%'
 });
 
-$('#school-name').waypoint(function() {
-  $('#logo').toggleClass("opacity-zero");
-}, { offset: '40%'
+$('.student-list:first-child').waypoint(function(direction) {
+  if (direction === 'down') {
+  $('#logo').removeClass("opacity-zero");
+}
+}, { offset: '100%'
+});
+
+$('#video-container').waypoint(function(direction) {
+  if (direction === 'up') {
+  $('#logo').removeClass("opacity-zero");
+}
+}, { offset: '-100%'
+});
+
+$('.student-list:first-child').waypoint(function(direction) {
+  if (direction === 'up') {
+  $('#logo').addClass("opacity-zero");
+}
+}, { offset: '80%'
 });
 
 var target = $('#video-container');
@@ -208,3 +226,7 @@ jQuery(function($) {
 // add class of lazy to all single imgs
 $(".single img").addClass("lazy");
 $(".single iframe").addClass("lazy");
+// Comic Sans easter egg 
+$('#comic-sans').click(function(){
+  $('body').toggleClass("comic-sans");
+});

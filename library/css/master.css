@@ -7108,6 +7108,10 @@ GLOBAL STYLES//////////////////////////
   }
 }
 
+.comic-sans {
+  font-family: "Comic Sans", "Comic Sans MS";
+}
+
 /*Animations*/
 @-webkit-keyframes play_break-left {
   0% {
@@ -7957,8 +7961,8 @@ img {
   background-repeat: no-repeat;
   text-indent: -9999px;
   opacity: 1;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 a:link, a:hover, a:active, a:visited {
@@ -8293,6 +8297,19 @@ a:link, a:hover, a:active, a:visited {
 
 #logo.opacity-zero {
   opacity: 1;
+}
+
+#comic-sans {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  height: 10px;
+  z-index: 9999999;
+  outline: none;
 }
 
 /*////////////////////////////////////////////////////

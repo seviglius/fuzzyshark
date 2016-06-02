@@ -56,7 +56,7 @@ img {
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	opacity: 1;
-	transition: 1s;
+	transition: .5s;
 }
 
 a {
@@ -440,3 +440,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 
 // }
 
+#comic-sans {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	height: 10px;
+	z-index: 9999999;
+	outline: none;
+}
