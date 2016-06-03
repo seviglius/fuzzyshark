@@ -6,12 +6,12 @@ else {
   $(".se-pre-con").hide();
 }
 
-//Enquire register
+//Enquire register. Check for browser width, render specific classes and styles
+// accordingly. This turns waypoints off on mobile to all for easier
+//styling of student names and featured images.
 enquire.register("screen and (min-width: 768px)", {
     match : function() {
-
-
-            //begin student list waypoints
+//begin student list waypoints
   $('.student-list').waypoint(function(direction) {
     if (direction === 'down') {
     $(this.element).siblings().removeClass('in-range');
@@ -76,96 +76,13 @@ enquire.register("screen and (min-width: 768px)", {
     },  
     unmatch : function() {
 
-          $('.student-list').waypoint(function(direction) {
-    if (direction === 'down') {
-    $(this.element).siblings().removeClass('in-range');
-    $(this.element).removeClass("in-range");
-    console.log('60%, down');
-  }
-   if (direction === 'up') {
-    $(this.element).removeClass('in-range');
-    $(this.element).prev().removeClass("in-range");
-    console.log('60%, up');
-  }
-   }, { offset: '60%'
-  });
-
-$('.student-list').hover(function(){
-    $(this).toggleClass("hovered");
-    $(this).siblings().removeClass('in-range-overridden');
-  });
 
     }
-
 });
-
 console.log("768 matched");
+//End enquire register.
 
-//   $( document ).ready(function() {
 
-//       //begin student list waypoints
-//   $('.student-list').waypoint(function(direction) {
-//     if (direction === 'down') {
-//     $(this.element).siblings().removeClass('in-range');
-//     $(this.element).addClass("in-range");
-//     console.log('60%, down');
-//   }
-//    if (direction === 'up') {
-//     $(this.element).removeClass('in-range');
-//     $(this.element).prev().addClass("in-range");
-//     console.log('60%, up');
-//   }
-//    }, { offset: '60%'
-//   });
-
-//   $('.student-list:first-child').waypoint(function(direction) {
-//     if (direction === 'up') {
-//     $('.student-list').removeClass('in-range');
-//     console.log('60%, up');
-//   }
-//    }, { offset: '60%'
-//   });
-
-//   $('.student-list:last-child').waypoint(function(direction) {
-//     if (direction === 'down') {
-//     $(this.element).removeClass('in-range');
-//     console.log('remove last element');
-//   }
-//   if (direction === 'up') {
-//     $(this.element).addClass('in-range');
-//     console.log('bring back last element');
-//   }
-//    }, { offset: '15%'
-//   });
-
-//   $('.student-list').hover(function(){
-//     $(this).toggleClass("hovered");
-//     $(this).siblings().toggleClass('in-range-overridden');
-//   });
-
-//   $('#video-container').waypoint(function(direction) {
-//     if (direction === 'down') {
-//     $('#logo').addClass("opacity-zero");
-//   }
-//   }, { offset: '-80%'
-//   });
-
-//   $('.student-list:first-child').waypoint(function(direction) {
-//     if (direction === 'down') {
-//     $('#logo').removeClass("opacity-zero");
-//   }
-//   }, { offset: '100%'
-//   });
-
-//   $('.student-list:first-child').waypoint(function(direction) {
-//     if (direction === 'up') {
-//     $('#logo').addClass("opacity-zero");
-//   }
-//   }, { offset: '80%'
-//   });
-//   //end student list waypoints
-
-// });
 
 $( document ).ready(function() {
 
