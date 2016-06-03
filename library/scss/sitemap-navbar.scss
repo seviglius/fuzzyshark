@@ -30,9 +30,21 @@ html,body {
 	font-size: 12px;
 }
 
-#parent div {
-	transition: all .5s;
+#parent{ 
+	padding:0 5px;
+	div{
+		transition: all .5s;
+		padding:5px 0 5px 0;
+	}
 }
+
+div.design{
+	background-color: green;
+	&:nth-of-type(1){
+		background-color:salmon;
+	}
+}
+
 .purple {
 	color: #433a97;
 	transition: all .5s;
@@ -91,9 +103,10 @@ html,body {
 
 .primary-nav a {
 	display: inline-block;
-	padding: .4em 1em;
 	border-radius: .25em;
 	transition: background .2s;
+	font-size: 1.1rem;
+	padding: 0 5px;
 }
 
 .primary-nav ul {

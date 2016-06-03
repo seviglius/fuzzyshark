@@ -6662,9 +6662,17 @@ html, body {
   color: #433a97;
   font-size: 12px; }
 
-#parent div {
-  -webkit-transition: all .5s;
-  transition: all .5s; }
+#parent {
+  padding: 0 5px; }
+  #parent div {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    padding: 5px 0 5px 0; }
+
+div.design {
+  background-color: green; }
+  div.design:nth-of-type(1) {
+    background-color: salmon; }
 
 .purple {
   color: #433a97;
@@ -6730,10 +6738,11 @@ html, body {
 
 .primary-nav a {
   display: inline-block;
-  padding: .4em 1em;
   border-radius: .25em;
   -webkit-transition: background .2s;
-  transition: background .2s; }
+  transition: background .2s;
+  font-size: 1.1rem;
+  padding: 0 5px; }
 
 .primary-nav ul {
   -webkit-padding-start: 0 !important; }
