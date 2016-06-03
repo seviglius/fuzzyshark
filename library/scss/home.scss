@@ -83,20 +83,20 @@ a {
 	outline: none;
 	}
 }
-@media screen and (max-width: 768px){
+
 .in-range {
-			.name {
-				text-decoration:none!important;
+		@media (max-width: 768px){
+			.name{
+				text-decoration:none;
 			}
 		}
-}
 	.featured-project-image {
 		display: block;
 	}
-	.in-range .name {
+	.name {
 		text-decoration: underline;
 	}
-
+}
 
 .in-range-overridden {
 	.featured-project-image {
