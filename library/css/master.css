@@ -6737,8 +6737,7 @@ html, body {
   border-radius: .25em;
   -webkit-transition: background .2s;
   transition: background .2s;
-  font-size: 1.1rem;
-  padding: 0 5px; }
+  font-size: 1.1rem; }
 
 .primary-nav ul {
   -webkit-padding-start: 0 !important; }
