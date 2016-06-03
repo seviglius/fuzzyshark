@@ -6318,11 +6318,11 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
   outline: none; }
 
+@media (max-width: 768px) {
+  .in-range .name {
+    text-decoration: none; } }
 .in-range .featured-project-image {
   display: block; }
-  @media (max-width: 768px) {
-    .in-range .featured-project-image .name {
-      text-decoration: none; } }
 .in-range .name {
   text-decoration: underline; }
 
