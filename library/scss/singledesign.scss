@@ -271,14 +271,17 @@ overflow-x: hidden;
 
 		
 .container>div>.caption-box {
-	padding-right: 0px;
-	padding-left: 0px;
+	.caption{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
 	margin-right: auto;
 	margin-left: auto;
 	@media (min-width: 768px) {
 	    width: 750px;
 	    padding-right: 15px;
-	padding-left: 15px;
+		padding-left: 15px;
 	}
 	@media (min-width: 992px) {
 	    width: 970px;

@@ -7041,10 +7041,11 @@ html, body {
     .single .profile-footer .social-icons {
       margin-bottom: 100px; }
   .single .container > div > .caption-box {
-    padding-right: 0px;
-    padding-left: 0px;
     margin-right: auto;
     margin-left: auto; }
+    .single .container > div > .caption-box .caption {
+      padding-right: 0px;
+      padding-left: 0px; }
     @media (min-width: 768px) {
       .single .container > div > .caption-box {
         width: 750px;
