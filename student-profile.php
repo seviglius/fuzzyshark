@@ -6,7 +6,7 @@
 	<div class="row profile-header-wrapper">
 		<div class="profile-header col-sm-12">
 			<img src="<?php the_field('headshot'); ?>" alt="<?php the_title(); ?>">
-			<h1 id="student-name"><?php the_title(); ?></h1>
+			<h1 class="student-name"><?php the_title(); ?></h1>
 			<p class="student-url"><a href="http://<?php the_field('portfolio_site'); ?>" target="_blank"><?php the_field('portfolio_site'); ?></a></p>
 		</div>
 	</div> 
