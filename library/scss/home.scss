@@ -10,11 +10,9 @@ body {
 .home {
 	overflow-y: hidden;
 }
+
 .overflow {
 	overflow: hidden;
-}
-img {
-	width: 100%;
 }
 
 /*Loader*/
@@ -53,7 +51,10 @@ img {
 }
 /*End Loader*/
 
-/*Intro Logo*/
+img {
+	width: 100%;
+}
+
 #logo {
 	position: fixed;
 	width: 305px;
@@ -71,7 +72,6 @@ img {
 	opacity: 1;
 	transition: .5s;
 }
-/*End Intro Logo*/
 
 a {
 	&:link,
@@ -87,11 +87,6 @@ a {
 .in-range {
 	.featured-project-image {
 		display: block;
-		@media (max-width: 768px){
-			.name{
-				text-decoration:none;
-			}
-		}
 	}
 	.name {
 		text-decoration: underline;
@@ -129,6 +124,7 @@ a {
 	margin-top: 200px;
 	margin-bottom: 100px;
 	color: $white;
+	background-color: $red;
 	h2 {
 	line-height: 1;
 	font-size:6rem;
@@ -141,6 +137,7 @@ a {
 	ul {
 		list-style-type: none;
 		padding: 6px 0 0 0;
+
 	}
 	li {
 		font-size: 2rem;
