@@ -6653,10 +6653,6 @@ html, body {
 .primary-nav svg {
   height: 30px; }
 
-.primary-nav .container {
-  padding-left: 5px;
-  padding-right: 5px; }
-
 .active path {
   fill: #433a97 !important;
   -webkit-transition: all .2s;
