@@ -6,12 +6,6 @@ else {
   $(".se-pre-con").hide();
 }
 
-//Enquire register. Check for browser width, render specific classes and styles
-// accordingly. This turns waypoints off on mobile to all for easier
-//styling of student names and featured images.
-enquire.register("screen and (min-width: 768px)", {
-    match : function() {
-//begin student list waypoints
   $('.student-list').waypoint(function(direction) {
     if (direction === 'down') {
     $(this.element).siblings().removeClass('in-range');
@@ -46,10 +40,6 @@ enquire.register("screen and (min-width: 768px)", {
    }, { offset: '15%'
   });
 
-  // $('.student-list').hover(function(){
-  //   $(this).toggleClass("hovered");
-  //   $(this).siblings().toggleClass('in-range-overridden');
-  // });
 
   $('#video-container').waypoint(function(direction) {
     if (direction === 'down') {
@@ -72,14 +62,6 @@ enquire.register("screen and (min-width: 768px)", {
   }, { offset: '80%'
   });
   //end student list waypoints
-
-    },  
-    unmatch : function() {
-
-    }
-});
-console.log("768 matched");
-//End enquire register.
 
 
 $('.student-list').hover(function(){
