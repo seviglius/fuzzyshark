@@ -6989,15 +6989,23 @@ html, body {
       transition: opacity .5s; }
   .single .scroll-opacity {
     opacity: 0;
-    -webkit-transition: opacity .5s;
-    transition: opacity .5s; }
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s; }
   .single .project-header {
     color: #433a97; }
+    @media screen and (max-width: 768px) {
+      .single .project-header .student-url {
+        font-size: 15px; } }
     .single .project-header h2 {
       text-align: center;
       color: #433a97;
       font-size: 40px;
       margin-bottom: 75px; }
+      @media screen and (max-width: 768px) {
+        .single .project-header h2 {
+          font-size: 25px;
+          margin-bottom: 50px;
+          text-align: center; } }
     .single .project-header p {
       font-size: 12px;
       letter-spacing: 0.6px;
@@ -7009,10 +7017,19 @@ html, body {
       text-decoration: underline; }
   .single .project-featured-image {
     margin-bottom: 100px; }
+    @media screen and (max-width: 768px) {
+      .single .project-featured-image {
+        margin-bottom: 80px; } }
   .single .project-introduction {
     margin-bottom: 300px; }
+    @media screen and (max-width: 768px) {
+      .single .project-introduction {
+        margin-bottom: 100px; } }
     .single .project-introduction p {
       font-size: 30px; }
+      @media screen and (max-width: 768px) {
+        .single .project-introduction p {
+          font-size: 16px; } }
   .single .profile-footer {
     text-align: center;
     color: #433a97; }
@@ -7199,7 +7216,7 @@ html, body {
   .single .profile-footer {
     margin-bottom: 200px; }
     .single .profile-footer .student-url {
-      font-size: 30px; }
+      font-size: 20px; }
   .single .centered-excerpt {
     margin-bottom: 200px; }
   .single p {

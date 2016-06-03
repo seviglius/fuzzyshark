@@ -188,17 +188,27 @@ overflow-x: hidden;
 
 		.scroll-opacity {
 			opacity: 0;
-			transition: opacity .5s;
+			transition: opacity 3s;
 		}
 
 		.project-header {
 			color: $darkblue;
+			@media screen and (max-width: 768px) {
+				.student-url{
+					font-size: 15px;
+				}
+			}
 
 			h2 {
 			text-align: center;
 			color: $darkblue;
 			font-size: 40px;
 			margin-bottom: 75px;
+			@media screen and (max-width: 768px) {
+				font-size:25px;
+				margin-bottom: 50px;
+				text-align: center;
+			}
 			}
 
 			p {
@@ -223,13 +233,22 @@ overflow-x: hidden;
 
 		.project-featured-image {
 			margin-bottom: 100px;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 80px;
+			}
 		}
 
 		.project-introduction {
 			margin-bottom: 300px;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 100px;
+			}
 
 			p {
 				font-size: 30px;
+				@media screen and (max-width: 768px) {
+				font-size: 16px;
+			}
 			}
 		}
 
@@ -502,7 +521,7 @@ path {
 		.profile-footer {
 			margin-bottom: 200px;
 				.student-url {
-					font-size: 30px;
+					font-size: 20px;
 				}
 		}
 
