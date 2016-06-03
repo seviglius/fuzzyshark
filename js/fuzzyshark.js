@@ -90,6 +90,11 @@ enquire.register("screen and (min-width: 768px)", {
    }, { offset: '60%'
   });
 
+$('.student-list').hover(function(){
+    $(this).toggleClass("hovered");
+    $(this).siblings().removeClass('in-range-overridden');
+  });
+
     }
 
 });

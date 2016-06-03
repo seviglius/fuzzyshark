@@ -361,6 +361,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 
 @media screen and (max-width: 768px) {
+	
+	.student-list{
+		position: relative;
+		.scca-student-name{
+			position: relative;
+			margin-top:0;
+			margin-bottom:0;
+			a{
+				text-decoration: none;
+				font-size: 2rem;
+			}
+		}
+		.scca-student-photo{
+			position: relative;
+			a{
+				img{
+					position: relative;
+					transform: translate3d(0,0,0);
+					display: block;
+				}
+			}
+		}
+	}
 
 	.intro {
 		h2.sticky {
@@ -430,24 +453,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 	line-height: 1.5;
 	font-size: 2rem;
 }
-	.student-list {
-		position: relative;
-	}
-	.scca-student-name {
-			margin-top: 415;
-			margin-bottom: -5px;
-			font-size: 5rem;
-		}  
-
-	.scca-student-photo img {
-		margin: auto 0;
-		width: 100%;
-		height: auto;
-		display: block;
-		position: absolute;
-		top: auto;
-		transform: translate(0,-50%);
-	}
 
 	.mobile-add-margin {
 		margin-right: 15px;
@@ -462,24 +467,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 
 @media screen and (max-width: 450px) {
-	.student-list {
-		position: relative;
-	}
-	.scca-student-name {
-			margin-top: 207px;
-			margin-bottom: 81px;
-			font-size: 5rem;
-		}  
 
-	.scca-student-photo img {
-		margin: auto 0;
-		width: 100%;
-		height: auto;
-		display: block;
-		position: absolute;
-		top: auto;
-		transform: translate(0,-150%);
-	}
 }
 
 
