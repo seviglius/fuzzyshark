@@ -46,10 +46,10 @@ enquire.register("screen and (min-width: 768px)", {
    }, { offset: '15%'
   });
 
-  $('.student-list').hover(function(){
-    $(this).toggleClass("hovered");
-    $(this).siblings().toggleClass('in-range-overridden');
-  });
+  // $('.student-list').hover(function(){
+  //   $(this).toggleClass("hovered");
+  //   $(this).siblings().toggleClass('in-range-overridden');
+  // });
 
   $('#video-container').waypoint(function(direction) {
     if (direction === 'down') {
@@ -76,12 +76,16 @@ enquire.register("screen and (min-width: 768px)", {
     },  
     unmatch : function() {
 
-
     }
 });
 console.log("768 matched");
 //End enquire register.
 
+
+$('.student-list').hover(function(){
+    $(this).toggleClass("hovered");
+    $(this).siblings().toggleClass('in-range-overridden');
+  });
 
 
 $( document ).ready(function() {
