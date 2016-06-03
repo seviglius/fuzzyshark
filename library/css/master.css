@@ -6669,11 +6669,6 @@ html, body {
     transition: all .5s;
     padding: 5px 0 5px 0; }
 
-div.design {
-  background-color: green; }
-  div.design:nth-of-type(1) {
-    background-color: salmon; }
-
 .purple {
   color: #433a97;
   -webkit-transition: all .5s;

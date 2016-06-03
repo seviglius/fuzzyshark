@@ -38,13 +38,6 @@ html,body {
 	}
 }
 
-div.design{
-	background-color: green;
-	&:nth-of-type(1){
-		background-color:salmon;
-	}
-}
-
 .purple {
 	color: #433a97;
 	transition: all .5s;
