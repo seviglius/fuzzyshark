@@ -49,7 +49,11 @@ Site Intro ////////////
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Seattle Central<br> Creative Academy<br><span class="dateAndTime">2016 DESIGN + PHOTOGRAPHY SHOW</span></h2>
 			<?php the_content(); ?>
-			<a href="#parking">Directions</a>
+			<div class="logistics">
+					<ul>
+						<a href="#parking"><li>Directions</li></a>
+					</ul>
+			</div><!--LOGISTICS-->
 		</div>
 
 		
@@ -68,8 +72,8 @@ Student Rolodex ////////////
     $featuredimage = get_field_objects();
 ?>
 
-<!-- begin desktop loop -->
-<div class="col-sm-12 hidden-xs">
+
+<div class="col-sm-12 hidden-xs visible-md">
 <?php while ($query->have_posts()) : $query->the_post(); ?> 
 	<div class="student-list">
 		<div class="scca-student-name">
@@ -116,61 +120,7 @@ Student Rolodex ////////////
 		</div>
 	</div>
 <?php endwhile; ?>
-</div> 
-<!-- end desktop loop -->
-
-<!-- begin mobile loop -->
-<div class="col-sm-12 hidden-md visible-xs">
-<?php while ($query->have_posts()) : $query->the_post(); ?> 
-	<div class="student-list-mobile">
-		<div class="scca-student-name-mobile">
-			<a href="<?php the_permalink(); ?>" class="name"><?php the_title(); ?></a>
-		</div>
-		<div class="scca-student-photo-mobile">
-			<a href="<?php the_permalink(); ?>">
-
-				<?php $img = get_field('project_featured_image'); ?>
-
-				<?php if( $img['mime_type'] == 'image/gif' ) : ?>
-
-				<img src="<?php echo $img['url']; ?>" alt="<?php the_title(); ?>" class="featured-project-image">
-
-				<?php else : ?>
-
-
-				<img
-					src="<?php echo $img['url']; ?>"
-					sizes="(min-width: 768px) 80vw, 100vw"
-				  srcset="<?php echo $img['sizes']['fuzzy-3700']; ?> 3700w,
-							<?php echo $img['sizes']['fuzzy-3500']; ?> 3500w,
-							<?php echo $img['sizes']['fuzzy-3300']; ?> 3300w,
-							<?php echo $img['sizes']['fuzzy-3100']; ?> 3100w,
-							<?php echo $img['sizes']['fuzzy-2900']; ?> 2900w,
-							<?php echo $img['sizes']['fuzzy-2700']; ?> 2700w,
-							<?php echo $img['sizes']['fuzzy-2500']; ?> 2500w,
-							<?php echo $img['sizes']['fuzzy-2300']; ?> 2300w,
-							<?php echo $img['sizes']['fuzzy-2100']; ?> 2100w,
-							<?php echo $img['sizes']['fuzzy-1900']; ?> 1900w,
-							<?php echo $img['sizes']['fuzzy-1700']; ?> 1700w,
-						    <?php echo $img['sizes']['fuzzy-1500']; ?> 1500w,
-						    <?php echo $img['sizes']['fuzzy-1300']; ?> 1300w,
-						    <?php echo $img['sizes']['fuzzy-1100']; ?> 1100w,
-						    <?php echo $img['sizes']['fuzzy-900']; ?> 900w,
-						    <?php echo $img['sizes']['fuzzy-700']; ?> 700w,
-						    <?php echo $img['sizes']['fuzzy-500']; ?> 500w,
-						    <?php echo $img['sizes']['fuzzy-300']; ?> 300w"
-				  alt="<?php the_title(); ?>"
-				  class="featured-project-image">
-
-				<?php endif; ?>
-			</a>
-		</div>
-	</div>
-<?php endwhile; ?>
 </div>
-<!-- end mobile loop -->
-
-
 		</div>
 
 	</div>
@@ -180,8 +130,9 @@ Student Rolodex ////////////
 Page Bottom Info Section//////
 //////////////////////////////////////-->
 <div id="pageBottom" class="justify-center gradient-rotated">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row showinfo">
+
 			<div class="row">
 				<div class="col-md-offset-1 col-md-6">
 					<h2>Portshowlio 2016<br>

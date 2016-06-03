@@ -1,47 +1,21 @@
-/*Top level homepage styles*/
 body {
 	background-color: $red;	
 	color: $white;
 	overflow-x: hidden;
 	font-family: "azo-sans-web",sans-serif;
 }
+.intro p {
+	font-size: 2rem;
+}
 .home {
 	overflow-y: hidden;
+}
+.overflow {
+	overflow: hidden;
 }
 img {
 	width: 100%;
 }
-
-.sticky {
-	top: 0;
-	position: fixed;
-}
-
-.justify-center{
-	display: flex;
-	flex-flow:row wrap;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.gradient{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+51,ee2624+82,ee2624+100&1+0,1+72,0+100 */
-	background: #433a97; /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(67,58,151,1) 0%, rgba(177,36,110,1) 51%, rgba(218,37,60,1) 72%, rgba(238,38,36,0.64) 82%, rgba(238,38,36,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#00ee2624',GradientType=0 ); /* IE6-9 */
-}
-
-.gradient-rotated{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ee2624+0,ee2624+18,b1246e+49,433a97+100&0+0,1+28,1+100 */
-background: #433a97; /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(238,38,36,0) 0%, rgba(238,38,36,0.64) 18%, rgba(218,37,60,1) 28%, rgba(177,36,110,1) 49%, rgba(67,58,151,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', endColorstr='#433a97',GradientType=0 ); /* IE6-9 */
-}
-/*End top level homepage styles*/
 
 /*Loader*/
 .no-js #loader {
@@ -79,7 +53,148 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 /*End Loader*/
 
-/*Top of page*/
+/*Intro Logo*/
+#logo {
+	position: fixed;
+	width: 305px;
+	height: 437px;
+	top: 44%;
+	bottom: 56%;
+	margin: auto;
+	padding-bottom: 25px;
+	left: 90px;
+	z-index: -9999;
+	background-image: url('../../img/logo.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	opacity: 1;
+	transition: .5s;
+}
+/*End Intro Logo*/
+
+a {
+	&:link,
+	&:hover,
+	&:active,
+	&:visited {
+	color: $white;
+	text-decoration: none;
+	outline: none;
+	}
+}
+@media screen and (max-width: 768px){
+.in-range {
+			.name {
+				text-decoration:none!important;
+			}
+		}
+}
+	.featured-project-image {
+		display: block;
+	}
+	.in-range .name {
+		text-decoration: underline;
+	}
+
+
+.in-range-overridden {
+	.featured-project-image {
+		display: none;
+	}
+	.name {
+		text-decoration: none;
+	}
+}
+
+.hovered {
+	.featured-project-image {
+		display: block;
+	}
+	.name {
+		text-decoration: underline;
+	}
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.display-block {
+	display: block;
+}
+
+
+.intro {
+	margin-top: 200px;
+	margin-bottom: 100px;
+	color: $white;
+	h2 {
+	line-height: 1;
+	font-size:6rem;
+	letter-spacing: 0.5px;
+	margin-bottom: 0;
+	}
+	p {
+		transform: translate(0,-12px);
+	}
+	ul {
+		list-style-type: none;
+		padding: 6px 0 0 0;
+	}
+	li {
+		font-size: 2rem;
+		display: inline;
+		padding-right: 30px;
+		color: white;
+		letter-spacing: 0.2px;
+	}
+	a {
+		color: white;
+	}
+	a:hover {
+		cursor: pointer;
+	}
+}
+
+.scca-student-name {
+	font-size: 100px;
+	line-height: 1;
+	margin-top: 350px;
+	margin-bottom: 350px;
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	@media screen and (min-width: 1600px) {
+		font-size: 140px;
+	}
+	@media screen and (min-width: 1800px) {
+		font-size: 160px;
+	}
+}
+
+.scca-student-photo img {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	z-index: -999;
+	height: auto;
+	width: 80%;
+	display: none;
+}
+
+.sticky {
+	top: 0;
+	position: fixed;
+}
+.justify-center{
+	display: flex;
+	flex-flow:row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
 #video-container {
 	width: 100%;
 	height: 100vh;
@@ -124,147 +239,24 @@ $yVal: 10px;
 		}
 	}
 }
-/*End top of page*/
 
-/*Begin Intro*/
-.intro {
-	margin-top: 200px;
-	margin-bottom: 100px;
-	color: $white;
-	h2 {
-	line-height: 1;
-	font-size:6rem;
-	letter-spacing: 0.5px;
-	margin-bottom: 0;
-	}
-	p {
-		transform: translate(0,-12px);
-	}
-	ul {
-		list-style-type: none;
-		padding: 6px 0 0 0;
-	}
-	li {
-		font-size: 2rem;
-		display: inline;
-		padding-right: 30px;
-		color: white;
-		letter-spacing: 0.2px;
-	}
-	a {
-		color: white;
-	}
-	a:hover {
-		cursor: pointer;
-	}
+.gradient{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#433a97+0,b1246e+51,ee2624+82,ee2624+100&1+0,1+72,0+100 */
+	background: #433a97; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(67,58,151,1) 0%, rgba(177,36,110,1) 51%, rgba(218,37,60,1) 72%, rgba(238,38,36,0.64) 82%, rgba(238,38,36,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(67,58,151,1) 0%,rgba(177,36,110,1) 51%,rgba(218,37,60,1) 72%,rgba(238,38,36,0.64) 82%,rgba(238,38,36,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#433a97', endColorstr='#00ee2624',GradientType=0 ); /* IE6-9 */
+}
+.gradient-rotated{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ee2624+0,ee2624+18,b1246e+49,433a97+100&0+0,1+28,1+100 */
+background: #433a97; /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(238,38,36,0) 0%, rgba(238,38,36,0.64) 18%, rgba(218,37,60,1) 28%, rgba(177,36,110,1) 49%, rgba(67,58,151,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(238,38,36,0) 0%,rgba(238,38,36,0.64) 18%,rgba(218,37,60,1) 28%,rgba(177,36,110,1) 49%,rgba(67,58,151,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', endColorstr='#433a97',GradientType=0 ); /* IE6-9 */
 }
 
-/*Intro Logo*/
-#logo {
-	position: fixed;
-	width: 305px;
-	height: 437px;
-	top: 44%;
-	bottom: 56%;
-	margin: auto;
-	padding-bottom: 25px;
-	left: 90px;
-	z-index: -9999;
-	background-image: url('../../img/logo.svg');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	opacity: 1;
-	transition: .5s;
-}
-
-#logo {
-	opacity: 0;
-}
-
-#logo.opacity-zero {
-	opacity: 1;
-}
-/*End Intro Logo*/
-
-/*Waypoints styling for desktop*/
-.featured-project-image {
-	display: block;
-}
-
-.in-range .name {
-	text-decoration: underline;
-}
-
-.in-range-overridden {
-	.featured-project-image {
-		display: none;
-	}
-	.name {
-		text-decoration: none;
-	}
-}
-
-.hovered {
-	.featured-project-image {
-		display: block;
-	}
-	.name {
-		text-decoration: underline;
-	}
-}
-
-.underlined {
-	text-decoration: underline;
-}
-
-.display-block {
-	display: block;
-}
-
-/*/
-Bring this back if the mobile loop starts underlining names
-/*/
-/*@media screen and (max-width: 768px){
-.in-range {
-			.name {
-				text-decoration:none!important;
-			}
-		}
-}*/
-
-/*End waypoints styling for desktop*/
-
-/*Desktop name and featured image styling*/
-.scca-student-name {
-	font-size: 100px;
-	line-height: 1;
-	margin-top: 350px;
-	margin-bottom: 350px;
-	&:last-of-type {
-		margin-bottom: 0;
-	}
-	@media screen and (min-width: 1600px) {
-		font-size: 140px;
-	}
-	@media screen and (min-width: 1800px) {
-		font-size: 160px;
-	}
-}
-
-.scca-student-photo img {
-	position: fixed;
-	top: 50%;
-	right: 0;
-	-webkit-transform: translate(0, -50%);
-	transform: translate(0, -50%);
-	z-index: -999;
-	height: auto;
-	width: 80%;
-	display: none;
-}
-
-/*Bottom of page*/
 #pageBottom{
 	min-height:100vh;
 	padding-top:100px;
@@ -277,9 +269,43 @@ Bring this back if the mobile loop starts underlining names
 		display: inline-block;
 		margin:0 10px 0 0;
 		transform: translate3d(0,25px,0);
+		&:nth-of-type(1){
+			
+		}
+		&:nth-of-type(2){
+			
+		}
+		&:nth-of-type(3){
+			
+		}
 	}
 }
 
+.collaborators {
+	&:first-of-type{
+		&:not(:nth-last-of-type(2)){
+			&:not(:last-of-type){
+				&::after {
+					content: ",";
+				}
+			}
+		}
+	}
+	&:last-of-type{
+		&:not(:first-of-type){
+			&::before {
+				content: "and ";
+			}
+		}
+	}
+	&:not(:last-of-type){
+		&:not(:first-of-type){
+			&::after {
+				content: ",";
+			}
+		}
+	}
+}
 .dateAndTime {
 		font-size:1.5rem;
 		letter-spacing: 2.7px;
@@ -303,6 +329,13 @@ Bring this back if the mobile loop starts underlining names
 
 		}
 	}
+	.parking {
+		a {
+		}
+	}
+}
+.intro p {
+	transform: translate(0, 0);
 }
 #pageBottom p,
 #pageBottom li {
@@ -310,25 +343,11 @@ Bring this back if the mobile loop starts underlining names
 	font-size: 2rem;
 	letter-spacing: 0.4px;
 	transform: translate(0, -24px);
+
 }
 
-#pageBottom p a{
-	text-decoration: underline;
-	&:hover{
-		text-decoration:none;
-	}
-}
-/*End bottom of page*/
-
-
-/*Begin Media Queries
-Starts to get a little messy here*/
-
-
-
-
-/*Begin 768px–992px*/
 @media screen and (max-width: 992px) {
+
 #logo {
 		position: relative;
 		z-index: auto;
@@ -343,12 +362,9 @@ Starts to get a little messy here*/
 		margin-top: 50px;
 	}
 }
-/*End 768px–992px*/
 
-/*Begin 451px–768px*/
 @media screen and (max-width: 768px) {
 
-	/*Begin Page Top*/
 	.intro {
 		h2.sticky {
 			display: block;
@@ -366,9 +382,6 @@ Starts to get a little messy here*/
 			font-size: 2rem;
 		}
 	}
-	/*End Page Top*/
-
-	/*Begin Page Bottom*/
 	#pageBottom {
 		.showinfo {
 			margin-bottom: 10px;
@@ -404,35 +417,57 @@ Starts to get a little messy here*/
 		}
 	}
 }
-/*End Page Bottom*/
-
-
 .dateAndTime {
 	font-size: 1.1rem;
 	letter-spacing: 1.5px;
-	position: relative;
-	top:-20px;
+		position: relative;
+		top:-20px;
 }
 .intro p {
 	margin-top: 20px;
 }
 
-.intro p,
+	.intro p,
 #pageBottom p,
 #pageBottom li {
 	line-height: 1.5;
 	font-size: 2rem;
 }
-}
-/*End 451px–768px*/
-
-/*Begin 0px–451px*/
-@media screen and (max-width: 450px) {
-	
 	.student-list {
 		position: relative;
 	}
+	.scca-student-name {
+			margin-top: 415;
+			margin-bottom: -5px;
+			font-size: 2.6rem;
+		}  
 
+	.scca-student-photo img {
+		margin: auto 0;
+		width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		top: auto;
+		transform: translate(0,-50%);
+	}
+
+	.mobile-add-margin {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.mobile-no-margin {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
+	.student-list {
+		position: relative;
+	}
 	.scca-student-name {
 			margin-top: 207px;
 			margin-bottom: 81px;
@@ -448,48 +483,33 @@ Starts to get a little messy here*/
 		top: auto;
 		transform: translate(0,-150%);
 	}
-
-	.student-list-mobile{
-		.scca-student-name-mobile{
-			font-size: 2.4rem;
-		}
-		.scca-student-photo-mobile{
-
-		}
-		margin-bottom:50px;
-	}
-	.intro{
-		margin-bottom: 200px;
-		
-		#school-name{
-			font-size: 3rem;
-			line-height: 1;
-			margin-bottom: 30px;
-
-			.dateAndTime{
-				display: block;
-				margin-top: 30px;
-				text-indent: 3px;
-			}
-		}
-
-	p{
-		font-size: 1.6rem;
-		line-height: 1.5;
-	}
-
-	a{
-		font-size: 1.6rem;
-		text-decoration:underline;
-	}
-
-}//end .intro
-
-#pageBottom{
-	.parking p{
-		font-size: 1.6rem;
-		line-height: 1.5;
-	}
 }
 
+
+#logo {
+	opacity: 0;
+}
+
+#logo.opacity-zero {
+	opacity: 1;
+}
+
+#comic-sans {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border: 0;
+	background: transparent;
+	width: 100%;
+	height: 10px;
+	z-index: 9999999;
+	outline: none;
+}
+
+#pageBottom p a{
+	text-decoration: underline;
+	&:hover{
+		text-decoration:none;
+	}
 }
