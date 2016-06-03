@@ -16,11 +16,9 @@ $( document ).ready(function() {
 // }
 //  }, { offset: '5%'
 // });
-$(window).on('resize', function(){
-      var win = $(this);
-      if (win.width() < 768) { 
 
-      //smaller than 768, do this
+
+
 $('.student-list').waypoint(function(direction) {
   if (direction === 'down') {
   $(this.element).siblings().removeClass('in-range');
@@ -97,93 +95,6 @@ $(document).scroll(function(){
         target.css('opacity', scrollPercent);
     }
 });
-
-      }
-    else
-    {
-        //larger than 768, do this
-
-    }//end else
-
-}); //end function
-
-
-// $('.student-list').waypoint(function(direction) {
-//   if (direction === 'down') {
-//   $(this.element).siblings().removeClass('in-range');
-//   $(this.element).addClass("in-range");
-//   console.log('60%, down');
-// }
-//  if (direction === 'up') {
-//   $(this.element).removeClass('in-range');
-//   $(this.element).prev().addClass("in-range");
-//   console.log('60%, up');
-// }
-//  }, { offset: '60%'
-// });
-
-// $('.student-list:first-child').waypoint(function(direction) {
-//   if (direction === 'up') {
-//   $('.student-list').removeClass('in-range');
-//   console.log('60%, up');
-// }
-//  }, { offset: '60%'
-// });
-
-// $('.student-list:last-child').waypoint(function(direction) {
-//   if (direction === 'down') {
-//   $(this.element).removeClass('in-range');
-//   console.log('remove last element');
-// }
-// if (direction === 'up') {
-//   $(this.element).addClass('in-range');
-//   console.log('bring back last element');
-// }
-//  }, { offset: '15%'
-// });
-
-// $('.student-list').hover(function(){
-//   $(this).toggleClass("hovered");
-//   $(this).siblings().toggleClass('in-range-overridden');
-// });
-
-// $('#video-container').waypoint(function(direction) {
-//   if (direction === 'down') {
-//   $('#logo').addClass("opacity-zero");
-// }
-// }, { offset: '-80%'
-// });
-
-// $('.student-list:first-child').waypoint(function(direction) {
-//   if (direction === 'down') {
-//   $('#logo').removeClass("opacity-zero");
-// }
-// }, { offset: '100%'
-// });
-
-// $('#video-container').waypoint(function(direction) {
-//   if (direction === 'up') {
-//   $('#logo').removeClass("opacity-zero");
-// }
-// }, { offset: '-100%'
-// });
-
-// $('.student-list:first-child').waypoint(function(direction) {
-//   if (direction === 'up') {
-//   $('#logo').addClass("opacity-zero");
-// }
-// }, { offset: '80%'
-// });
-
-// var target = $('#video-container');
-// var targetHeight = target.outerHeight();
-
-// $(document).scroll(function(){
-//     var scrollPercent = (targetHeight - window.scrollY) / targetHeight;
-//     if(scrollPercent >= 50){
-//         target.css('opacity', scrollPercent);
-//     }
-// });
 
 $(".module").waypoint(function() {
   $(this.element).find("p.caption").toggleClass("opacity-toggle");
@@ -330,7 +241,7 @@ $(function() {
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 3000);
+        }, 1000);
         return false;
       }
     }
