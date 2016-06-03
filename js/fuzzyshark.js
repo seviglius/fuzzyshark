@@ -6,85 +6,170 @@ else {
   $(".se-pre-con").hide();
 }
 
-$( document ).ready(function() {
+//Enquire register
+enquire.register("screen and (min-width: 768px)", {
+    match : function() {
 
-// $('.student-list').waypoint(function(direction) {
+
+            //begin student list waypoints
+  $('.student-list').waypoint(function(direction) {
+    if (direction === 'down') {
+    $(this.element).siblings().removeClass('in-range');
+    $(this.element).addClass("in-range");
+    console.log('60%, down');
+  }
+   if (direction === 'up') {
+    $(this.element).removeClass('in-range');
+    $(this.element).prev().addClass("in-range");
+    console.log('60%, up');
+  }
+   }, { offset: '60%'
+  });
+
+  $('.student-list:first-child').waypoint(function(direction) {
+    if (direction === 'up') {
+    $('.student-list').removeClass('in-range');
+    console.log('60%, up');
+  }
+   }, { offset: '60%'
+  });
+
+  $('.student-list:last-child').waypoint(function(direction) {
+    if (direction === 'down') {
+    $(this.element).removeClass('in-range');
+    console.log('remove last element');
+  }
+  if (direction === 'up') {
+    $(this.element).addClass('in-range');
+    console.log('bring back last element');
+  }
+   }, { offset: '15%'
+  });
+
+  $('.student-list').hover(function(){
+    $(this).toggleClass("hovered");
+    $(this).siblings().toggleClass('in-range-overridden');
+  });
+
+  $('#video-container').waypoint(function(direction) {
+    if (direction === 'down') {
+    $('#logo').addClass("opacity-zero");
+  }
+  }, { offset: '-80%'
+  });
+
+  $('.student-list:first-child').waypoint(function(direction) {
+    if (direction === 'down') {
+    $('#logo').removeClass("opacity-zero");
+  }
+  }, { offset: '100%'
+  });
+
+  $('.student-list:first-child').waypoint(function(direction) {
+    if (direction === 'up') {
+    $('#logo').addClass("opacity-zero");
+  }
+  }, { offset: '80%'
+  });
+  //end student list waypoints
+
+    },  
+    unmatch : function() {
+
+          $('.student-list').waypoint(function(direction) {
+    if (direction === 'down') {
+    $(this.element).siblings().removeClass('in-range');
+    $(this.element).removeClass("in-range");
+    console.log('60%, down');
+  }
+   if (direction === 'up') {
+    $(this.element).removeClass('in-range');
+    $(this.element).prev().removeClass("in-range");
+    console.log('60%, up');
+  }
+   }, { offset: '60%'
+  });
+
+    }
+
+});
+
+console.log("768 matched");
+
+//   $( document ).ready(function() {
+
+//       //begin student list waypoints
+//   $('.student-list').waypoint(function(direction) {
+//     if (direction === 'down') {
+//     $(this.element).siblings().removeClass('in-range');
+//     $(this.element).addClass("in-range");
+//     console.log('60%, down');
+//   }
+//    if (direction === 'up') {
+//     $(this.element).removeClass('in-range');
+//     $(this.element).prev().addClass("in-range");
+//     console.log('60%, up');
+//   }
+//    }, { offset: '60%'
+//   });
+
+//   $('.student-list:first-child').waypoint(function(direction) {
+//     if (direction === 'up') {
+//     $('.student-list').removeClass('in-range');
+//     console.log('60%, up');
+//   }
+//    }, { offset: '60%'
+//   });
+
+//   $('.student-list:last-child').waypoint(function(direction) {
+//     if (direction === 'down') {
+//     $(this.element).removeClass('in-range');
+//     console.log('remove last element');
+//   }
 //   if (direction === 'up') {
-//   $(this.element).siblings().removeClass('in-range');
-//   $(this.element).addClass("in-range");
-//   console.log('5%, up');
-// }
-//  }, { offset: '5%'
+//     $(this.element).addClass('in-range');
+//     console.log('bring back last element');
+//   }
+//    }, { offset: '15%'
+//   });
+
+//   $('.student-list').hover(function(){
+//     $(this).toggleClass("hovered");
+//     $(this).siblings().toggleClass('in-range-overridden');
+//   });
+
+//   $('#video-container').waypoint(function(direction) {
+//     if (direction === 'down') {
+//     $('#logo').addClass("opacity-zero");
+//   }
+//   }, { offset: '-80%'
+//   });
+
+//   $('.student-list:first-child').waypoint(function(direction) {
+//     if (direction === 'down') {
+//     $('#logo').removeClass("opacity-zero");
+//   }
+//   }, { offset: '100%'
+//   });
+
+//   $('.student-list:first-child').waypoint(function(direction) {
+//     if (direction === 'up') {
+//     $('#logo').addClass("opacity-zero");
+//   }
+//   }, { offset: '80%'
+//   });
+//   //end student list waypoints
+
 // });
 
-
-
-$('.student-list').waypoint(function(direction) {
-  if (direction === 'down') {
-  $(this.element).siblings().removeClass('in-range');
-  $(this.element).addClass("in-range");
-  console.log('60%, down');
-}
- if (direction === 'up') {
-  $(this.element).removeClass('in-range');
-  $(this.element).prev().addClass("in-range");
-  console.log('60%, up');
-}
- }, { offset: '60%'
-});
-
-$('.student-list:first-child').waypoint(function(direction) {
-  if (direction === 'up') {
-  $('.student-list').removeClass('in-range');
-  console.log('60%, up');
-}
- }, { offset: '60%'
-});
-
-$('.student-list:last-child').waypoint(function(direction) {
-  if (direction === 'down') {
-  $(this.element).removeClass('in-range');
-  console.log('remove last element');
-}
-if (direction === 'up') {
-  $(this.element).addClass('in-range');
-  console.log('bring back last element');
-}
- }, { offset: '15%'
-});
-
-$('.student-list').hover(function(){
-  $(this).toggleClass("hovered");
-  $(this).siblings().toggleClass('in-range-overridden');
-});
+$( document ).ready(function() {
 
 $('#video-container').waypoint(function(direction) {
-  if (direction === 'down') {
-  $('#logo').addClass("opacity-zero");
-}
-}, { offset: '-80%'
-});
-
-$('.student-list:first-child').waypoint(function(direction) {
-  if (direction === 'down') {
-  $('#logo').removeClass("opacity-zero");
-}
-}, { offset: '100%'
-});
-
-$('#video-container').waypoint(function(direction) {
-  if (direction === 'up') {
-  $('#logo').removeClass("opacity-zero");
-}
-}, { offset: '-100%'
-});
-
-$('.student-list:first-child').waypoint(function(direction) {
-  if (direction === 'up') {
-  $('#logo').addClass("opacity-zero");
-}
-}, { offset: '80%'
-});
+    if (direction === 'up') {
+    $('#logo').removeClass("opacity-zero");
+  }
+  }, { offset: '-100%'
+  });
 
 var target = $('#video-container');
 var targetHeight = target.outerHeight();
@@ -128,41 +213,7 @@ $(".profile-footer").waypoint(function() {
   $(".profile-header").toggleClass("scroll-opacity");
 });
 
-// var $window = $(window),
-//        $stickyEl = $('.profile-header'),
-//        elTop = $stickyEl.offset().top;
-
-//    $window.scroll(function() {
-//         $stickyEl.toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
-//         // $('#student-url').toggleClass('.scroll-opacity', $window.scrollTop() > elTop);
-//     });
-
 });
-
-
-
-///Slow down the scroll speed on the student rolodex
-// if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-// window.onmousewheel = document.onmousewheel = wheel;
-
-// function wheel(event) {
-//     var delta = 0;
-//     if (event.wheelDelta) delta = event.wheelDelta / 12;
-//     else if (event.detail) delta = -event.detail / 3;
-
-//     handle(delta);
-//     if (event.preventDefault) event.preventDefault();
-//     event.returnValue = false;
-// }
-
-// function handle(delta) {
-//     var time = 1;
-//   var distance = 3;
-    
-//     $('html, slowSpeed').stop().animate({
-//         scrollTop: $(window).scrollTop() - (distance * delta)
-//     }, time );
-// }
 
 
 $('.single-design').find("#bottom-design-button").addClass("active");
