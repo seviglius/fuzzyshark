@@ -85,13 +85,13 @@ a {
 }
 
 .in-range {
+	.featured-project-image {
+		display: block;
 		@media (max-width: 768px){
 			.name{
 				text-decoration:none;
 			}
 		}
-	.featured-project-image {
-		display: block;
 	}
 	.name {
 		text-decoration: underline;
