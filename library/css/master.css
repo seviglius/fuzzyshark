@@ -7043,7 +7043,7 @@ html, body {
   .single .container > div > .caption-box {
     margin-right: auto;
     margin-left: auto; }
-    .single .container > div > .caption-box .caption {
+    .single .container > div > .caption-box div {
       padding-right: 0px;
       padding-left: 0px; }
     @media (min-width: 768px) {
