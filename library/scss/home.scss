@@ -196,6 +196,10 @@ $yVal: 10px;
 	text-decoration: underline;
 }
 
+.in-range{
+	display: block;
+}
+
 .in-range-overridden {
 	.featured-project-image {
 		display: none;
@@ -491,5 +495,9 @@ Starts to get a little messy here*/
 		line-height: 1.5;
 	}
 }
+}
 
+
+.overflow {
+  overflow: hidden;
 }

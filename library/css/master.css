@@ -5591,9 +5591,6 @@ GLOBAL STYLES//////////////////////////
 .comic-sans {
   font-family: "Comic Sans", "Comic Sans MS"; }
 
-.overflow {
-  overflow: hidden; }
-
 a:link, a:hover, a:active, a:visited {
   color: #fff;
   text-decoration: none;
@@ -6454,6 +6451,9 @@ img {
 .in-range .name {
   text-decoration: underline; }
 
+.in-range {
+  display: block; }
+
 .in-range-overridden .featured-project-image {
   display: none; }
 .in-range-overridden .name {
@@ -6670,6 +6670,9 @@ Starts to get a little messy here*/
   #pageBottom .parking p {
     font-size: 1.6rem;
     line-height: 1.5; } }
+.overflow {
+  overflow: hidden; }
+
 /*////////////////////////////////////////////////////
 SITEMAP
 ////////////////////////////////////////////////////*/
