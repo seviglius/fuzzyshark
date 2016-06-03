@@ -73,7 +73,7 @@ Student Rolodex ////////////
 ?>
 
 
-<div class="col-sm-12 hidden-xs visible-md">
+<div class="col-sm-12">
 <?php while ($query->have_posts()) : $query->the_post(); ?> 
 	<div class="student-list">
 		<div class="scca-student-name">
