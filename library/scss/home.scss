@@ -468,6 +468,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		margin-right: -15px;
 		margin-left: -15px;
 	}
+
+.showinfo div, .parking div, .thanks div {
+    padding-right: 0;
+    padding-left: 0;
+}
 	
 }
 
