@@ -7207,7 +7207,8 @@ html, body {
   .bottom-nav .bottom-nav-photo {
     margin-right: -15px;
     margin-left: -15px; }
-  .bottom-nav .bottom-nav-design div {
+  .bottom-nav .bottom-nav-design div,
+  .bottom-nav .bottom-nav-photo div {
     padding-left: 0;
     padding-right: 0; }
   .bottom-nav .bottom-img-container {
