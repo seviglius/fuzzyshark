@@ -7187,8 +7187,8 @@ html, body {
     display: block;
     margin: 0 auto;
     text-align: center;
-    margin-top: 75px;
-    margin-bottom: 25px; }
+    margin-top: 25px;
+    margin-bottom: 40px; }
   .bottom-nav path {
     fill: transparent !important;
     stroke: #433a97 !important; }
@@ -7197,6 +7197,21 @@ html, body {
     stroke: #433a97 !important;
     -webkit-transition: all .2s;
     transition: all .2s; }
+  .bottom-nav #bottom-photo-button {
+    -webkit-transform: translate3d(15px, 0, 0);
+            transform: translate3d(15px, 0, 0); }
+  .bottom-nav #bottom-design-button {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0); }
+  .bottom-nav .bottom-nav-design,
+  .bottom-nav .bottom-nav-photo {
+    margin-right: -15px;
+    margin-left: -15px; }
+  .bottom-nav .bottom-nav-design div {
+    padding-left: 0;
+    padding-right: 0; }
+  .bottom-nav .bottom-img-container {
+    margin-bottom: 0; }
 
 @media (min-width: 768px) {
   .single .col-sm-6 .caption {
@@ -7210,7 +7225,7 @@ html, body {
     width: 100%;
     margin: 0 auto; }
   .single .module {
-    margin-bottom: 200px; }
+    margin-bottom: 75px; }
     .single .module img {
       margin-bottom: 15px; }
   .single .profile-footer {

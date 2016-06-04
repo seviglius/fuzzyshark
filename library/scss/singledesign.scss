@@ -470,8 +470,8 @@ overflow-x: hidden;
 		display: block;
 		margin: 0 auto;
 		text-align: center;
-		margin-top: 75px;
-		margin-bottom: 25px;
+		margin-top: 25px;
+		margin-bottom: 40px;
 	}
 
 path {
@@ -486,7 +486,34 @@ path {
   transition: all .2s;
 }
 }
-
+#bottom-photo-button{
+	transform: translate3d(15px,0,0);
+}
+#bottom-design-button{
+	transform: translate3d(10px,0,0);
+}
+.bottom-nav-img-wrap{
+}
+.bottom-nav-design,
+.bottom-nav-photo{
+	margin-right:-15px;
+	margin-left: -15px;
+}
+.bottom-nav-design div{
+	padding-left:0;
+	padding-right:0;
+}
+.bottom-img-container{
+	margin-bottom: 0;
+}
+.bottom-nav-design div:nth-of-type(even) a .bottom-img-container,
+.bottom-nav-photo div:nth-of-type(even) a .bottom-img-container{
+	
+}
+.bottom-nav-design div:nth-of-type(odd) a .bottom-img-container,
+.bottom-nav-photo div:nth-of-type(odd) a .bottom-img-container{
+	
+}
 }
 
 
@@ -512,7 +539,7 @@ path {
 		}
 
 		.module {
-			margin-bottom: 200px;
+			margin-bottom: 75px;
 				
 				img {
 					margin-bottom: 15px;
