@@ -6316,6 +6316,7 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
   outline: none; }
 
+/*Waypoints*/
 .in-range .featured-project-image {
   display: block; }
 .in-range .name {
@@ -6337,6 +6338,7 @@ a:link, a:hover, a:active, a:visited {
 .display-block {
   display: block; }
 
+/*end Waypoints*/
 .intro {
   margin-top: 200px;
   margin-bottom: 100px;
@@ -6556,7 +6558,7 @@ a:link, a:hover, a:active, a:visited {
     position: sticky;
     top: 10px; }
   .intro h2 {
-    font-size: 4rem; }
+    font-size: 3rem; }
   .intro p {
     line-height: 1.5;
     font-size: 2rem; }
@@ -6567,9 +6569,9 @@ a:link, a:hover, a:active, a:visited {
     margin: 0 25px 0 25px; }
   #pageBottom h2 {
     line-height: 1;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 0.5px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     text-align: center; }
   #pageBottom .thanks {
     margin-bottom: 40px; }
@@ -6588,16 +6590,16 @@ a:link, a:hover, a:active, a:visited {
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     position: relative;
-    top: -20px; }
+    top: -7px;
+    left: -1px; }
 
   .intro p {
     margin-top: 20px; }
 
   .intro p,
-  #pageBottom p,
-  #pageBottom li {
+  #pageBottom p {
     line-height: 1.5;
-    font-size: 2rem; }
+    font-size: 1.4rem; }
 
   .mobile-add-margin {
     margin-right: 15px;
@@ -6606,6 +6608,11 @@ a:link, a:hover, a:active, a:visited {
   .mobile-no-margin {
     margin-right: -15px;
     margin-left: -15px; } }
+@media screen and (max-width: 450px) {
+  #pageBottom .parking p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 40px; } }
 #logo {
   opacity: 0; }
 
