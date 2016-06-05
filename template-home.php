@@ -30,6 +30,7 @@ Header Video Section////////////
 						</svg>
 					</div>
 					<div class="videotitlewrap no-shadow"></div>
+					<span id="top"></span>
 				</a>
 			</div>
 <!-- 		</div>
@@ -46,7 +47,6 @@ Intro & Rolodex Container //
 Site Intro ////////////
 //////////////////////////////////-->
 		<div class="col-md-7 col-md-offset-4 intro">
-		<span id="top"></span>
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">JUNE 15 + 16, 5&ndash;9 PM</span></h2>
 			<?php the_content(); ?>
