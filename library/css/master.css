@@ -6361,9 +6361,13 @@ a:link, a:hover, a:active, a:visited {
     color: white;
     letter-spacing: 0.2px; }
   .intro a {
-    color: white; }
+    color: white;
+    text-decoration: underline;
+    font-size: 1.9rem; }
   .intro a:hover {
     cursor: pointer; }
+  .intro h2 {
+    margin-bottom: 25px; }
 
 .scca-student-name {
   font-size: 100px;
@@ -6486,10 +6490,10 @@ a:link, a:hover, a:active, a:visited {
   content: ","; }
 
 .dateAndTime {
-  font-size: 1.5rem;
-  letter-spacing: 2.7px;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
   position: relative;
-  top: -30px; }
+  top: -25px; }
 
 #pageBottom h2 {
   line-height: 1;
