@@ -47,7 +47,7 @@ Site Intro ////////////
 //////////////////////////////////-->
 		<div class="col-md-7 col-md-offset-4 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
-			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">June 15 + 16, 5–9 PM</span></h2>
+			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">JUNE 15 + 16, 5&ndash;9 PM</span></h2>
 			<?php the_content(); ?>
 			<div class="logistics">
 					<ul>
@@ -136,7 +136,7 @@ Page Bottom Info Section//////
 			<div class="row">
 				<div class="col-md-offset-1 col-md-6">
 					<h2>Portshowlio 2016<br>
-					<span class="dateAndTime">JUNE 15 + 16 | 5:00PM&ndash;9:00PM</span></h2>
+					<span class="dateAndTime">JUNE 15 + 16, 5&ndash;9PM</span></h2>
 				</div>
 			</div>
 
@@ -162,6 +162,14 @@ Page Bottom Info Section//////
 						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
+        				</span>
+        				</a>
+        			</div>
+
+        			<div class="social-icon-frame-white">
+						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
+						<span class="fa-stack fa-lg scca-social-button">
+            				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
         				</span>
         				</a>
         			</div>
