@@ -6533,11 +6533,13 @@ a:link, a:hover, a:active, a:visited {
 
 #pageBottom p,
 #pageBottom li {
-  line-height: 1.25;
   font-size: 2rem;
   letter-spacing: 0.4px;
   -webkit-transform: translate(0, -24px);
           transform: translate(0, -24px); }
+
+.showinfo > .row div {
+  margin-bottom: 30px; }
 
 @media screen and (max-width: 992px) {
   #logo {
@@ -6584,7 +6586,6 @@ a:link, a:hover, a:active, a:visited {
   .intro h2 {
     font-size: 3rem; }
   .intro p {
-    line-height: 1.5;
     font-size: 2rem; }
 
   #pageBottom .container {
@@ -6620,7 +6621,6 @@ a:link, a:hover, a:active, a:visited {
 
   .intro p,
   #pageBottom p {
-    line-height: 1.5;
     font-size: 1.4rem; }
 
   .mobile-add-margin {
@@ -6637,7 +6637,6 @@ a:link, a:hover, a:active, a:visited {
 @media screen and (max-width: 450px) {
   #pageBottom .parking p {
     font-size: 1.4rem;
-    line-height: 1.4;
     margin-bottom: 40px; } }
 #logo {
   opacity: 0; }
@@ -6669,6 +6668,18 @@ a:link, a:hover, a:active, a:visited {
   @media screen and (max-width: 768px) {
     #top {
       top: 80vh; } }
+
+p {
+  padding-right: 0; }
+  @media only screen and (min-width: 570px) and (max-width: 768px) {
+    p {
+      padding-right: 100px; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    p {
+      padding-right: 150px; } }
+
+.intro {
+  min-height: 60vh; }
 
 /*////////////////////////////////////////////////////
 SITEMAP

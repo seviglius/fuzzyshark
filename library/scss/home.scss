@@ -360,11 +360,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 }
 #pageBottom p,
 #pageBottom li {
-	line-height: 1.25;
 	font-size: 2rem;
 	letter-spacing: 0.4px;
 	transform: translate(0, -24px);
 
+}
+
+.showinfo > .row div{
+	margin-bottom: 30px;
 }
 
 @media screen and (max-width: 992px) {
@@ -427,7 +430,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 			font-size: 3rem;
 			}
 		p {
-			line-height: 1.5;
 			font-size: 2rem;
 		}
 	}
@@ -475,7 +477,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 
 	.intro p,
 #pageBottom p{
-	line-height: 1.5;
 	font-size: 1.4rem;
 }
 
@@ -503,7 +504,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		.parking{
 			p{
 				font-size: 1.4rem;
-				line-height: 1.4;
 				margin-bottom: 40px;
 			}
 		}
@@ -547,3 +547,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ee2624', e
 		top:80vh;
 	}
 }
+
+
+	p{
+		padding-right:0;
+
+		@media only screen and (min-width:570px) and (max-width: 768px){
+		padding-right:100px;
+	}
+		@media only screen and (min-width:768px) and (max-width: 992px){
+		padding-right:150px;
+		}
+	}
+
+	.intro{
+		min-height: 60vh;
+	}
