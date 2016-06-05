@@ -46,6 +46,7 @@ Intro & Rolodex Container //
 Site Intro ////////////
 //////////////////////////////////-->
 		<div class="col-md-7 col-md-offset-4 intro">
+		<span id="top"></span>
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">JUNE 15 + 16, 5&ndash;9 PM</span></h2>
 			<?php the_content(); ?>
@@ -144,6 +145,8 @@ Page Bottom Info Section//////
 				<div class="col-md-offset-1 col-md-6">
 				<p>The Creative Academy is located on the 5th floor of <a href="https://maps.google.com?daddr=1701+Broadway,+Seattle+WA+98122
 ">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find paid parking in the lot.</p>
+
+<a href="#top">Return to top</a>
 				</div>
 			</div>
 
@@ -162,14 +165,6 @@ Page Bottom Info Section//////
 						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
 						<span class="fa-stack fa-lg scca-social-button">
             				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
-        				</span>
-        				</a>
-        			</div>
-
-        			<div class="social-icon-frame-white">
-						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
-						<span class="fa-stack fa-lg scca-social-button">
-            				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
         				</span>
         				</a>
         			</div>
