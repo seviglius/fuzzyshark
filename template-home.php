@@ -15,6 +15,8 @@ Header Video Section////////////
 //////////////////////////////////-->
 <div class="se-pre-con"></div>
 
+<span id="top"></span>
+
 <!-- ///////////////////////////////
 Header Video Section////////////
 //////////////////////////////////-->
@@ -30,7 +32,6 @@ Header Video Section////////////
 						</svg>
 					</div>
 					<div class="videotitlewrap no-shadow"></div>
-					<span id="top"></span>
 				</a>
 			</div>
 <!-- 		</div>

@@ -6662,6 +6662,14 @@ a:link, a:hover, a:active, a:visited {
   #pageBottom p a:hover {
     text-decoration: none; }
 
+#top {
+  position: absolute;
+  top: 110vh;
+  left: 0; }
+  @media screen and (max-width: 768px) {
+    #top {
+      top: 80vh; } }
+
 /*////////////////////////////////////////////////////
 SITEMAP
 ////////////////////////////////////////////////////*/
