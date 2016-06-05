@@ -150,15 +150,15 @@ $('#bottom-photo-button').click(function(){
 // $('#parent>.design:nth-child(4n)').after('<div class="clearfix visible-design">');
 // $('#parent>.photography:nth-child(4n)').after('<div class="clearfix visible-photo">');
 
-$('#parent>div:nth-child(4n)').after('<div class="clearfix visible-all">');
+// $('#parent>div:nth-child(4n)').after('<div class="clearfix visible-all">');
 
-$('#parent>.design').filter(function(index){
- return (index%4 == 3);
-}).after('<div class="clearfix visible-design">');
+// $('#parent>.design').filter(function(index){
+//  return (index%4 == 3);
+// }).after('<div class="clearfix visible-design">');
 
-$('#parent>.photography').filter(function(index){
- return (index%4 == 3);
-}).after('<div class="clearfix visible-photo">');
+// $('#parent>.photography').filter(function(index){
+//  return (index%4 == 3);
+// }).after('<div class="clearfix visible-photo">');
 
 $('#all').click(function() {
   $('.visible-all').css('display', 'block');
