@@ -236,6 +236,12 @@ $yVal: 10px;
 				stroke: $white;
 				stroke-width:1px;
 			}
+			#left-piece{
+				animation: play_break-right infinite alternate 3s;
+			}
+			#right-piece{
+				animation: play_break-right infinite alternate 3s;
+			}
 			@media screen and (max-width: 500px){
 				width:20%;
 			}
@@ -243,9 +249,11 @@ $yVal: 10px;
 		a:hover > .videothumb > svg#play-button{
 			#left-piece{
 					transform: translate3d($xVal,-$yVal,0);
+					animation:none;
 			}
 			#right-piece{
 					transform: translate3d($xVal,$yVal,0);
+					animation:none;
 			}
 		}
 	}
