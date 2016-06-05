@@ -51,6 +51,12 @@ Site Intro ////////////
 			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">JUNE 15 + 16, 5&ndash;9 PM</span></h2>
 			<?php the_content(); ?>
 
+			<div class="logistics">
+					<ul>
+						<a href="#parking">Directions</a>
+					</ul>
+			</div><!--LOGISTICS-->
+
 			<a class="social-icon social-icon-frame-white" href="https://www.facebook.com/events/130863727328179/" target="_blank">
 			<span class="fa-stack fa-lg scca-social-button">
 			<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
@@ -62,12 +68,6 @@ Site Intro ////////////
 			<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
 			</span>
 			</a>
-
-			<div class="logistics">
-					<ul>
-						<a href="#parking">Directions</a>
-					</ul>
-			</div><!--LOGISTICS-->
 		</div>
 
 		
