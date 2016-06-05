@@ -6342,8 +6342,7 @@ a:link, a:hover, a:active, a:visited {
 .intro {
   margin-top: 200px;
   margin-bottom: 100px;
-  color: #fff;
-  background-color: #ee2624; }
+  color: #fff; }
   .intro h2 {
     line-height: 1;
     font-size: 6rem;
