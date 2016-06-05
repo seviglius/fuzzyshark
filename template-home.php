@@ -47,11 +47,11 @@ Site Intro ////////////
 //////////////////////////////////-->
 		<div class="col-md-7 col-md-offset-4 intro">
 			<h1 id="logo">Portshowlio 2016</h1>
-			<h2 id="school-name">Seattle Central<br> Creative Academy<br><span class="dateAndTime">2016 DESIGN + PHOTOGRAPHY SHOW</span></h2>
+			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">June 15 + 16, 5–9 PM</span></h2>
 			<?php the_content(); ?>
 			<div class="logistics">
 					<ul>
-						<a href="#parking"><li>Directions</li></a>
+						<a href="#parking">Directions</a>
 					</ul>
 			</div><!--LOGISTICS-->
 		</div>
