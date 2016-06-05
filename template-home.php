@@ -50,6 +50,19 @@ Site Intro ////////////
 			<h1 id="logo">Portshowlio 2016</h1>
 			<h2 id="school-name">Portshowlio 2016<br><span class="dateAndTime">JUNE 15 + 16, 5&ndash;9 PM</span></h2>
 			<?php the_content(); ?>
+
+			<a class="social-icon social-icon-frame-white" href="https://www.facebook.com/events/130863727328179/" target="_blank">
+			<span class="fa-stack fa-lg scca-social-button">
+			<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
+			</span>
+			</a>
+
+			<a class="social-icon social-icon-frame-white" href="https://www.instagram.com/creative_academy/" target="_blank">
+			<span class="fa-stack fa-lg scca-social-button">
+			<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
+			</span>
+			</a>
+
 			<div class="logistics">
 					<ul>
 						<a href="#parking">Directions</a>
@@ -146,8 +159,9 @@ Page Bottom Info Section//////
 				<p>The Creative Academy is located on the 5th floor of <a href="https://maps.google.com?daddr=1701+Broadway,+Seattle+WA+98122
 ">Seattle Central College</a>. We are easily accessed from the Capitol Hill Lightrail station one block away, or the Seattle Street Car. You can also find paid parking in the lot.</p>
 
-<a href="#top">Return to top</a>
+<a href="#top" id="return-to-top">Return to top</a>
 				</div>
+
 			</div>
 
 		</div><!--THANKS-->
@@ -157,26 +171,6 @@ Page Bottom Info Section//////
 
 			<div class="col-md-offset-1 col-md-6">
 			<p>The SCCA class of 2016 would like to thank the incredible faculty,  alumni, and many professionals who have inspired and supported us over the last two years. Your dedication and patience are unmatched,  and we are thrilled to be entering a community with so much talent.</p>
-			</div>
-
-			<div class="col-md-offset-2 col-md-3">
-
-        			<div class="social-icon-frame-white">
-						<a class="social-icon" href="https://www.facebook.com/events/130863727328179/" target="_blank">
-						<span class="fa-stack fa-lg scca-social-button">
-            				<i class="fa fa-stack-1x fa-facebook" aria-hidden="true"></i>
-        				</span>
-        				</a>
-        			</div>
-
-        			<div class="social-icon-frame-white">
-						<a class="social-icon" href="https://www.instagram.com/creative_academy/" target="_blank">
-						<span class="fa-stack fa-lg scca-social-button">
-            				<i class="fa fa-stack-1x fa-instagram" aria-hidden="true"></i>
-        				</span>
-        				</a>
-        			</div>
-
 			</div>
 
 		</div>

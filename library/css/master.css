@@ -6364,6 +6364,10 @@ a:link, a:hover, a:active, a:visited {
     color: white;
     text-decoration: underline;
     font-size: 1.9rem; }
+  .intro a.social-icon {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px; }
   .intro a:hover {
     cursor: pointer; }
   .intro h2 {
@@ -6475,12 +6479,16 @@ a:link, a:hover, a:active, a:visited {
   position: relative;
   color: #fff; }
   #pageBottom .showinfo {
-    margin: 0 0 150px 0; }
+    margin: 0 0 200px 0; }
   #pageBottom li {
     display: inline-block;
     margin: 0 10px 0 0;
     -webkit-transform: translate3d(0, 25px, 0);
             transform: translate3d(0, 25px, 0); }
+  #pageBottom #return-to-top {
+    display: block;
+    font-size: 1.9rem;
+    text-decoration: underline; }
 
 .collaborators:first-of-type:not(:nth-last-of-type(2)):not(:last-of-type)::after {
   content: ","; }
@@ -6575,7 +6583,7 @@ a:link, a:hover, a:active, a:visited {
     font-size: 2.5rem;
     letter-spacing: 0.5px;
     margin-bottom: 30px;
-    text-align: center; }
+    text-align: left; }
   #pageBottom .thanks {
     margin-bottom: 40px; }
     #pageBottom .thanks p {
