@@ -63,22 +63,31 @@ jQuery(document).ready(function() {
     39: 'next'
   }
 
+  $('.videoitem').click(function(event) {
+    $('.videoitem.active').not(this).removeClass('active');
+    $(this).addClass('active');
+  });
   $(document).on('keydown', function (e) {
+
       var dir = o[e.which];
-      var $active = $('.active'),
-          i = $video.index($active);
+      var $active = $('.videoitem.active'),
+          i = $active.index();
+          console.log(i);
+      
+      
       if (e.which == 13) {
          $('.selected').removeClass('selected');
          // $active.addClass('selected');
           return;
       }
-      if (!$active.length) {
+
+      if ($active.length === 0) {
           $video.first().addClass('active').focus();
           return;
       } else {
           if (dir === 'next' || dir === 'prev') {
               $active.removeClass('active')[dir]().addClass('active').focus();
-          } else {
+          } else if(e.which != 27) {
               var p = dir === 'up' ? (i - 4) : (i + 4);
               $video.removeClass('active').eq(p).addClass('active').focus();
           }
@@ -86,10 +95,7 @@ jQuery(document).ready(function() {
   })
 
 });
-
 </script>
-
-
 
 
 
