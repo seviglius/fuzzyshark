@@ -3,6 +3,11 @@
 	padding: 2%;
 }
 
+.videologo {
+  width: 100px;
+  margin: 30px 0px 20px 3%;
+}
+
 .mainfeature .videotitlewrap h3 {
     font-size: 32px !important;
     font-weight: 300;
