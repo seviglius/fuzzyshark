@@ -5695,6 +5695,10 @@ GLOBAL STYLES//////////////////////////
     opacity: 0; }
   to {
     opacity: 1; } }
+.videologo {
+  width: 100px;
+  margin: 30px 0px 20px 3%; }
+
 body.page-template-template-video-gallery {
   background: #000; }
 
