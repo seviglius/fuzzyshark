@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/magnific.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/library/css/videogallery.css">
+
 <img class="white videologo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/header_logo.svg" width="100px">
 
 <style>
